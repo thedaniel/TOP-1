@@ -54,10 +54,19 @@ function(target_add_lib name)
   target_compile_options(libtop-1 PUBLIC ${${name}_CFLAGS_OTHER})
 endfunction(target_add_lib)
 
+OPTION(RPI "Build for Pi. Uses framebuffer for drawing and GPIO for input" OFF)
+if (RPI)
+  add_definitions(-DRPI)
+  #target_link_libraries(libtop-1 wiringPi)
+  target_add_lib(osmesa)
+else (RPI)
+  target_add_lib(glfw3)
+endif (RPI)
+
+
 # DEPENDENCIES
 
 target_add_lib(jack)
-target_add_lib(glfw3)
 target_add_lib(gl)
 
 include(CheckCXXCompilerFlag)

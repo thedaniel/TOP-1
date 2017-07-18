@@ -4,7 +4,7 @@
 
 class MainUI : public ui::Screen {
 
-  static void mainRoutine();
+  void mainRoutine();
 
   bool globKeyPre(ui::Key key);
   bool globKeyPost(ui::Key key);

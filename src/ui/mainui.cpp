@@ -12,7 +12,7 @@ void MainUI::display(ui::Screen::ptr screen) {
 }
 
 void MainUI::init() {
-  uiThread = std::thread(MainUI::mainRoutine);
+  uiThread = std::thread([this](){mainRoutine();});
 }
 
 void MainUI::exit() {

@@ -1,3 +1,6 @@
+#include "../comp-config.h"
+#ifdef UIFRAMEWORK_GLFW
+
 #define GLFW_INCLUDE_ES3
 #define GLFW_INCLUDE_GLEXT
 #include <GLFW/glfw3.h>
@@ -124,7 +127,6 @@ static void key(GLFWwindow* window, int key, int scancode, int action, int mods)
 }
 
 void MainUI::mainRoutine() {
-  MainUI& self = GLOB.ui;
   GLFWwindow* window;
 	NVGcontext* vg = NULL;
 	double prevt = 0;
@@ -201,7 +203,7 @@ void MainUI::mainRoutine() {
     canvas.begineFrame(winWidth, winHeight);
 
     canvas.scale(scale, scale);
-    self.draw(canvas);
+    draw(canvas);
 
     canvas.endFrame();
 
@@ -224,3 +226,6 @@ void MainUI::mainRoutine() {
 
   GLOB.exit();
 }
+
+
+#endif // UIFRAMEWORK == GLFW
