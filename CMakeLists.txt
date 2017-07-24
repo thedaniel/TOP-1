@@ -58,9 +58,7 @@ OPTION(RPI "Build for Pi. Uses framebuffer for drawing and GPIO for input" OFF)
 if (RPI)
   add_definitions(-DRPI)
   #target_link_libraries(libtop-1 wiringPi)
-  target_add_lib(x11)
 else (RPI)
-  target_add_lib(glfw3)
 endif (RPI)
 
 
@@ -68,6 +66,8 @@ endif (RPI)
 
 target_add_lib(jack)
 target_add_lib(gl)
+target_add_lib(egl)
+target_add_lib(x11)
 
 include(CheckCXXCompilerFlag)
 
