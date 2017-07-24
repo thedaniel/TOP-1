@@ -1,18 +1,19 @@
 #include "../comp-config.h"
 
-#include <nanocanvas/NanoCanvas.h>
-#define NANOVG_GLES2_IMPLEMENTATION
-#include <GLES2/gl2.h>
-#include <nanovg/nanovg_gl.h>
-#include <nanovg/nanovg_gl_utils.h>
-
 #include "base.h"
 #include "mainui.h"
 #include "utils.h"
 #include "../globals.h"
 #include "../util/configfile.h"
 
-#include <GL/glx.h>
+#include <nanocanvas/NanoCanvas.h>
+#define NANOVG_GLES2_IMPLEMENTATION
+#include <GLES2/gl2.h>
+#include <GLES/egl.h>
+#include <nanovg/nanovg_gl.h>
+#include <nanovg/nanovg_gl_utils.h>
+
+#include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <X11/XKBlib.h>
 
@@ -36,11 +37,14 @@ struct X11Data {
   top1::json            config;
   Display              *dpy;
   Window                xWin;
-  XVisualInfo          *vInfo;
   XSetWindowAttributes  swa;
-  GLXFBConfig          *fbConfigs;
-  GLXContext            context;
-  GLXWindow             glxWin;
+  Screen*               screen;
+  EGLDisplay            eglDisplay;
+  EGLConfig             eglConfig;
+  EGLContext            eglContext;
+  EGLSurface            eglSurface;
+  NativeWindowType      window;
+  EGLint                numConfig;
   int                   swaMask;
   int                   numReturned;
   int                   swapFlag = True;
@@ -58,26 +62,14 @@ struct X11Data {
   float fps = 0;
 };
 
-int singleBufferAttributess[] = {
-  GLX_DRAWABLE_TYPE, GLX_WINDOW_BIT,
-  GLX_RENDER_TYPE,   GLX_RGBA_BIT,
-  GLX_RED_SIZE,      1,   /* Request a single buffered color buffer */
-  GLX_GREEN_SIZE,    1,   /* with the maximum number of color bits  */
-  GLX_BLUE_SIZE,     1,   /* for each component                     */
-  GLX_STENCIL_SIZE,  1,
-  None
-};
 
-int doubleBufferAttributes[] = {
-  GLX_DRAWABLE_TYPE, GLX_WINDOW_BIT,
-  GLX_RENDER_TYPE,   GLX_RGBA_BIT,
-  GLX_DOUBLEBUFFER,  True,  /* Request a double-buffered color buffer with */
-  GLX_RED_SIZE,      1,     /* the maximum number of bits per component    */
-  GLX_GREEN_SIZE,    1,
-  GLX_BLUE_SIZE,     1,
-  GLX_STENCIL_SIZE,  1,
-  None
-};
+const EGLint configAttribs[] = { 
+  EGL_RENDERABLE_TYPE,EGL_OPENGL_ES2_BIT,    
+  EGL_SURFACE_TYPE,EGL_WINDOW_BIT,
+  EGL_BLUE_SIZE,8, EGL_GREEN_SIZE,8, EGL_RED_SIZE,8, EGL_ALPHA_SIZE,8,
+  EGL_STENCIL_SIZE,8, EGL_NONE };
+const EGLint contextAttribs[] = {EGL_CONTEXT_CLIENT_VERSION,2, EGL_NONE };
+const EGLint surfaceAttribs[] = {EGL_RENDER_BUFFER,EGL_BACK_BUFFER, EGL_NONE };
 
 static ui::Key keyboardKey(int xKey, int mods) {
   using namespace ui;
@@ -237,44 +229,27 @@ void MainUI::mainRoutine() {
   /* Open a connection to the X server */
   data.dpy = XOpenDisplay( NULL );
   if ( data.dpy == NULL ) {
-      printf( "Unable to open a connection to the X server\n" );
-      exit();
+    LOGF << ( "Unable to open a connection to the X server\n" );
+    GLOB.exit();
+    return;
   }
 
-  /* Request a suitable framebuffer configuration - try for a double 
-  ** buffered configuration first */
-  data.fbConfigs = glXChooseFBConfig( data.dpy, DefaultScreen(data.dpy),
-                                  doubleBufferAttributes, &data.numReturned );
+  data.screen = DefaultScreenOfDisplay(data.dpy);
 
-  if ( data.fbConfigs == NULL ) {  /* no double buffered configs available */
-    data.fbConfigs = glXChooseFBConfig(data.dpy, DefaultScreen(data.dpy),
-                                    singleBufferAttributess, &data.numReturned );
-    data.swapFlag = False;
-  }
-
-  data.vInfo = glXGetVisualFromFBConfig( data.dpy, data.fbConfigs[0] );
-
-  data.swa.border_pixel = 0;
-  data.swa.event_mask = StructureNotifyMask;
-  data.swa.colormap = XCreateColormap( data.dpy, RootWindow(data.dpy, data.vInfo->screen),
-   data.vInfo->visual, AllocNone );
-
-  data.swaMask = CWBorderPixel | CWColormap | CWEventMask;
+  data.eglDisplay = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+  /* initialize the EGL display connection */
+  eglInitialize(data.eglDisplay, NULL, NULL);
+  /* get an appropriate EGL frame buffer configuration */
+  eglChooseConfig(data.eglDisplay, configAttribs, &data.eglConfig, 1, &data.numConfig);
+  /* create an EGL rendering context */
+  data.eglContext = eglCreateContext(data.eglDisplay, data.eglConfig, EGL_NO_CONTEXT, contextAttribs);
 
   data.width = drawing::WIDTH;
   data.height = drawing::HEIGHT;
 
-  data.xWin = XCreateWindow( data.dpy, RootWindow(data.dpy, data.vInfo->screen),
-    0, 0, data.width, data.height,
-    0, data.vInfo->depth, InputOutput, data.vInfo->visual, data.swaMask, &data.swa );
-
-  /* Create a GLX context for OpenGL rendering */
-  data.context = glXCreateNewContext( data.dpy, data.fbConfigs[0], GLX_RGBA_TYPE,
-        NULL, True );
-
-  /* Create a GLX window to associate the frame buffer configuration
-  ** with the created X window */
-  data.glxWin = glXCreateWindow( data.dpy, data.fbConfigs[0], data.xWin, NULL );
+  data.xWin = XCreateWindow(data.dpy, RootWindowOfScreen(data.screen),
+    0, 0, data.width, data.height, 0, DefaultDepthOfScreen(data.screen),
+    InputOutput, DefaultVisualOfScreen(data.screen), data.swaMask, &data.swa);
 
   data.sizeH = XAllocSizeHints();
   data.sizeH->flags = PSize | PMinSize | PMaxSize | PAspect;
@@ -292,12 +267,16 @@ void MainUI::mainRoutine() {
   data.deleteWindow = XInternAtom(data.dpy, "WM_DELETE_WINDOW", false);
   XSetWMProtocols(data.dpy, data.xWin, &data.deleteWindow, 1);
 
-  glXMakeContextCurrent( data.dpy, data.glxWin, data.glxWin, data.context );
+  /* create an EGL window surface */
+  data.eglSurface = eglCreateWindowSurface(data.eglDisplay, data.eglConfig, data.xWin, surfaceAttribs);
+  /* connect the context to the surface */
+  eglMakeCurrent(data.eglDisplay, data.eglSurface, data.eglSurface, data.eglContext);
 
-	data.vg = nvgCreateGLES2(NVG_ANTIALIAS | NVG_STENCIL_STROKES);
+	data.vg = nvgCreateGLES2(NVG_ANTIALIAS | NVG_STENCIL_STROKES | NVG_DEBUG);
 	if (data.vg == NULL) {
-		printf("Could not init nanovg.\n");
-		return;
+		LOGF << ("Could not init nanovg.\n");
+    GLOB.exit();
+    return;
 	}
 
   drawing::Canvas canvas(data.vg, drawing::WIDTH, drawing::HEIGHT);
@@ -313,7 +292,7 @@ void MainUI::mainRoutine() {
   auto waitTime = milliseconds(int(1000.f / data.config["FPS"].get<float>()));
   auto t0 = clock::now();
 
-  bool showFps = data.config["Debug"].get<bool>();
+  bool showFps = data.config["Debug"];
 
 	while (GLOB.running()) {
     t0 = clock::now();
@@ -349,7 +328,7 @@ void MainUI::mainRoutine() {
     canvas.endFrame();
 
     if (data.swapFlag)
-      glXSwapBuffers(data.dpy, data.glxWin);
+      eglSwapBuffers(data.eglDisplay, data.eglSurface);
 
     glFlush();
 
