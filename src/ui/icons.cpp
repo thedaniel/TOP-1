@@ -53,19 +53,22 @@ void Arrow::draw(Canvas& ctx) {
   ctx.beginPath();
   ctx.moveTo(start);
   ctx.lineTo(end);
+  ctx.stroke(colour);
+
+  ctx.beginPath();
+  ctx.moveTo(end);
   ctx.lineTo(cp1);
   ctx.lineTo(cp2);
-  ctx.lineTo(end);
+  ctx.closePath();
+  ctx.fill(colour);
+  ctx.stroke(colour);
 
   if (stopped) {
+    ctx.beginPath();
     ctx.moveTo(cp1.x, end.y);
     ctx.lineTo(cp2.x, end.y);
+    ctx.stroke(colour);
   }
-
-  ctx.strokeStyle(colour);
-  ctx.fillStyle(colour);
-  ctx.stroke();
-  ctx.fill();
 
   } else {
 

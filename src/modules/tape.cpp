@@ -1044,6 +1044,8 @@ void TapeScreen::draw(drawing::Canvas& ctx) {
     ctx.fillStyle(Colours::Black);
     ctx.beginPath();
     ctx.rect(startCoord - 5, 185, 10, 40);
+    ctx.fill();
+    ctx.beginPath();
     ctx.rect(endCoord - 5, 185, 10, 40);
     ctx.fill();
   }
