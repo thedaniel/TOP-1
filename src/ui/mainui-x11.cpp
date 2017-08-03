@@ -9,7 +9,7 @@
 #include <nanocanvas/NanoCanvas.h>
 #define NANOVG_GLES2_IMPLEMENTATION
 #include <GLES2/gl2.h>
-#include <GLES/egl.h>
+#include <EGL/egl.h>
 #include <nanovg/nanovg_gl.h>
 #include <nanovg/nanovg_gl_utils.h>
 
@@ -60,6 +60,8 @@ struct X11Data {
 
   std::chrono::duration<double> lastFrameTime;
   float fps = 0;
+
+  X11Data(MainUI &ui) : ui (ui) {}
 };
 
 
