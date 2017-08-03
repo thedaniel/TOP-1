@@ -291,7 +291,8 @@ void MainUI::mainRoutine() {
   using std::chrono::duration;
   using clock = std::chrono::high_resolution_clock;
 
-  auto waitTime = milliseconds(int(1000.f / data.config["FPS"].get<float>()));
+  float desiredFPS = data.config["FPS"].get<float>();
+  auto waitTime = milliseconds(int(1000.f / desiredFPS));
   auto t0 = clock::now();
 
   bool showFps = data.config["Debug"];
@@ -325,7 +326,7 @@ void MainUI::mainRoutine() {
       canvas.font(drawing::FONT_NORM);
       canvas.fillStyle(drawing::Colours::White);
       canvas.textAlign(drawing::TextAlign::Left, drawing::TextAlign::Baseline);
-      canvas.fillText(fmt::format("{:.2f} FPS", data.fps), {0, drawing::HEIGHT});
+      canvas.fillText(fmt::format("{:.2f} FPS ({:.2f})", data.fps, desiredFPS), {0, drawing::HEIGHT});
     }
     canvas.endFrame();
 
