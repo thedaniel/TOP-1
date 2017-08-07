@@ -65,9 +65,24 @@ endif (RPI)
 # DEPENDENCIES
 
 target_add_lib(jack)
-target_add_lib(gl)
-target_add_lib(egl)
-target_add_lib(x11)
+
+option(RPI "RPI" OFF)
+
+if(RPI)
+  add_definitions(-DRPI=1)
+  link_directories("/opt/vc/lib")
+  set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/opt/vc/lib")
+  find_library(BCM_HOST bcm_host)
+  find_library(BCM_EGL brcmEGL)
+  find_library(BCM_GLES brcmGLESv2)
+  target_link_libraries(libtop-1 ${BCM_HOST})
+  target_link_libraries(libtop-1 ${BCM_EGL})
+  target_link_libraries(libtop-1 ${BCM_GLES})
+  target_include_directories(libtop-1 PUBLIC "/opt/vc/include")
+else()
+  target_add_lib(glfw3)
+  target_add_lib(gl)
+endif()
 
 include(CheckCXXCompilerFlag)
 

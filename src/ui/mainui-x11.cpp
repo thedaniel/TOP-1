@@ -1,5 +1,7 @@
 #include "../comp-config.h"
 
+#ifdef UI_FRAMEWORK_X11
+
 #include "base.h"
 #include "mainui.h"
 #include "utils.h"
@@ -344,3 +346,5 @@ void MainUI::mainRoutine() {
 
   GLOB.exit();
 }
+
+#endif
