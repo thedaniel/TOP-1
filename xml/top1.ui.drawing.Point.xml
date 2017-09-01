@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::Point" name="Point" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::ui::drawing::Point::x" name="x">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::ui::drawing::Point::y" name="y">
+    <type builtin="yes" name="float" />
+  </field>
+  <constructor id="top1::ui::drawing::Point::Point" name="Point" />
+  <constructor id="top1::ui::drawing::Point::Point" name="Point">
+    <argument id="top1::ui::drawing::Point::Point::x" name="x">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Point::Point::y" name="y">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::Point::Point" name="Point">
+    <argument id="top1::ui::drawing::Point::Point::v" name="v">
+      <type name="math::vec" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::drawing::Point::flipX" name="flipX">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <method id="top1::ui::drawing::Point::flipY" name="flipY">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <conversionfunction id="top1::ui::drawing::Point::operator vec" name="operator vec">
+    <undocumented-return />
+    <return>
+      <type name="math::vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </conversionfunction>
+  <method id="top1::ui::drawing::Point::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator!=::rhs" name="rhs">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator*::s" name="s">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::operator+" name="operator+">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator+::rhs" name="rhs">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator-::rhs" name="rhs">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <method id="top1::ui::drawing::Point::operator/" name="operator/">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator/::s" name="s">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::drawing::Point::operator==::rhs" name="rhs">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::rotate" name="rotate">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::drawing::Point::rotate::rad" name="rad">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Point::swapXY" name="swapXY">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+</struct>

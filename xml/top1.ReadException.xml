@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ReadException" name="ReadException" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="std::exception" />
+  </base>
+  <enum anonymous="yes" id="top1::ReadException::Type" name="Type">
+    <enumvalue id="top1::ReadException::END_OF_FILE" name="END_OF_FILE" value="0" />
+    <enumvalue id="top1::ReadException::UNEXPECTED_CHUNK" name="UNEXPECTED_CHUNK" value="1" />
+    <enumvalue id="top1::ReadException::INVALID_SIZE" name="INVALID_SIZE" value="2" />
+    <enumvalue id="top1::ReadException::POSITION_MISMATCH" name="POSITION_MISMATCH" value="3" />
+  </enum>
+  <field id="top1::ReadException::type" name="type">
+    <type name="Type" ref="top1::ReadException#top1::ReadException::Type" />
+  </field>
+  <field id="top1::ReadException::message" name="message">
+    <type name="std::string" />
+  </field>
+  <constructor id="top1::ReadException::ReadException" name="ReadException" />
+  <constructor id="top1::ReadException::ReadException" name="ReadException">
+    <argument id="top1::ReadException::ReadException::message" name="message">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ReadException::ReadException" name="ReadException">
+    <argument id="top1::ReadException::ReadException::type" name="type">
+      <type name="Type" ref="top1::ReadException#top1::ReadException::Type" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ReadException::ReadException" name="ReadException">
+    <argument id="top1::ReadException::ReadException::type" name="type">
+      <type name="Type" ref="top1::ReadException#top1::ReadException::Type" />
+    </argument>
+    <argument id="top1::ReadException::ReadException::message" name="message">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <method id="top1::ReadException::what" name="what" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </return>
+  </method>
+</struct>

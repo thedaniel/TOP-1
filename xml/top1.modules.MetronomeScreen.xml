@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::MetronomeScreen" interface="true" name="MetronomeScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::Metronome&gt;" />
+  </base>
+  <method abstract="yes" id="top1::modules::MetronomeScreen::draw" name="draw" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::MetronomeScreen::draw::" name="">
+      <type name="ui::drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::MetronomeScreen::rotary" name="rotary" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::MetronomeScreen::rotary::" name="">
+      <type name="ui::RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+    </argument>
+  </method>
+</class>

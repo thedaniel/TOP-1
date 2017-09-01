@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::ui::drawing::SizedDrawable" name="SizedDrawable" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Drawable" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+  </base>
+  <subclass access="public" name="icons::Icon" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon" />
+  <subclass access="public" name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
+  <field id="top1::ui::drawing::SizedDrawable::size" name="size">
+    <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+  </field>
+  <constructor id="top1::ui::drawing::SizedDrawable::SizedDrawable" name="SizedDrawable" />
+  <constructor id="top1::ui::drawing::SizedDrawable::SizedDrawable" name="SizedDrawable">
+    <argument id="top1::ui::drawing::SizedDrawable::SizedDrawable::s" name="s">
+      <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+  </constructor>
+</class>

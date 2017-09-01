@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::Bool" name="Bool" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::tree::Bool::value" name="value">
+    <type builtin="yes" name="bool" />
+  </field>
+  <conversionfunction id="top1::tree::Bool::operator bool" name="operator bool">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </conversionfunction>
+  <method id="top1::tree::Bool::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator!=::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+  <method id="top1::tree::Bool::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator&lt;::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+  <method id="top1::tree::Bool::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator&lt;=::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+  <method id="top1::tree::Bool::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator==::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+  <method id="top1::tree::Bool::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator&gt;::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+  <method id="top1::tree::Bool::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Bool::operator&gt;=::lhs" name="lhs">
+      <type name="Bool" qualifier=" const &amp;" ref="top1::tree::Bool#top1::tree::Bool" />
+    </argument>
+  </method>
+</struct>

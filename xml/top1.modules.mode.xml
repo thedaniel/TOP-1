@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::modules::mode" name="mode" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <struct name="def" ref="top1::modules::mode::def#top1::modules::mode::def">
+    <brief>Pass to mode_for_tag, to get the default mode for a type
+Specialize `mode_for_tag` with at least this for each new type</brief>
+  </struct>
+  <struct name="exp" ref="top1::modules::mode::exp#top1::modules::mode::exp">
+    <brief>Like `sized_step`, But steps exponentially</brief>
+  </struct>
+  <structtemplate name="exp_mode" ref="top1::modules::mode::exp_mode#top1::modules::mode::exp_mode">
+    <templatetypeparameter id="top1::modules::mode::exp_mode::T" name="T" />
+  </structtemplate>
+  <structtemplate name="is_mode" ref="top1::modules::mode::is_mode#top1::modules::mode::is_mode">
+    <templatetypeparameter id="top1::modules::mode::is_mode::T" name="T" />
+  </structtemplate>
+  <structtemplate name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag">
+    <brief>Has a member typedef `mode`, selected based on the type and the tag.
+Specialize this for each mode</brief>
+    <templatetypeparameter id="top1::modules::mode::mode_for_tag::T" name="T" />
+    <templatetypeparameter id="top1::modules::mode::mode_for_tag::Tag" name="Tag" />
+    <templatetypeparameter id="top1::modules::mode::mode_for_tag::Enable" name="Enable" />
+  </structtemplate>
+  <struct name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag" />
+  <struct name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag" />
+  <struct name="plain_set" ref="top1::modules::mode::plain_set#top1::modules::mode::plain_set">
+    <brief>Non-numeric</brief>
+  </struct>
+  <structtemplate name="plain_set_mode" ref="top1::modules::mode::plain_set_mode#top1::modules::mode::plain_set_mode">
+    <templatetypeparameter id="top1::modules::mode::plain_set_mode::T" name="T" />
+  </structtemplate>
+  <struct name="sized_step" ref="top1::modules::mode::sized_step#top1::modules::mode::sized_step">
+    <brief>Steps up/down by `step`, until `min`/`max` is reached, then stops</brief>
+  </struct>
+  <structtemplate name="sized_step_mode" ref="top1::modules::mode::sized_step_mode#top1::modules::mode::sized_step_mode">
+    <templatetypeparameter id="top1::modules::mode::sized_step_mode::T" name="T" />
+  </structtemplate>
+  <struct name="toggle" ref="top1::modules::mode::toggle#top1::modules::mode::toggle">
+    <brief>Default mode for Bool</brief>
+  </struct>
+  <struct name="toggle_mode" ref="top1::modules::mode::toggle_mode#top1::modules::mode::toggle_mode" />
+  <struct name="wrap" ref="top1::modules::mode::wrap#top1::modules::mode::wrap">
+    <brief>Like `sized_step`, but wraps around when `max` or `min` reached</brief>
+  </struct>
+  <structtemplate name="wrap_mode" ref="top1::modules::mode::wrap_mode#top1::modules::mode::wrap_mode">
+    <templatetypeparameter id="top1::modules::mode::wrap_mode::T" name="T" />
+  </structtemplate>
+</namespace>

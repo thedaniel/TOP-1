@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::icons::Arrow" interface="true" name="Arrow" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>A simple arrow</brief>
+  <base access="public">
+    <type name="Icon" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon" />
+  </base>
+  <enum anonymous="yes" id="top1::ui::drawing::icons::Arrow::Direction" name="Direction">
+    <enumvalue id="top1::ui::drawing::icons::Arrow::Up" name="Up" value="0" />
+    <enumvalue id="top1::ui::drawing::icons::Arrow::Down" name="Down" value="1" />
+    <enumvalue id="top1::ui::drawing::icons::Arrow::Left" name="Left" value="2" />
+    <enumvalue id="top1::ui::drawing::icons::Arrow::Right" name="Right" value="3" />
+  </enum>
+  <field id="top1::ui::drawing::icons::Arrow::dir" name="dir">
+    <type name="Direction" ref="top1::ui::drawing::icons::Arrow#top1::ui::drawing::icons::Arrow::Direction" />
+  </field>
+  <field id="top1::ui::drawing::icons::Arrow::stopped" name="stopped">
+    <brief>Add stop line -&gt;|</brief>
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::ui::drawing::icons::Arrow::looping" name="looping">
+    <brief>Loop arrow - CW for Up/Right, CCW for Down/Left</brief>
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::ui::drawing::icons::Arrow::headRatio" name="headRatio">
+    <brief>headLength/arrowLength</brief>
+    <type builtin="yes" name="float" />
+  </field>
+  <method abstract="yes" id="top1::ui::drawing::icons::Arrow::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::drawing::icons::Arrow::draw::" name="">
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="Icon::draw" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon::draw" />
+  </method>
+</struct>

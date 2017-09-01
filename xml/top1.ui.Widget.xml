@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::ui::Widget" name="Widget" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="drawing::SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
+  </base>
+  <subclass access="public" name="WaveformWidget" ref="top1::ui::WaveformWidget#top1::ui::WaveformWidget" />
+  <constructor id="top1::ui::Widget::Widget" name="Widget" />
+  <constructor id="top1::ui::Widget::Widget" name="Widget">
+    <argument id="top1::ui::Widget::Widget::size" name="size">
+      <type name="drawing::Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+  </constructor>
+</class>

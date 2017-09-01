@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::Map" name="Map" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::tree::Map::values" name="values">
+    <type name="std::unordered_map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt;, std::hash&lt;std::string&gt;, std::equal_to&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt; &gt; &gt; &gt;" />
+  </field>
+  <method id="top1::tree::Map::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="std::__detail::_Node_iterator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt; &gt;, false, true&gt;" />
+    </return>
+  </method>
+  <method id="top1::tree::Map::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="std::__detail::_Node_const_iterator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt; &gt;, false, true&gt;" />
+    </return>
+  </method>
+  <method id="top1::tree::Map::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="std::__detail::_Node_iterator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt; &gt;, false, true&gt;" />
+    </return>
+  </method>
+  <method id="top1::tree::Map::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="std::__detail::_Node_const_iterator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt; &gt;, false, true&gt;" />
+    </return>
+  </method>
+  <method id="top1::tree::Map::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Map::operator!=::lhs" name="lhs">
+      <type name="Map" qualifier=" const &amp;" ref="top1::tree::Map#top1::tree::Map" />
+    </argument>
+  </method>
+  <method id="top1::tree::Map::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Map::operator==::lhs" name="lhs">
+      <type name="Map" qualifier=" const &amp;" ref="top1::tree::Map#top1::tree::Map" />
+    </argument>
+  </method>
+  <method id="top1::tree::Map::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="mapbox::util::variant&lt;top1::tree::Float, top1::tree::String, top1::tree::Int, top1::tree::Bool, top1::tree::Null, mapbox::util::recursive_wrapper&lt;top1::tree::Array&gt;, mapbox::util::recursive_wrapper&lt;top1::tree::Map&gt; &gt;" qualifier=" &amp;" />
+    </return>
+    <argument id="top1::tree::Map::operator[]::k" name="k">
+      <type name="std::string" />
+    </argument>
+  </method>
+</struct>

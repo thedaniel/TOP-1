@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::DataFile" interface="true" name="DataFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="JsonFile" ref="top1::JsonFile#top1::JsonFile" />
+  </base>
+  <method abstract="yes" id="top1::DataFile::read" name="read" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="JsonFile::read" ref="top1::JsonFile#top1::JsonFile::read" />
+  </method>
+  <method abstract="yes" id="top1::DataFile::write" name="write" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="JsonFile::write" ref="top1::JsonFile#top1::JsonFile::write" />
+  </method>
+</class>

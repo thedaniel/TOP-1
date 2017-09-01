@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::detail" name="detail" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::detail::baseType" name="baseType">
+    <type name="TypeIndex" qualifier=" const" />
+  </variable>
+  <functiontemplate id="top1::detail::generate_sequence_impl" name="generate_sequence_impl">
+    <undocumented-return />
+    <return>
+      <type name="auto" />
+    </return>
+    <argument id="top1::detail::generate_sequence_impl::" name="">
+      <type name="std::integer_sequence&lt;int, ns...&gt; &amp;&amp;" />
+    </argument>
+    <argument id="top1::detail::generate_sequence_impl::gen" name="gen">
+      <type name="Func &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::detail::generate_sequence_impl::Func" name="Func" />
+    <templatenontypeparameter id="top1::detail::generate_sequence_impl::ns" name="ns">
+      <type builtin="yes" name="int" />
+    </templatenontypeparameter>
+  </functiontemplate>
+  <variable id="top1::detail::invalidType" name="invalidType">
+    <type name="TypeIndex" qualifier=" const" />
+  </variable>
+  <structtemplate name="FunctionArgs" ref="top1::detail::FunctionArgs#top1::detail::FunctionArgs">
+    <templatetypeparameter id="top1::detail::FunctionArgs::T" name="T" />
+  </structtemplate>
+  <structtemplate name="FunctionArgsBase" ref="top1::detail::FunctionArgsBase#top1::detail::FunctionArgsBase">
+    <templatetypeparameter id="top1::detail::FunctionArgsBase::R" name="R" />
+    <templatetypeparameter id="top1::detail::FunctionArgsBase::Args" name="Args" />
+  </structtemplate>
+  <structtemplate name="getTypeIndex" ref="top1::detail::getTypeIndex#top1::detail::getTypeIndex">
+    <templatetypeparameter id="top1::detail::getTypeIndex::Base" name="Base" />
+    <templatetypeparameter id="top1::detail::getTypeIndex::T" name="T" />
+    <templatetypeparameter id="top1::detail::getTypeIndex::Ts" name="Ts" />
+  </structtemplate>
+  <structtemplate name="smart_poly_storage" ref="top1::detail::smart_poly_storage#top1::detail::smart_poly_storage">
+    <templatetypeparameter id="top1::detail::smart_poly_storage::T" name="T" />
+  </structtemplate>
+</namespace>

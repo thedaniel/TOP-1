@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct abstract="true" id="top1::modules::PropertyBase" name="PropertyBase" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  <subclass access="public" name="Property" ref="top1::modules::Property#top1::modules::Property" />
+  <struct name="FaustLink" ref="top1::modules::PropertyBase::FaustLink#top1::modules::PropertyBase::FaustLink" />
+  <field id="top1::modules::PropertyBase::name" name="name">
+    <type name="std::string" />
+  </field>
+  <field id="top1::modules::PropertyBase::store" name="store">
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::modules::PropertyBase::faustLink" name="faustLink">
+    <type name="FaustLink" ref="top1::modules::PropertyBase::FaustLink#top1::modules::PropertyBase::FaustLink" />
+  </field>
+  <constructor id="top1::modules::PropertyBase::PropertyBase" name="PropertyBase">
+    <argument id="top1::modules::PropertyBase::PropertyBase::name" name="name">
+      <type name="std::string" />
+    </argument>
+    <argument id="top1::modules::PropertyBase::PropertyBase::store" name="store">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </constructor>
+  <method id="top1::modules::PropertyBase::linkToFaust" name="linkToFaust" virtual="yes">
+    <brief>Link this property to a faust variable.
+</brief>
+    <doc>Should only be used from `FaustWrapper`,
+where it is handled automatically</doc>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::PropertyBase::linkToFaust::ptr" name="ptr">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::modules::PropertyBase::linkToFaust::isOutput" name="isOutput">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </method>
+  <method id="top1::modules::PropertyBase::makeNode" name="makeNode" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="tree::Node" />
+    </return>
+  </method>
+  <method id="top1::modules::PropertyBase::readNode" name="readNode" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::PropertyBase::readNode::n" name="n">
+      <type name="tree::Node" qualifier=" const &amp;" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::PropertyBase::reset" name="reset" virtual="yes">
+    <brief>Reset to inital value</brief>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::PropertyBase::updateFaust" name="updateFaust" virtual="yes">
+    <brief>Update the linked faust variable.
+</brief>
+    <doc>When the faust link uses this property as an input, call this from
+`set`, `step` etc.</doc>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+</struct>

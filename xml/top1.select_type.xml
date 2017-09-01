@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::select_type" name="select_type" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>has member type `type` which is `T1` if b is `true`,
+otherwise it is `T2`</brief>
+  <templatenontypeparameter id="top1::select_type::b" name="b">
+    <type builtin="yes" name="bool" />
+  </templatenontypeparameter>
+  <templatetypeparameter id="top1::select_type::T1" name="T1" />
+  <templatetypeparameter id="top1::select_type::T2" name="T2" />
+</structtemplate>

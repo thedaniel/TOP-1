@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::ui::WaveformWidget" name="WaveformWidget" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
+  </base>
+  <templatetypeparameter id="top1::ui::WaveformWidget::Container" name="Container" />
+  <struct name="iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+  <field id="top1::ui::WaveformWidget::viewRange" name="viewRange">
+    <type name="WaveformWidget&lt;Container&gt;::Range" />
+  </field>
+  <field id="top1::ui::WaveformWidget::lineCol" name="lineCol">
+    <type name="drawing::Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </field>
+  <field id="top1::ui::WaveformWidget::minPx" name="minPx">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::ui::WaveformWidget::scale" name="scale">
+    <type builtin="yes" name="float" />
+  </field>
+  <constructor id="top1::ui::WaveformWidget::WaveformWidget&lt;Container&gt;" name="WaveformWidget&lt;Container&gt;" />
+  <constructor id="top1::ui::WaveformWidget::WaveformWidget&lt;Container&gt;" name="WaveformWidget&lt;Container&gt;">
+    <argument id="top1::ui::WaveformWidget::WaveformWidget&lt;Container&gt;::wf" name="wf">
+      <type name="std::shared_ptr&lt;_Tp&gt;" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::WaveformWidget&lt;Container&gt;::s" name="s">
+      <type name="drawing::Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::WaveformWidget::draw" name="draw" override="yes" virtual="yes">
+    <brief>*************************************
+*************************************</brief>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::draw::" name="">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="drawing::Drawable::draw" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable::draw" />
+  </method>
+  <method id="top1::ui::WaveformWidget::drawRange" name="drawRange">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::drawRange::" name="">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::drawRange::range" name="range">
+      <type name="WaveformWidget&lt;Container&gt;::Range" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::drawRange::" name="">
+      <type name="drawing::Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::drawRange" name="drawRange">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::drawRange::ctx" name="ctx">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::drawRange::range" name="range">
+      <type name="WaveformWidget&lt;Container&gt;::Range" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::begin::range" name="range">
+      <type name="WaveformWidget&lt;Container&gt;::Range" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::end::range" name="range">
+      <type name="WaveformWidget&lt;Container&gt;::Range" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::point" name="point">
+    <undocumented-return />
+    <return>
+      <type name="drawing::Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::point::idx" name="idx">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+</classtemplate>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::TapeScreen" interface="true" name="TapeScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::Tapedeck&gt;" />
+  </base>
+</class>

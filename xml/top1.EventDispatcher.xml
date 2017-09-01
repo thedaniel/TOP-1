@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate abstract="true" id="top1::EventDispatcher" name="EventDispatcher" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::EventDispatcher::Args" name="Args" />
+  <constructor abstract="yes" id="top1::EventDispatcher::EventDispatcher&lt;Args...&gt;" name="EventDispatcher&lt;Args...&gt;" />
+  <method id="top1::EventDispatcher::add" name="add">
+    <undocumented-return />
+    <return>
+      <type name="uint" />
+    </return>
+    <argument id="top1::EventDispatcher::add::handler" name="handler">
+      <type name="EventDispatcher&lt;Args&gt;::handler_type" />
+    </argument>
+  </method>
+  <method id="top1::EventDispatcher::remove" name="remove">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::EventDispatcher::remove::i" name="i">
+      <type builtin="yes" name="unsigned int" />
+    </argument>
+  </method>
+  <method id="top1::EventDispatcher::runAll" name="runAll">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::EventDispatcher::runAll::args" name="args">
+      <type name="Args..." />
+    </argument>
+  </method>
+  <method id="top1::EventDispatcher::operator+=" name="operator+=">
+    <undocumented-return />
+    <return>
+      <type name="uint" />
+    </return>
+    <argument id="top1::EventDispatcher::operator+=::h" name="h">
+      <type name="EventDispatcher&lt;Args&gt;::handler_type" qualifier=" const &amp;" />
+    </argument>
+  </method>
+</classtemplate>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::is_iterator" name="is_iterator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Extends `std::true_type` if `iter` is an iterator over `type`,
+with category of at least `category`
+</brief>
+  <doc>Checks `std::iterator_traits`</doc>
+  <base access="public">
+    <type name="std::false_type" />
+  </base>
+  <templatetypeparameter id="top1::is_iterator::iter" name="iter" />
+  <templatetypeparameter id="top1::is_iterator::type" name="type" />
+  <templatetypeparameter id="top1::is_iterator::category" name="category" />
+  <templatetypeparameter id="top1::is_iterator::Enable" name="Enable" />
+</structtemplate>

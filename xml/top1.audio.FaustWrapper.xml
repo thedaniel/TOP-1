@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::audio::FaustWrapper" name="FaustWrapper" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="modules::SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice" />
+  <subclass access="public" name="modules::Metronome" ref="top1::modules::Metronome#top1::modules::Metronome" />
+  <subclass access="public" name="modules::FaustSynthModule" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule" />
+  <field id="top1::audio::FaustWrapper::fDSP" name="fDSP">
+    <type name="dsp" qualifier="*" />
+  </field>
+  <constructor id="top1::audio::FaustWrapper::FaustWrapper" name="FaustWrapper" />
+  <constructor abstract="yes" id="top1::audio::FaustWrapper::FaustWrapper" name="FaustWrapper">
+    <argument id="top1::audio::FaustWrapper::FaustWrapper::DSP" name="DSP">
+      <type name="dsp" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustWrapper::FaustWrapper::data" name="data">
+      <type name="modules::Properties" qualifier=" &amp;" ref="top1::modules::Properties#top1::modules::Properties" />
+    </argument>
+  </constructor>
+  <destructor id="top1::audio::FaustWrapper::~FaustWrapper" name="~FaustWrapper" virtual="yes" />
+  <method id="top1::audio::FaustWrapper::process" name="process" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustWrapper::process::data" name="data">
+      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+  <field access="protected" id="top1::audio::FaustWrapper::opts" name="opts">
+    <type name="FaustOptions" ref="top1::audio::FaustOptions#top1::audio::FaustOptions" />
+  </field>
+  <field access="protected" id="top1::audio::FaustWrapper::inBuffer" name="inBuffer">
+    <type builtin="yes" name="float" qualifier="**" />
+  </field>
+  <field access="protected" id="top1::audio::FaustWrapper::outBuffer" name="outBuffer">
+    <type builtin="yes" name="float" qualifier="**" />
+  </field>
+  <method abstract="yes" access="protected" id="top1::audio::FaustWrapper::initBuffers" name="initBuffers" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" access="protected" id="top1::audio::FaustWrapper::postBuffers" name="postBuffers" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustWrapper::postBuffers::" name="">
+      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+  <method abstract="yes" access="protected" id="top1::audio::FaustWrapper::prepBuffers" name="prepBuffers" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustWrapper::prepBuffers::" name="">
+      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+</class>

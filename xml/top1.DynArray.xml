@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::DynArray" name="DynArray" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::DynArray::T" name="T" />
+  <templatetypeparameter id="top1::DynArray::A" name="A">
+    <default>
+      <type name="T" />
+    </default>
+  </templatetypeparameter>
+  <templatetypeparameter id="top1::DynArray" />
+  <class name="iterator" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+  <class name="const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+  <constructor id="top1::DynArray::DynArray&lt;T, A, type-parameter-0-2&gt;" name="DynArray&lt;T, A, type-parameter-0-2&gt;">
+    <argument id="top1::DynArray::DynArray&lt;T, A, type-parameter-0-2&gt;::size" name="size">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </constructor>
+  <destructor id="top1::DynArray::~DynArray&lt;T, A, type-parameter-0-2&gt;" name="~DynArray&lt;T, A, type-parameter-0-2&gt;" virtual="yes" />
+  <method id="top1::DynArray::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </return>
+  </method>
+  <method id="top1::DynArray::data" name="data">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::pointer" />
+    </return>
+  </method>
+  <method id="top1::DynArray::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::reference" />
+    </return>
+    <argument id="top1::DynArray::operator[]::index" name="index">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::reference" qualifier=" const" />
+    </return>
+    <argument id="top1::DynArray::operator[]::index" name="index">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::iterator" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::iterator" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::cbegin" name="cbegin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::cend" name="cend">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::rbegin" name="rbegin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::rend" name="rend">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::rbegin" name="rbegin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::crbegin" name="crbegin">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::rend" name="rend">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::crend" name="crend">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_reverse_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::resize" name="resize">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::DynArray::resize::size" name="size">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::clear" name="clear">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::DynArray::copyFrom" name="copyFrom">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::DynArray::copyFrom::loc" name="loc">
+      <type name="DynArray&lt;T, A, typename&gt;::pointer" />
+    </argument>
+    <argument id="top1::DynArray::copyFrom::n" name="n">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+</classtemplate>

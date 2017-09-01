@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::ui::MainUI" name="MainUI" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  </base>
+  <field id="top1::ui::MainUI::keys" name="keys">
+    <type name="PressedKeys" />
+  </field>
+  <field id="top1::ui::MainUI::defaultScreen" name="defaultScreen">
+    <type name="DefaultScreen" ref="top1::ui::DefaultScreen#top1::ui::DefaultScreen" />
+  </field>
+  <field id="top1::ui::MainUI::currentScreen" name="currentScreen">
+    <type name="Screen" qualifier="*" ref="top1::ui::Screen#top1::ui::Screen" />
+  </field>
+  <field id="top1::ui::MainUI::uiThread" name="uiThread">
+    <type name="std::thread" />
+  </field>
+  <constructor id="top1::ui::MainUI::MainUI" name="MainUI" />
+  <constructor abstract="yes" id="top1::ui::MainUI::MainUI" name="MainUI">
+    <argument id="top1::ui::MainUI::MainUI::" name="">
+      <type name="MainUI" qualifier=" &amp;" ref="top1::ui::MainUI#top1::ui::MainUI" />
+    </argument>
+  </constructor>
+  <constructor abstract="yes" id="top1::ui::MainUI::MainUI" name="MainUI">
+    <argument id="top1::ui::MainUI::MainUI::" name="">
+      <type name="MainUI &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::ui::MainUI::display" name="display">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::MainUI::display::screen" name="screen">
+      <type name="Screen" qualifier=" &amp;" ref="top1::ui::Screen#top1::ui::Screen" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::ui::MainUI::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::MainUI::draw::ctx" name="ctx">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="drawing::Drawable::draw" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable::draw" />
+  </method>
+  <method abstract="yes" id="top1::ui::MainUI::exit" name="exit" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Screen::exit" ref="top1::ui::Screen#top1::ui::Screen::exit" />
+  </method>
+  <method abstract="yes" id="top1::ui::MainUI::init" name="init" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Screen::init" ref="top1::ui::Screen#top1::ui::Screen::init" />
+  </method>
+  <method abstract="yes" id="top1::ui::MainUI::keypress" name="keypress" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::MainUI::keypress::key" name="key">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+    <override name="Screen::keypress" ref="top1::ui::Screen#top1::ui::Screen::keypress" />
+  </method>
+  <method abstract="yes" id="top1::ui::MainUI::keyrelease" name="keyrelease" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::MainUI::keyrelease::key" name="key">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+    <override name="Screen::keyrelease" ref="top1::ui::Screen#top1::ui::Screen::keyrelease" />
+  </method>
+</class>

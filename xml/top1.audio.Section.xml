@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::audio::Section" name="Section" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::audio::Section::T" name="T" />
+  <field id="top1::audio::Section::in" name="in">
+    <type name="T" />
+  </field>
+  <field id="top1::audio::Section::out" name="out">
+    <type name="T" />
+  </field>
+  <constructor id="top1::audio::Section::Section&lt;T&gt;" name="Section&lt;T&gt;" />
+  <constructor id="top1::audio::Section::Section&lt;T&gt;" name="Section&lt;T&gt;">
+    <argument id="top1::audio::Section::Section&lt;T&gt;::in" name="in">
+      <type name="T" />
+    </argument>
+    <argument id="top1::audio::Section::Section&lt;T&gt;::out" name="out">
+      <type name="T" />
+    </argument>
+  </constructor>
+  <conversionfunction id="top1::audio::Section::operator bool" name="operator bool">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </conversionfunction>
+  <method id="top1::audio::Section::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="T" />
+    </return>
+  </method>
+  <method id="top1::audio::Section::contains" name="contains">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::audio::Section::contains::element" name="element">
+      <type name="const T" qualifier=" const" />
+    </argument>
+  </method>
+  <method id="top1::audio::Section::contains" name="contains">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::audio::Section::contains::other" name="other">
+      <type name="Section&lt;T&gt;" qualifier=" const &amp;" ref="top1::audio::Section#top1::audio::Section" />
+    </argument>
+  </method>
+  <enum anonymous="yes" id="top1::audio::Section::Overlap" name="Overlap">
+    <enumvalue id="top1::audio::Section::None" name="None" value="0" />
+    <enumvalue id="top1::audio::Section::Contains" name="Contains" value="0" />
+    <enumvalue id="top1::audio::Section::Contained" name="Contained" value="0" />
+    <enumvalue id="top1::audio::Section::ContainsIn" name="ContainsIn" value="0" />
+    <enumvalue id="top1::audio::Section::ContainsOut" name="ContainsOut" value="0" />
+  </enum>
+  <method id="top1::audio::Section::overlaps" name="overlaps">
+    <undocumented-return />
+    <return>
+      <type name="Section&lt;T&gt;::Overlap" ref="top1::audio::Section#top1::audio::Section::Overlap" />
+    </return>
+    <argument id="top1::audio::Section::overlaps::other" name="other">
+      <type name="Section&lt;T&gt;" qualifier=" const &amp;" ref="top1::audio::Section#top1::audio::Section" />
+    </argument>
+  </method>
+</structtemplate>

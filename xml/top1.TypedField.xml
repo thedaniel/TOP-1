@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::TypedField" name="TypedField" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="File::Field" ref="top1::File::Field#top1::File::Field" />
+  </base>
+  <templatetypeparameter id="top1::TypedField::T" name="T" />
+  <field id="top1::TypedField::data" name="data">
+    <type name="T" qualifier="*" />
+  </field>
+  <constructor id="top1::TypedField::TypedField&lt;T&gt;" name="TypedField&lt;T&gt;">
+    <argument id="top1::TypedField::TypedField&lt;T&gt;::data" name="data">
+      <type name="T" qualifier="*" />
+    </argument>
+  </constructor>
+  <method id="top1::TypedField::size" name="size" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="size_t" />
+    </return>
+    <override name="File::Field::size" ref="top1::File::Field#top1::File::Field::size" />
+  </method>
+  <method id="top1::TypedField::read" name="read" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TypedField::read::file" name="file">
+      <type name="File" qualifier="*" ref="top1::File#top1::File" />
+    </argument>
+    <override name="File::Field::read" ref="top1::File::Field#top1::File::Field::read" />
+  </method>
+  <method id="top1::TypedField::write" name="write" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TypedField::write::file" name="file">
+      <type name="File" qualifier="*" ref="top1::File#top1::File" />
+    </argument>
+    <override name="File::Field::write" ref="top1::File::Field#top1::File::Field::write" />
+  </method>
+</structtemplate>

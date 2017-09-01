@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::Null" name="Null" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <method id="top1::tree::Null::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator!=::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+  <method id="top1::tree::Null::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator&lt;::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+  <method id="top1::tree::Null::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator&lt;=::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+  <method id="top1::tree::Null::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator==::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+  <method id="top1::tree::Null::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator&gt;::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+  <method id="top1::tree::Null::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Null::operator&gt;=::lhs" name="lhs">
+      <type name="Null" qualifier=" const &amp;" ref="top1::tree::Null#top1::tree::Null" />
+    </argument>
+  </method>
+</struct>

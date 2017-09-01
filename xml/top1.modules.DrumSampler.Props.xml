@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::DrumSampler::Props" interface="true" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <struct name="VoiceData" ref="top1::modules::DrumSampler::Props::VoiceData#top1::modules::DrumSampler::Props::VoiceData" />
+  <field id="top1::modules::DrumSampler::Props::sampleName" name="sampleName">
+    <type name="Property&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::modules::mode::def, true, top1::modules::mode::plain_set_mode&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;" />
+  </field>
+  <field id="top1::modules::DrumSampler::Props::voiceData" name="voiceData">
+    <type name="std::array&lt;top1::modules::DrumSampler::Props::VoiceData, 24&gt;" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::DrumSampler::Props::Props" name="Props" />
+  <constructor abstract="yes" id="top1::modules::DrumSampler::Props::Props" name="Props">
+    <argument id="top1::modules::DrumSampler::Props::Props::" name="">
+      <type name="Props" qualifier=" &amp;" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
+    </argument>
+  </constructor>
+  <constructor abstract="yes" id="top1::modules::DrumSampler::Props::Props" name="Props">
+    <argument id="top1::modules::DrumSampler::Props::Props::" name="">
+      <type name="Props &amp;&amp;" />
+    </argument>
+  </constructor>
+</struct>

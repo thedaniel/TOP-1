@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::SimpleDrumVoice::Props::Osc" name="Osc" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::freq" name="freq">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::noiseLvl" name="noiseLvl">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::toneDecay" name="toneDecay">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::cutoff" name="cutoff">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::filterSwitch" name="filterSwitch">
+    <type name="Property&lt;bool, top1::modules::mode::def, true, top1::modules::mode::toggle_mode&gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::Osc::decayGraph" name="decayGraph">
+    <type name="Property&lt;float, top1::modules::mode::def, false, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+</struct>

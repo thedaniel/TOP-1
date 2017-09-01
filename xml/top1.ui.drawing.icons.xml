@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::ui::drawing::icons" name="icons" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <struct name="Arrow" ref="top1::ui::drawing::icons::Arrow#top1::ui::drawing::icons::Arrow">
+    <brief>A simple arrow</brief>
+  </struct>
+  <struct name="Icon" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon" />
+  <struct name="Note" ref="top1::ui::drawing::icons::Note#top1::ui::drawing::icons::Note">
+    <brief>A musical note</brief>
+  </struct>
+</namespace>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::Mixer::Props" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <struct name="TrackInfo" ref="top1::modules::Mixer::Props::TrackInfo#top1::modules::Mixer::Props::TrackInfo" />
+  <field id="top1::modules::Mixer::Props::tracks" name="tracks">
+    <type name="std::array&lt;top1::modules::Mixer::Props::TrackInfo, 4&gt;" />
+  </field>
+</struct>

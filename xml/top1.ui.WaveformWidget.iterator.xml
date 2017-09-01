@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::WaveformWidget::iterator" name="iterator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::ui::WaveformWidget::iterator::w" name="w">
+    <type name="WaveformWidget" qualifier=" const &amp;" ref="top1::ui::WaveformWidget#top1::ui::WaveformWidget" />
+  </field>
+  <field id="top1::ui::WaveformWidget::iterator::idx" name="idx">
+    <type name="uint" />
+  </field>
+  <field id="top1::ui::WaveformWidget::iterator::inc" name="inc">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::ui::WaveformWidget::iterator::range" name="range">
+    <type name="WaveformWidget&lt;Container&gt;::Range" />
+  </field>
+  <constructor id="top1::ui::WaveformWidget::iterator::iterator" name="iterator">
+    <argument id="top1::ui::WaveformWidget::iterator::iterator::w" name="w">
+      <type name="WaveformWidget" qualifier=" const &amp;" ref="top1::ui::WaveformWidget#top1::ui::WaveformWidget" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::iterator::iterator::idx" name="idx">
+      <type name="uint" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::iterator::iterator::inc" name="inc">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::WaveformWidget::iterator::iterator::r" name="r">
+      <type name="WaveformWidget&lt;Container&gt;::Range" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::WaveformWidget::iterator::get" name="get">
+    <undocumented-return />
+    <return>
+      <type name="drawing::Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator!=::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="drawing::Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator++" name="operator++">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator--" name="operator--">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator&lt;::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator&lt;=::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator==::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator&gt;::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+  <method id="top1::ui::WaveformWidget::iterator::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::WaveformWidget::iterator::operator&gt;=::rhs" name="rhs">
+      <type name="WaveformWidget&lt;Container&gt;::iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+    </argument>
+  </method>
+</struct>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::TapeBuffer::TapeSliceSet" name="TapeSliceSet" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::TapeBuffer::TapeSliceSet::changed" name="changed">
+    <type builtin="yes" name="bool" />
+  </field>
+  <constructor id="top1::TapeBuffer::TapeSliceSet::TapeSliceSet" name="TapeSliceSet" />
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::addSlice" name="addSlice">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::addSlice::slice" name="slice">
+      <type name="TapeSlice" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::TapeSliceSet::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="std::_Rb_tree_const_iterator&lt;top1::audio::Section&lt;int&gt; &gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::current" name="current">
+    <undocumented-return />
+    <return>
+      <type name="TapeSlice" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::current::time" name="time">
+      <type name="TapeTime" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::cut" name="cut">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::cut::time" name="time">
+      <type name="TapeTime" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::TapeSliceSet::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="std::_Rb_tree_const_iterator&lt;top1::audio::Section&lt;int&gt; &gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::erase" name="erase">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::erase::slice" name="slice">
+      <type name="TapeSlice" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::glue" name="glue">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::glue::s1" name="s1">
+      <type name="TapeSlice" />
+    </argument>
+    <argument id="top1::TapeBuffer::TapeSliceSet::glue::s2" name="s2">
+      <type name="TapeSlice" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::inSlice" name="inSlice">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::inSlice::time" name="time">
+      <type name="TapeTime" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::TapeSliceSet::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="unsigned long" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::TapeBuffer::TapeSliceSet::slicesIn" name="slicesIn">
+    <undocumented-return />
+    <return>
+      <type name="std::vector&lt;top1::audio::Section&lt;int&gt;, std::allocator&lt;top1::audio::Section&lt;int&gt; &gt; &gt;" />
+    </return>
+    <argument id="top1::TapeBuffer::TapeSliceSet::slicesIn::area" name="area">
+      <type name="audio::Section&lt;int&gt;" />
+    </argument>
+  </method>
+</class>

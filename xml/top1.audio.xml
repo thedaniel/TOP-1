@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::audio" name="audio" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <namespace name="detail" ref="top1::audio::detail#top1::audio::detail" />
+  <structtemplate name="AudioFrame" ref="top1::audio::AudioFrame#top1::audio::AudioFrame">
+    <templatenontypeparameter id="top1::audio::AudioFrame::nChannels" name="nChannels">
+      <type builtin="yes" name="int" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::audio::AudioFrame::SampleType" name="SampleType" />
+  </structtemplate>
+  <class name="FaustOptions" ref="top1::audio::FaustOptions#top1::audio::FaustOptions" />
+  <class name="FaustWrapper" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper" />
+  <struct name="Graph" ref="top1::audio::Graph#top1::audio::Graph" />
+  <structtemplate name="is_audio_processor" ref="top1::audio::is_audio_processor#top1::audio::is_audio_processor">
+    <templatetypeparameter id="top1::audio::is_audio_processor" />
+  </structtemplate>
+  <class name="JackAudio" ref="top1::audio::JackAudio#top1::audio::JackAudio" />
+  <struct name="ProcessData" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+  <classtemplate name="RTBuffer" ref="top1::audio::RTBuffer#top1::audio::RTBuffer">
+    <templatetypeparameter id="top1::audio::RTBuffer::T" name="T" />
+  </classtemplate>
+  <structtemplate name="Section" ref="top1::audio::Section#top1::audio::Section">
+    <templatetypeparameter id="top1::audio::Section::T" name="T" />
+  </structtemplate>
+  <class name="Waveform" ref="top1::audio::Waveform#top1::audio::Waveform" />
+  <function id="top1::audio::mix" name="mix">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+    <argument id="top1::audio::mix::A" name="A">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::mix::B" name="B">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::mix::ratio" name="ratio">
+      <type builtin="yes" name="float" />
+    </argument>
+  </function>
+</namespace>

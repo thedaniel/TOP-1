@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::TapeFile::SlicesChunk" name="SlicesChunk" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="File::Chunk" ref="top1::File::Chunk#top1::File::Chunk" />
+  </base>
+  <field id="top1::TapeFile::SlicesChunk::tracks" name="tracks">
+    <type class="array" size="4">
+      <type name="TrackSlicesChunk" ref="top1::TapeFile::TrackSlicesChunk#top1::TapeFile::TrackSlicesChunk" />
+    </type>
+  </field>
+  <constructor id="top1::TapeFile::SlicesChunk::SlicesChunk" name="SlicesChunk" />
+</struct>

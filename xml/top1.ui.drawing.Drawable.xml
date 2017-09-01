@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::ui::drawing::Drawable" name="Drawable" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  <subclass access="public" name="SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
+  <constructor id="top1::ui::drawing::Drawable::Drawable" name="Drawable" />
+  <method abstract="yes" id="top1::ui::drawing::Drawable::draw" name="draw" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::drawing::Drawable::draw::ctx" name="ctx">
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+  </method>
+</class>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::SynthSampleScreen" interface="true" name="SynthSampleScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::SynthSampler&gt;" />
+  </base>
+  <field id="top1::modules::SynthSampleScreen::topWF" name="topWF">
+    <type name="std::shared_ptr&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::SynthSampleScreen::topWFW" name="topWFW">
+    <type name="ui::WaveformWidget&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::SynthSampleScreen::mainWF" name="mainWF">
+    <type name="std::shared_ptr&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::SynthSampleScreen::mainWFW" name="mainWFW">
+    <type name="ui::WaveformWidget&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::SynthSampleScreen::SynthSampleScreen" name="SynthSampleScreen">
+    <argument id="top1::modules::SynthSampleScreen::SynthSampleScreen::" name="">
+      <type name="SynthSampler" qualifier="*" ref="top1::modules::SynthSampler#top1::modules::SynthSampler" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::modules::SynthSampleScreen::draw" name="draw" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SynthSampleScreen::draw::" name="">
+      <type name="ui::drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::SynthSampleScreen::keypress" name="keypress" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::modules::SynthSampleScreen::keypress::" name="">
+      <type name="ui::Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::SynthSampleScreen::rotary" name="rotary" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SynthSampleScreen::rotary::" name="">
+      <type name="ui::RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+    </argument>
+  </method>
+</class>

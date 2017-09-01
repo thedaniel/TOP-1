@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1" name="top1" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <functiontemplate id="top1::&lt;deduction guide for overloaded&gt;" name="&lt;deduction guide for overloaded&gt;">
+    <undocumented-return />
+    <return>
+      <type name="overloaded&lt;L1, Ls&gt;" ref="top1::overloaded#top1::overloaded" />
+    </return>
+    <argument id="top1::&lt;deduction guide for overloaded&gt;::" name="">
+      <type name="Ls..." />
+    </argument>
+    <templatetypeparameter id="top1::&lt;deduction guide for overloaded&gt;::Ls" name="Ls" />
+  </functiontemplate>
+  <functiontemplate id="top1::generate_sequence" name="generate_sequence">
+    <undocumented-return />
+    <return>
+      <type name="auto" />
+    </return>
+    <argument id="top1::generate_sequence::gen" name="gen">
+      <type name="Func &amp;&amp;" />
+    </argument>
+    <templatenontypeparameter id="top1::generate_sequence::n" name="n">
+      <type builtin="yes" name="int" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::generate_sequence::Func" name="Func" />
+  </functiontemplate>
+  <functiontemplate id="top1::join_strings" name="join_strings">
+    <brief>Joins a sequence of strings, separating them using `js`</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::string" />
+    </return>
+    <argument id="top1::join_strings::b" name="b">
+      <type name="StrIterator" />
+    </argument>
+    <argument id="top1::join_strings::e" name="e">
+      <type name="StrIterator" />
+    </argument>
+    <argument id="top1::join_strings::js" name="js">
+      <type name="std::string_view" />
+    </argument>
+    <templatetypeparameter id="top1::join_strings::StrIterator" name="StrIterator" />
+  </functiontemplate>
+  <functiontemplate id="top1::match" name="match">
+    <brief>Pattern matching for std::variant</brief>
+    <undocumented-return />
+    <return>
+      <type name="decltype(auto)" />
+    </return>
+    <argument id="top1::match::v" name="v">
+      <type name="Var &amp;&amp;" />
+    </argument>
+    <argument id="top1::match::ls" name="ls">
+      <type name="Lambdas..." />
+    </argument>
+    <templatetypeparameter id="top1::match::Var" name="Var" />
+    <templatetypeparameter id="top1::match::Lambdas" name="Lambdas" />
+  </functiontemplate>
+  <namespace name="audio" ref="top1::audio#top1::audio" />
+  <namespace name="detail" ref="top1::detail#top1::detail" />
+  <namespace name="math" ref="top1::math#top1::math" />
+  <namespace name="midi" ref="top1::midi#top1::midi" />
+  <namespace name="modules" ref="top1::modules#top1::modules" />
+  <namespace name="timer" ref="top1::timer#top1::timer" />
+  <namespace name="tree" ref="top1::tree#top1::tree" />
+  <namespace name="ui" ref="top1::ui#top1::ui" />
+  <templatetypeparameter id="top1::L1" name="L1" />
+  <templatetypeparameter id="top1::Ls" name="Ls" />
+  <classtemplate name="BasicPolyPtr" ref="top1::BasicPolyPtr#top1::BasicPolyPtr">
+    <templatetypeparameter id="top1::BasicPolyPtr::PtrType" name="PtrType" />
+    <templatetypeparameter id="top1::BasicPolyPtr::Base" name="Base" />
+    <templatetypeparameter id="top1::BasicPolyPtr::Types" name="Types" />
+  </classtemplate>
+  <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
+    <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
+    <templatenontypeparameter id="top1::BasicSndFile::_channels" name="_channels">
+      <type name="uint" />
+    </templatenontypeparameter>
+  </classtemplate>
+  <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
+    <brief>TODO: Documentation</brief>
+  </class>
+  <class name="DataFile" ref="top1::DataFile#top1::DataFile" />
+  <classtemplate name="DynArray" ref="top1::DynArray#top1::DynArray">
+    <templatetypeparameter id="top1::DynArray::T" name="T" />
+    <templatetypeparameter id="top1::DynArray::A" name="A">
+      <default>
+        <type name="T" />
+      </default>
+    </templatetypeparameter>
+    <templatetypeparameter id="top1::DynArray" />
+  </classtemplate>
+  <classtemplate name="EventDispatcher" ref="top1::EventDispatcher#top1::EventDispatcher">
+    <templatetypeparameter id="top1::EventDispatcher::Args" name="Args" />
+  </classtemplate>
+  <class name="File" ref="top1::File#top1::File" />
+  <class name="Globals" ref="top1::Globals#top1::Globals" />
+  <structtemplate name="is_iterator" ref="top1::is_iterator#top1::is_iterator">
+    <brief>Extends `std::true_type` if `iter` is an iterator over `type`,
+with category of at least `category`
+</brief>
+    <templatetypeparameter id="top1::is_iterator::iter" name="iter" />
+    <templatetypeparameter id="top1::is_iterator::type" name="type" />
+    <templatetypeparameter id="top1::is_iterator::category" name="category" />
+    <templatetypeparameter id="top1::is_iterator::Enable" name="Enable" />
+  </structtemplate>
+  <structtemplate name="is_number" ref="top1::is_number#top1::is_number">
+    <brief>Any arithmetic type except bool</brief>
+    <templatetypeparameter id="top1::is_number::T" name="T" />
+    <templatetypeparameter id="top1::is_number::Enable" name="Enable" />
+  </structtemplate>
+  <class name="JsonFile" ref="top1::JsonFile#top1::JsonFile" />
+  <structtemplate name="overloaded" ref="top1::overloaded#top1::overloaded">
+    <brief>Overload lambdas</brief>
+  </structtemplate>
+  <struct name="ReadException" ref="top1::ReadException#top1::ReadException" />
+  <classtemplate name="result" ref="top1::result#top1::result">
+    <brief>A sum type, holding either an Ok value, or an Err
+</brief>
+    <templatetypeparameter id="top1::result::ok_t" name="ok_t" />
+    <templatetypeparameter id="top1::result::err_t" name="err_t" />
+  </classtemplate>
+  <structtemplate name="select_type" ref="top1::select_type#top1::select_type">
+    <brief>has member type `type` which is `T1` if b is `true`,
+otherwise it is `T2`</brief>
+    <templatenontypeparameter id="top1::select_type::b" name="b">
+      <type builtin="yes" name="bool" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::select_type::T1" name="T1" />
+    <templatetypeparameter id="top1::select_type::T2" name="T2" />
+  </structtemplate>
+  <class name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer" />
+  <class name="TapeDiskThread" ref="top1::TapeDiskThread#top1::TapeDiskThread" />
+  <class name="TapeFile" ref="top1::TapeFile#top1::TapeFile" />
+  <struct name="Track" ref="top1::Track#top1::Track" />
+  <structtemplate name="TypedField" ref="top1::TypedField#top1::TypedField">
+    <templatetypeparameter id="top1::TypedField::T" name="T" />
+  </structtemplate>
+</namespace>

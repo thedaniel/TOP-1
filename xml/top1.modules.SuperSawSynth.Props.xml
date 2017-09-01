@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::SuperSawSynth::Props" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <struct anonymous="yes" id="top1::modules::SuperSawSynth::Props::(anonymous::1)" name="(anonymous::1)">
+    <base access="public">
+      <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+    </base>
+    <field id="top1::modules::SuperSawSynth::Props::attack" name="attack">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+    <field id="top1::modules::SuperSawSynth::Props::decay" name="decay">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+    <field id="top1::modules::SuperSawSynth::Props::sustain" name="sustain">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+    <field id="top1::modules::SuperSawSynth::Props::release" name="release">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+  </struct>
+  <field id="top1::modules::SuperSawSynth::Props::envelope" name="envelope">
+    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/modules/super-saw-synth.hpp:15:7)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
+  </field>
+  <field id="top1::modules::SuperSawSynth::Props::key" name="key">
+    <type name="Property&lt;int, top1::modules::mode::def, false, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SuperSawSynth::Props::velocity" name="velocity">
+    <type name="Property&lt;float, top1::modules::mode::def, false, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SuperSawSynth::Props::trigger" name="trigger">
+    <type name="Property&lt;bool, top1::modules::mode::def, false, top1::modules::mode::toggle_mode&gt;" />
+  </field>
+</struct>

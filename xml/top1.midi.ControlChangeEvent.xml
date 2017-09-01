@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::midi::ControlChangeEvent" name="ControlChangeEvent" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="MidiEvent" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+  </base>
+  <field id="top1::midi::ControlChangeEvent::controler" name="controler">
+    <type builtin="yes" name="int" />
+  </field>
+  <field id="top1::midi::ControlChangeEvent::value" name="value">
+    <type builtin="yes" name="int" />
+  </field>
+  <constructor id="top1::midi::ControlChangeEvent::ControlChangeEvent" name="ControlChangeEvent">
+    <argument id="top1::midi::ControlChangeEvent::ControlChangeEvent::event" name="event">
+      <type name="MidiEvent" qualifier=" const &amp;" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+    </argument>
+  </constructor>
+</struct>

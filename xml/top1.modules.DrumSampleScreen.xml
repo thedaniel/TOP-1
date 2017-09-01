@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::DrumSampleScreen" interface="true" name="DrumSampleScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::DrumSampler&gt;" />
+  </base>
+  <field id="top1::modules::DrumSampleScreen::topWF" name="topWF">
+    <type name="std::shared_ptr&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::DrumSampleScreen::topWFW" name="topWFW">
+    <type name="ui::WaveformWidget&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::DrumSampleScreen::mainWF" name="mainWF">
+    <type name="std::shared_ptr&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <field id="top1::modules::DrumSampleScreen::mainWFW" name="mainWFW">
+    <type name="ui::WaveformWidget&lt;top1::audio::Waveform&gt;" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::DrumSampleScreen::DrumSampleScreen" name="DrumSampleScreen">
+    <argument id="top1::modules::DrumSampleScreen::DrumSampleScreen::" name="">
+      <type name="DrumSampler" qualifier="*" ref="top1::modules::DrumSampler#top1::modules::DrumSampler" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::modules::DrumSampleScreen::draw" name="draw" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::DrumSampleScreen::draw::" name="">
+      <type name="ui::drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::DrumSampleScreen::keypress" name="keypress" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::modules::DrumSampleScreen::keypress::" name="">
+      <type name="ui::Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::DrumSampleScreen::rotary" name="rotary" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::DrumSampleScreen::rotary::" name="">
+      <type name="ui::RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+    </argument>
+  </method>
+</class>

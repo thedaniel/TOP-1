@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::String" name="String" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::tree::String::value" name="value">
+    <type name="std::string" />
+  </field>
+  <constructor id="top1::tree::String::String" name="String">
+    <argument id="top1::tree::String::String::s" name="s">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::tree::String::String" name="String">
+    <argument id="top1::tree::String::String::s" name="s">
+      <type name="std::string &amp;&amp;" />
+    </argument>
+  </constructor>
+  <conversionfunction id="top1::tree::String::operator basic_string" name="operator basic_string">
+    <undocumented-return />
+    <return>
+      <type name="std::string" />
+    </return>
+  </conversionfunction>
+  <method id="top1::tree::String::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator!=::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+  <method id="top1::tree::String::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator&lt;::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+  <method id="top1::tree::String::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator&lt;=::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+  <method id="top1::tree::String::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator==::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+  <method id="top1::tree::String::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator&gt;::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+  <method id="top1::tree::String::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::String::operator&gt;=::lhs" name="lhs">
+      <type name="String" qualifier=" const &amp;" ref="top1::tree::String#top1::tree::String" />
+    </argument>
+  </method>
+</struct>

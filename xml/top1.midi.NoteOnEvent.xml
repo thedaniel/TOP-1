@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::midi::NoteOnEvent" name="NoteOnEvent" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="MidiEvent" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+  </base>
+  <field id="top1::midi::NoteOnEvent::key" name="key">
+    <type builtin="yes" name="int" />
+  </field>
+  <field id="top1::midi::NoteOnEvent::velocity" name="velocity">
+    <type builtin="yes" name="int" />
+  </field>
+  <constructor id="top1::midi::NoteOnEvent::NoteOnEvent" name="NoteOnEvent">
+    <argument id="top1::midi::NoteOnEvent::NoteOnEvent::event" name="event">
+      <type name="MidiEvent" qualifier=" const &amp;" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+    </argument>
+  </constructor>
+</struct>

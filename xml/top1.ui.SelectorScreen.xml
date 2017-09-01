@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::ui::SelectorScreen" name="SelectorScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  </base>
+  <templatetypeparameter id="top1::ui::SelectorScreen::ItemType" name="ItemType" />
+  <field id="top1::ui::SelectorScreen::selectedItem" name="selectedItem">
+    <type builtin="yes" name="int" />
+  </field>
+  <struct name="Item" ref="top1::ui::SelectorScreen::Item#top1::ui::SelectorScreen::Item" />
+  <field id="top1::ui::SelectorScreen::items" name="items">
+    <type name="SelectorScreen&lt;ItemType&gt;::ItemMap" />
+  </field>
+  <field id="top1::ui::SelectorScreen::itemColour" name="itemColour">
+    <type name="drawing::Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </field>
+  <field id="top1::ui::SelectorScreen::onSelect" name="onSelect">
+    <type name="std::function&lt;void ()&gt;" />
+  </field>
+  <constructor id="top1::ui::SelectorScreen::SelectorScreen&lt;ItemType&gt;" name="SelectorScreen&lt;ItemType&gt;">
+    <brief>*************************************
+*************************************</brief>
+    <argument id="top1::ui::SelectorScreen::SelectorScreen&lt;ItemType&gt;::" name="">
+      <type name="SelectorScreen&lt;ItemType&gt;::ItemMap" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::ui::SelectorScreen::SelectorScreen&lt;ItemType&gt;::" name="">
+      <type name="drawing::Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::SelectorScreen::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::draw::" name="">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="drawing::Drawable::draw" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable::draw" />
+  </method>
+  <method id="top1::ui::SelectorScreen::keypress" name="keypress" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::keypress::" name="">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+    <override name="Screen::keypress" ref="top1::ui::Screen#top1::ui::Screen::keypress" />
+  </method>
+  <method id="top1::ui::SelectorScreen::rotary" name="rotary" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::rotary::" name="">
+      <type name="RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+    </argument>
+    <override name="Screen::rotary" ref="top1::ui::Screen#top1::ui::Screen::rotary" />
+  </method>
+  <method id="top1::ui::SelectorScreen::prev" name="prev">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::prev::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::ui::SelectorScreen::next" name="next">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::next::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::ui::SelectorScreen::select" name="select">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::SelectorScreen::select::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+</classtemplate>

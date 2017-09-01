@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::Mixer::Props::TrackInfo" name="TrackInfo" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <field id="top1::modules::Mixer::Props::TrackInfo::level" name="level">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Mixer::Props::TrackInfo::pan" name="pan">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Mixer::Props::TrackInfo::muted" name="muted">
+    <type name="Property&lt;bool, top1::modules::mode::def, true, top1::modules::mode::toggle_mode&gt;" />
+  </field>
+</struct>

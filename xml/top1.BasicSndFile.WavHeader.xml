@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct access="protected" id="top1::BasicSndFile::WavHeader" name="WavHeader" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="File::Chunk" ref="top1::File::Chunk#top1::File::Chunk" />
+  </base>
+  <field id="top1::BasicSndFile::WavHeader::format" name="format">
+    <type name="File::ChunkFCC" ref="top1::File::ChunkFCC#top1::File::ChunkFCC" />
+  </field>
+  <constructor id="top1::BasicSndFile::WavHeader::WavHeader" name="WavHeader" />
+</struct>

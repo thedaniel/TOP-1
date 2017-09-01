@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::tree" name="tree" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <functiontemplate id="top1::tree::makeNode" name="makeNode">
+    <undocumented-return />
+    <return>
+      <type name="Node" />
+    </return>
+    <argument id="top1::tree::makeNode::" name="">
+      <type name="T" />
+    </argument>
+    <templatetypeparameter id="top1::tree::makeNode::T" name="T" />
+  </functiontemplate>
+  <functiontemplate id="top1::tree::readNode" name="readNode">
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;_Tp&gt;" />
+    </return>
+    <argument id="top1::tree::readNode::" name="">
+      <type name="Node" />
+    </argument>
+    <templatetypeparameter id="top1::tree::readNode::T" name="T" />
+  </functiontemplate>
+  <struct name="Array" ref="top1::tree::Array#top1::tree::Array" />
+  <struct name="Bool" ref="top1::tree::Bool#top1::tree::Bool" />
+  <struct name="Float" ref="top1::tree::Float#top1::tree::Float" />
+  <struct name="Int" ref="top1::tree::Int#top1::tree::Int" />
+  <struct name="Map" ref="top1::tree::Map#top1::tree::Map" />
+  <struct name="Null" ref="top1::tree::Null#top1::tree::Null" />
+  <struct name="String" ref="top1::tree::String#top1::tree::String" />
+  <function id="top1::tree::makeNode" name="makeNode">
+    <undocumented-return />
+    <return>
+      <type name="Node" />
+    </return>
+    <argument id="top1::tree::makeNode::f" name="f">
+      <type builtin="yes" name="float" />
+    </argument>
+  </function>
+  <function id="top1::tree::makeNode" name="makeNode">
+    <undocumented-return />
+    <return>
+      <type name="Node" />
+    </return>
+    <argument id="top1::tree::makeNode::i" name="i">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="top1::tree::makeNode" name="makeNode">
+    <undocumented-return />
+    <return>
+      <type name="Node" />
+    </return>
+    <argument id="top1::tree::makeNode::b" name="b">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </function>
+  <function id="top1::tree::makeNode" name="makeNode">
+    <undocumented-return />
+    <return>
+      <type name="Node" />
+    </return>
+    <argument id="top1::tree::makeNode::s" name="s">
+      <type name="std::string" />
+    </argument>
+  </function>
+  <function id="top1::tree::readNode" name="readNode">
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;float&gt;" />
+    </return>
+    <argument id="top1::tree::readNode::n" name="n">
+      <type name="Node" />
+    </argument>
+  </function>
+  <function id="top1::tree::readNode" name="readNode">
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;int&gt;" />
+    </return>
+    <argument id="top1::tree::readNode::n" name="n">
+      <type name="Node" />
+    </argument>
+  </function>
+  <function id="top1::tree::readNode" name="readNode">
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;bool&gt;" />
+    </return>
+    <argument id="top1::tree::readNode::n" name="n">
+      <type name="Node" />
+    </argument>
+  </function>
+  <function id="top1::tree::readNode" name="readNode">
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;" />
+    </return>
+    <argument id="top1::tree::readNode::n" name="n">
+      <type name="Node" />
+    </argument>
+  </function>
+</namespace>

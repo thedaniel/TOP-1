@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::timer::ScopeTimer" name="ScopeTimer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>RAII based timer. Times from creation until destruction.</brief>
+  <field id="top1::timer::ScopeTimer::timer" name="timer">
+    <type name="Timer" qualifier=" &amp;" ref="top1::timer::Timer#top1::timer::Timer" />
+  </field>
+  <constructor id="top1::timer::ScopeTimer::ScopeTimer" name="ScopeTimer">
+    <argument id="top1::timer::ScopeTimer::ScopeTimer::t" name="t">
+      <type name="Timer" qualifier=" &amp;" ref="top1::timer::Timer#top1::timer::Timer" />
+    </argument>
+  </constructor>
+  <destructor id="top1::timer::ScopeTimer::~ScopeTimer" name="~ScopeTimer" />
+</struct>

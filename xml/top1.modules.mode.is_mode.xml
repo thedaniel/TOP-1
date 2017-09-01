@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::modules::mode::is_mode" name="is_mode" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="std::true_type" />
+  </base>
+  <templatetypeparameter id="top1::modules::mode::is_mode::T" name="T" />
+</structtemplate>

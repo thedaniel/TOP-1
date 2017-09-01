@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::MainColour" name="MainColour" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </base>
+  <field id="top1::ui::drawing::MainColour::dimmed" name="dimmed">
+    <type name="Colour" qualifier=" const" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </field>
+  <constructor id="top1::ui::drawing::MainColour::MainColour" name="MainColour">
+    <argument id="top1::ui::drawing::MainColour::MainColour::basic" name="basic">
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::MainColour::MainColour" name="MainColour">
+    <argument id="top1::ui::drawing::MainColour::MainColour::basic" name="basic">
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+    <argument id="top1::ui::drawing::MainColour::MainColour::dimmed" name="dimmed">
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::MainColour::MainColour" name="MainColour">
+    <argument id="top1::ui::drawing::MainColour::MainColour::basic" name="basic">
+      <type name="uint32" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::MainColour::MainColour" name="MainColour">
+    <argument id="top1::ui::drawing::MainColour::MainColour::basic" name="basic">
+      <type name="uint32" />
+    </argument>
+    <argument id="top1::ui::drawing::MainColour::MainColour::dimmed" name="dimmed">
+      <type name="uint32" />
+    </argument>
+  </constructor>
+</struct>

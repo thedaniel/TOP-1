@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::audio::ProcessData::AudioData" name="AudioData" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::audio::ProcessData::AudioData::outL" name="outL">
+    <type name="RTBuffer&lt;float&gt;" />
+  </field>
+  <field id="top1::audio::ProcessData::AudioData::outR" name="outR">
+    <type name="RTBuffer&lt;float&gt;" />
+  </field>
+  <field id="top1::audio::ProcessData::AudioData::input" name="input">
+    <type name="RTBuffer&lt;float&gt;" />
+  </field>
+  <field id="top1::audio::ProcessData::AudioData::proc" name="proc">
+    <type name="RTBuffer&lt;float&gt;" />
+  </field>
+</struct>

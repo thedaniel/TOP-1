@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::modules::mode::wrap_mode" name="wrap_mode" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::modules::mode::wrap_mode::T" name="T" />
+  <constructor id="top1::modules::mode::wrap_mode::wrap_mode&lt;T&gt;" name="wrap_mode&lt;T&gt;">
+    <argument id="top1::modules::mode::wrap_mode::wrap_mode&lt;T&gt;::min" name="min">
+      <type name="T" />
+    </argument>
+    <argument id="top1::modules::mode::wrap_mode::wrap_mode&lt;T&gt;::max" name="max">
+      <type name="T" />
+    </argument>
+    <argument id="top1::modules::mode::wrap_mode::wrap_mode&lt;T&gt;::step" name="step">
+      <type name="T" />
+    </argument>
+  </constructor>
+  <method id="top1::modules::mode::wrap_mode::step" name="step">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::mode::wrap_mode::step::steps" name="steps">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::modules::mode::wrap_mode::set" name="set">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::mode::wrap_mode::set::v" name="v">
+      <type name="T" />
+    </argument>
+  </method>
+  <method id="top1::modules::mode::wrap_mode::normalize" name="normalize">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <field id="top1::modules::mode::wrap_mode::min" name="min">
+    <type name="T" />
+  </field>
+  <field id="top1::modules::mode::wrap_mode::max" name="max">
+    <type name="T" />
+  </field>
+  <field id="top1::modules::mode::wrap_mode::stepSize" name="stepSize">
+    <type name="T" />
+  </field>
+  <field id="top1::modules::mode::wrap_mode::value" name="value">
+    <type name="T" qualifier="*" />
+  </field>
+</structtemplate>

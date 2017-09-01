@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::ui::drawing" name="drawing" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::ui::drawing::FONT_BOLD" name="FONT_BOLD">
+    <type name="NanoCanvas::Font" />
+  </variable>
+  <variable id="top1::ui::drawing::FONT_LIGHT" name="FONT_LIGHT">
+    <type name="NanoCanvas::Font" />
+  </variable>
+  <variable id="top1::ui::drawing::FONT_NORM" name="FONT_NORM">
+    <type name="NanoCanvas::Font" />
+  </variable>
+  <variable id="top1::ui::drawing::HEIGHT" name="HEIGHT">
+    <type name="uint" qualifier=" const" />
+  </variable>
+  <variable id="top1::ui::drawing::WIDTH" name="WIDTH">
+    <type name="uint" qualifier=" const" />
+  </variable>
+  <namespace name="Colours" ref="top1::ui::drawing::Colours#top1::ui::drawing::Colours" />
+  <namespace name="icons" ref="top1::ui::drawing::icons#top1::ui::drawing::icons" />
+  <class name="Canvas" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+  <struct name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  <class name="Drawable" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+  <struct name="MainColour" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  <struct name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+  <struct name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+  <class name="SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
+  <function id="top1::ui::drawing::initUtils" name="initUtils">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::drawing::initUtils::canvas" name="canvas">
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+  </function>
+</namespace>

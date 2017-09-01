@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::Colour" name="Colour" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="MainColour" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  <field id="top1::ui::drawing::Colour::r" name="r">
+    <type name="uint8_t" />
+  </field>
+  <field id="top1::ui::drawing::Colour::g" name="g">
+    <type name="uint8_t" />
+  </field>
+  <field id="top1::ui::drawing::Colour::b" name="b">
+    <type name="uint8_t" />
+  </field>
+  <field id="top1::ui::drawing::Colour::a" name="a">
+    <type name="uint8_t" />
+  </field>
+  <constructor id="top1::ui::drawing::Colour::Colour" name="Colour">
+    <argument id="top1::ui::drawing::Colour::Colour::" name="">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::Colour::" name="">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::Colour::" name="">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::Colour::a" name="a">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::Colour::Colour" name="Colour">
+    <argument id="top1::ui::drawing::Colour::Colour::data" name="data">
+      <type name="uint32" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::Colour::Colour" name="Colour" />
+  <method id="top1::ui::drawing::Colour::brighten" name="brighten">
+    <undocumented-return />
+    <return>
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </return>
+    <argument id="top1::ui::drawing::Colour::brighten::amount" name="amount">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Colour::dim" name="dim">
+    <undocumented-return />
+    <return>
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </return>
+    <argument id="top1::ui::drawing::Colour::dim::amount" name="amount">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Colour::mix" name="mix">
+    <undocumented-return />
+    <return>
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </return>
+    <argument id="top1::ui::drawing::Colour::mix::c" name="c">
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::mix::ratio" name="ratio">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <conversionfunction id="top1::ui::drawing::Colour::operator Color" name="operator Color">
+    <undocumented-return />
+    <return>
+      <type name="NanoCanvas::Color" />
+    </return>
+  </conversionfunction>
+</struct>

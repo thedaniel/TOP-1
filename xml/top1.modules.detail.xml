@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::modules::detail" name="detail" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <function id="top1::modules::detail::displayScreen" name="displayScreen">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::detail::displayScreen::" name="">
+      <type name="ui::Screen" qualifier=" &amp;" ref="top1::ui::Screen#top1::ui::Screen" />
+    </argument>
+  </function>
+  <function id="top1::modules::detail::isShiftPressed" name="isShiftPressed">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </function>
+</namespace>

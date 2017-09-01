@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::timer" name="timer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::timer::dispatcher" name="dispatcher">
+    <type name="GlobalTimerDispatcher" ref="top1::timer::GlobalTimerDispatcher#top1::timer::GlobalTimerDispatcher" />
+  </variable>
+  <struct name="GlobalTimerDispatcher" ref="top1::timer::GlobalTimerDispatcher#top1::timer::GlobalTimerDispatcher">
+    <brief>Writes to file on destruction.</brief>
+  </struct>
+  <struct name="ScopeTimer" ref="top1::timer::ScopeTimer#top1::timer::ScopeTimer">
+    <brief>RAII based timer. Times from creation until destruction.</brief>
+  </struct>
+  <struct name="Timer" ref="top1::timer::Timer#top1::timer::Timer" />
+  <struct name="TimerDispatcher" ref="top1::timer::TimerDispatcher#top1::timer::TimerDispatcher" />
+</namespace>

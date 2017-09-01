@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::midi" name="midi" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::midi::freqTable" name="freqTable">
+    <type class="array" size="128">
+      <type builtin="yes" name="float" />
+    </type>
+  </variable>
+  <struct name="ControlChangeEvent" ref="top1::midi::ControlChangeEvent#top1::midi::ControlChangeEvent" />
+  <struct name="MidiEvent" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+  <struct name="NoteOffEvent" ref="top1::midi::NoteOffEvent#top1::midi::NoteOffEvent" />
+  <struct name="NoteOnEvent" ref="top1::midi::NoteOnEvent#top1::midi::NoteOnEvent" />
+  <function id="top1::midi::generateFreqTable" name="generateFreqTable">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::midi::generateFreqTable::tuning" name="tuning">
+      <type builtin="yes" name="float" />
+    </argument>
+  </function>
+</namespace>

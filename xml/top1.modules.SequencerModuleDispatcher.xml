@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::SequencerModuleDispatcher" name="SequencerModuleDispatcher" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ModuleDispatcher&lt;top1::modules::SequencerModule&gt;" />
+  </base>
+  <method id="top1::modules::SequencerModuleDispatcher::process" name="process">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SequencerModuleDispatcher::process::data" name="data">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+</class>

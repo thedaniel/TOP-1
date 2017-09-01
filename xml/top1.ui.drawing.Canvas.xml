@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::ui::drawing::Canvas" name="Canvas" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="NanoCanvas::Canvas" />
+  </base>
+  <methodtemplate id="top1::ui::drawing::Canvas::bzCurve" name="bzCurve">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::bzCurve::pointB" name="pointB">
+      <type name="It" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::bzCurve::pointE" name="pointE">
+      <type name="It" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::bzCurve::f" name="f">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::bzCurve::t" name="t">
+      <type builtin="yes" name="float" />
+    </argument>
+    <templatetypeparameter id="top1::ui::drawing::Canvas::bzCurve::It" name="It" />
+  </methodtemplate>
+  <methodtemplate id="top1::ui::drawing::Canvas::roundedCurve" name="roundedCurve">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::roundedCurve::pointB" name="pointB">
+      <type name="It" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::roundedCurve::pointE" name="pointE">
+      <type name="It" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::roundedCurve::maxR" name="maxR">
+      <type builtin="yes" name="float" />
+    </argument>
+    <templatetypeparameter id="top1::ui::drawing::Canvas::roundedCurve::It" name="It" />
+  </methodtemplate>
+  <constructor id="top1::ui::drawing::Canvas::Canvas" name="Canvas">
+    <argument id="top1::ui::drawing::Canvas::Canvas::ctx" name="ctx">
+      <type name="NVGcontext" qualifier="*" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::Canvas::size" name="size">
+      <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::Canvas::scaleRatio" name="scaleRatio">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::Canvas::Canvas" name="Canvas">
+    <argument id="top1::ui::drawing::Canvas::Canvas::ctx" name="ctx">
+      <type name="NVGcontext" qualifier="*" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::Canvas::width" name="width">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::Canvas::height" name="height">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::Canvas::scaleRatio" name="scaleRatio">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::drawing::Canvas::arc" name="arc">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::arc::cp" name="cp">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arc::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arc::sAngle" name="sAngle">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arc::eAngle" name="eAngle">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arc::counterclockwise" name="counterclockwise">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::arcTo" name="arcTo">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::arcTo::p1" name="p1">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arcTo::p2" name="p2">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::arcTo::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::bezierCurveTo" name="bezierCurveTo">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::bezierCurveTo::cp1" name="cp1">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::bezierCurveTo::cp2" name="cp2">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::bezierCurveTo::end" name="end">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::callAt" name="callAt">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::callAt::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::callAt::f" name="f">
+      <type name="std::function&lt;void ()&gt;" qualifier=" const &amp;" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::circle" name="circle">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::circle::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::circle::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::clearColor" name="clearColor">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::clearColor::color" name="color">
+      <type name="Colour" qualifier=" const &amp;" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::debugDot" name="debugDot">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::debugDot::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::debugDot::c" name="c">
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::draw" name="draw">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::draw::d" name="d">
+      <type name="Drawable" qualifier=" &amp;" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::drawAt" name="drawAt">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::drawAt::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::drawAt::d" name="d">
+      <type name="Drawable" qualifier=" &amp;" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::ellipse" name="ellipse">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::ellipse::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::ellipse::rx" name="rx">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::ellipse::ry" name="ry">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::fill" name="fill">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::fill::color" name="color">
+      <type name="Colour" qualifier=" const &amp;" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::fillStyle" name="fillStyle">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::fillStyle::color" name="color">
+      <type name="Colour" qualifier=" const &amp;" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::fillText" name="fillText">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::fillText::text" name="text">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::fillText::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::fillText::rowWidth" name="rowWidth">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::lineTo" name="lineTo">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::lineTo::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::moveTo" name="moveTo">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::moveTo::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::quadraticCurveTo" name="quadraticCurveTo">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::quadraticCurveTo::control" name="control">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::quadraticCurveTo::end" name="end">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::rect" name="rect">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::rect::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::rect::s" name="s">
+      <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::rotateAround" name="rotateAround">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::rotateAround::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::rotateAround::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::roundedRect" name="roundedRect">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::roundedRect::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::roundedRect::s" name="s">
+      <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::roundedRect::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::stroke" name="stroke">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::stroke::color" name="color">
+      <type name="Colour" qualifier=" const &amp;" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::strokeStyle" name="strokeStyle">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::strokeStyle::color" name="color">
+      <type name="Colour" qualifier=" const &amp;" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::translate" name="translate">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::translate::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+  </method>
+</class>

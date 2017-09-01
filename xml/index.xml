@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='utf-8'?>
+<index xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <namespace name="top1" ref="top1#top1">
+    <namespace name="audio" ref="top1::audio#top1::audio">
+      <namespace name="detail" ref="top1::audio::detail#top1::audio::detail" />
+      <structtemplate name="AudioFrame" ref="top1::audio::AudioFrame#top1::audio::AudioFrame">
+        <templatenontypeparameter id="top1::audio::AudioFrame::nChannels" name="nChannels">
+          <type builtin="yes" name="int" />
+        </templatenontypeparameter>
+        <templatetypeparameter id="top1::audio::AudioFrame::SampleType" name="SampleType" />
+      </structtemplate>
+      <class name="FaustOptions" ref="top1::audio::FaustOptions#top1::audio::FaustOptions" />
+      <class name="FaustWrapper" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper" />
+      <struct name="Graph" ref="top1::audio::Graph#top1::audio::Graph" />
+      <structtemplate name="is_audio_processor" ref="top1::audio::is_audio_processor#top1::audio::is_audio_processor">
+        <templatetypeparameter id="top1::audio::is_audio_processor" />
+      </structtemplate>
+      <class name="JackAudio" ref="top1::audio::JackAudio#top1::audio::JackAudio" />
+      <struct name="ProcessData" ref="top1::audio::ProcessData#top1::audio::ProcessData">
+        <struct name="AudioData" ref="top1::audio::ProcessData::AudioData#top1::audio::ProcessData::AudioData" />
+      </struct>
+      <classtemplate name="RTBuffer" ref="top1::audio::RTBuffer#top1::audio::RTBuffer">
+        <templatetypeparameter id="top1::audio::RTBuffer::T" name="T" />
+      </classtemplate>
+      <structtemplate name="Section" ref="top1::audio::Section#top1::audio::Section">
+        <templatetypeparameter id="top1::audio::Section::T" name="T" />
+      </structtemplate>
+      <class name="Waveform" ref="top1::audio::Waveform#top1::audio::Waveform" />
+    </namespace>
+    <namespace name="detail" ref="top1::detail#top1::detail">
+      <structtemplate name="FunctionArgs" ref="top1::detail::FunctionArgs#top1::detail::FunctionArgs">
+        <templatetypeparameter id="top1::detail::FunctionArgs::T" name="T" />
+      </structtemplate>
+      <structtemplate name="FunctionArgsBase" ref="top1::detail::FunctionArgsBase#top1::detail::FunctionArgsBase">
+        <templatetypeparameter id="top1::detail::FunctionArgsBase::R" name="R" />
+        <templatetypeparameter id="top1::detail::FunctionArgsBase::Args" name="Args" />
+      </structtemplate>
+      <structtemplate name="getTypeIndex" ref="top1::detail::getTypeIndex#top1::detail::getTypeIndex">
+        <templatetypeparameter id="top1::detail::getTypeIndex::Base" name="Base" />
+        <templatetypeparameter id="top1::detail::getTypeIndex::T" name="T" />
+        <templatetypeparameter id="top1::detail::getTypeIndex::Ts" name="Ts" />
+      </structtemplate>
+      <structtemplate name="smart_poly_storage" ref="top1::detail::smart_poly_storage#top1::detail::smart_poly_storage">
+        <templatetypeparameter id="top1::detail::smart_poly_storage::T" name="T" />
+      </structtemplate>
+    </namespace>
+    <namespace name="math" ref="top1::math#top1::math">
+      <struct name="vec" ref="top1::math::vec#top1::math::vec" />
+    </namespace>
+    <namespace name="midi" ref="top1::midi#top1::midi">
+      <struct name="ControlChangeEvent" ref="top1::midi::ControlChangeEvent#top1::midi::ControlChangeEvent" />
+      <struct name="MidiEvent" ref="top1::midi::MidiEvent#top1::midi::MidiEvent" />
+      <struct name="NoteOffEvent" ref="top1::midi::NoteOffEvent#top1::midi::NoteOffEvent" />
+      <struct name="NoteOnEvent" ref="top1::midi::NoteOnEvent#top1::midi::NoteOnEvent" />
+    </namespace>
+    <namespace name="modules" ref="top1::modules#top1::modules">
+      <namespace name="detail" ref="top1::modules::detail#top1::modules::detail" />
+      <namespace name="mode" ref="top1::modules::mode#top1::modules::mode">
+        <struct name="def" ref="top1::modules::mode::def#top1::modules::mode::def">
+          <brief>Pass to mode_for_tag, to get the default mode for a type
+Specialize `mode_for_tag` with at least this for each new type</brief>
+        </struct>
+        <struct name="exp" ref="top1::modules::mode::exp#top1::modules::mode::exp">
+          <brief>Like `sized_step`, But steps exponentially</brief>
+        </struct>
+        <structtemplate name="exp_mode" ref="top1::modules::mode::exp_mode#top1::modules::mode::exp_mode">
+          <templatetypeparameter id="top1::modules::mode::exp_mode::T" name="T" />
+        </structtemplate>
+        <structtemplate name="is_mode" ref="top1::modules::mode::is_mode#top1::modules::mode::is_mode">
+          <templatetypeparameter id="top1::modules::mode::is_mode::T" name="T" />
+        </structtemplate>
+        <structtemplate name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag">
+          <brief>Has a member typedef `mode`, selected based on the type and the tag.
+Specialize this for each mode</brief>
+          <templatetypeparameter id="top1::modules::mode::mode_for_tag::T" name="T" />
+          <templatetypeparameter id="top1::modules::mode::mode_for_tag::Tag" name="Tag" />
+          <templatetypeparameter id="top1::modules::mode::mode_for_tag::Enable" name="Enable" />
+        </structtemplate>
+        <struct name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag" />
+        <struct name="mode_for_tag" ref="top1::modules::mode::mode_for_tag#top1::modules::mode::mode_for_tag" />
+        <struct name="plain_set" ref="top1::modules::mode::plain_set#top1::modules::mode::plain_set">
+          <brief>Non-numeric</brief>
+        </struct>
+        <structtemplate name="plain_set_mode" ref="top1::modules::mode::plain_set_mode#top1::modules::mode::plain_set_mode">
+          <templatetypeparameter id="top1::modules::mode::plain_set_mode::T" name="T" />
+        </structtemplate>
+        <struct name="sized_step" ref="top1::modules::mode::sized_step#top1::modules::mode::sized_step">
+          <brief>Steps up/down by `step`, until `min`/`max` is reached, then stops</brief>
+        </struct>
+        <structtemplate name="sized_step_mode" ref="top1::modules::mode::sized_step_mode#top1::modules::mode::sized_step_mode">
+          <templatetypeparameter id="top1::modules::mode::sized_step_mode::T" name="T" />
+        </structtemplate>
+        <struct name="toggle" ref="top1::modules::mode::toggle#top1::modules::mode::toggle">
+          <brief>Default mode for Bool</brief>
+        </struct>
+        <struct name="toggle_mode" ref="top1::modules::mode::toggle_mode#top1::modules::mode::toggle_mode" />
+        <struct name="wrap" ref="top1::modules::mode::wrap#top1::modules::mode::wrap">
+          <brief>Like `sized_step`, but wraps around when `max` or `min` reached</brief>
+        </struct>
+        <structtemplate name="wrap_mode" ref="top1::modules::mode::wrap_mode#top1::modules::mode::wrap_mode">
+          <templatetypeparameter id="top1::modules::mode::wrap_mode::T" name="T" />
+        </structtemplate>
+      </namespace>
+      <class name="DrumSampler" ref="top1::modules::DrumSampler#top1::modules::DrumSampler">
+        <struct name="Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props">
+          <struct name="VoiceData" ref="top1::modules::DrumSampler::Props::VoiceData#top1::modules::DrumSampler::Props::VoiceData" />
+        </struct>
+      </class>
+      <class name="DrumSampleScreen" ref="top1::modules::DrumSampleScreen#top1::modules::DrumSampleScreen" />
+      <class name="EffectModule" ref="top1::modules::EffectModule#top1::modules::EffectModule" />
+      <class name="EffectModuleDispatcher" ref="top1::modules::EffectModuleDispatcher#top1::modules::EffectModuleDispatcher" />
+      <class name="FaustSynthModule" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule" />
+      <class name="Metronome" ref="top1::modules::Metronome#top1::modules::Metronome">
+        <struct name="Props" ref="top1::modules::Metronome::Props#top1::modules::Metronome::Props" />
+      </class>
+      <class name="MetronomeScreen" ref="top1::modules::MetronomeScreen#top1::modules::MetronomeScreen" />
+      <class name="Mixer" ref="top1::modules::Mixer#top1::modules::Mixer">
+        <struct name="Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props">
+          <struct name="TrackInfo" ref="top1::modules::Mixer::Props::TrackInfo#top1::modules::Mixer::Props::TrackInfo" />
+        </struct>
+      </class>
+      <class name="MixerScreen" ref="top1::modules::MixerScreen#top1::modules::MixerScreen" />
+      <class name="Module" ref="top1::modules::Module#top1::modules::Module" />
+      <classtemplate name="ModuleDispatcher" ref="top1::modules::ModuleDispatcher#top1::modules::ModuleDispatcher">
+        <templatetypeparameter id="top1::modules::ModuleDispatcher::M" name="M" />
+      </classtemplate>
+      <class name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+      <classtemplate name="Property" ref="top1::modules::Property#top1::modules::Property">
+        <templatetypeparameter id="top1::modules::Property::T" name="T" />
+        <templatetypeparameter id="top1::modules::Property::mode_tag" name="mode_tag">
+          <default>
+            <type name="top1::modules::mode::def" ref="top1::modules::mode::def#top1::modules::mode::def" />
+          </default>
+        </templatetypeparameter>
+        <templatenontypeparameter id="top1::modules::Property::_store" name="_store">
+          <type builtin="yes" name="bool" />
+        </templatenontypeparameter>
+        <templatetypeparameter id="top1::modules::Property::mode_type" name="mode_type">
+          <default>
+            <type name="T" />
+          </default>
+        </templatetypeparameter>
+      </classtemplate>
+      <struct name="PropertyBase" ref="top1::modules::PropertyBase#top1::modules::PropertyBase">
+        <struct name="FaustLink" ref="top1::modules::PropertyBase::FaustLink#top1::modules::PropertyBase::FaustLink" />
+      </struct>
+      <class name="SequencerModule" ref="top1::modules::SequencerModule#top1::modules::SequencerModule" />
+      <class name="SequencerModuleDispatcher" ref="top1::modules::SequencerModuleDispatcher#top1::modules::SequencerModuleDispatcher" />
+      <class name="SimpleDrumsModule" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
+      <class name="SimpleDrumsScreen" ref="top1::modules::SimpleDrumsScreen#top1::modules::SimpleDrumsScreen" />
+      <class name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice">
+        <struct name="Props" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props">
+          <struct name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+        </struct>
+      </class>
+      <class name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth">
+        <struct name="Props" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props" />
+      </class>
+      <class name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+      <class name="SynthModuleDispatcher" ref="top1::modules::SynthModuleDispatcher#top1::modules::SynthModuleDispatcher" />
+      <class name="SynthSampler" ref="top1::modules::SynthSampler#top1::modules::SynthSampler">
+        <struct name="Props" ref="top1::modules::SynthSampler::Props#top1::modules::SynthSampler::Props" />
+      </class>
+      <class name="SynthSampleScreen" ref="top1::modules::SynthSampleScreen#top1::modules::SynthSampleScreen" />
+      <class name="Tapedeck" ref="top1::modules::Tapedeck#top1::modules::Tapedeck">
+        <struct name="Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
+        <struct name="State" ref="top1::modules::Tapedeck::State#top1::modules::Tapedeck::State" />
+      </class>
+      <class name="TapeScreen" ref="top1::modules::TapeScreen#top1::modules::TapeScreen" />
+    </namespace>
+    <namespace name="timer" ref="top1::timer#top1::timer">
+      <struct name="GlobalTimerDispatcher" ref="top1::timer::GlobalTimerDispatcher#top1::timer::GlobalTimerDispatcher">
+        <brief>Writes to file on destruction.</brief>
+      </struct>
+      <struct name="ScopeTimer" ref="top1::timer::ScopeTimer#top1::timer::ScopeTimer">
+        <brief>RAII based timer. Times from creation until destruction.</brief>
+      </struct>
+      <struct name="Timer" ref="top1::timer::Timer#top1::timer::Timer" />
+      <struct name="TimerDispatcher" ref="top1::timer::TimerDispatcher#top1::timer::TimerDispatcher" />
+    </namespace>
+    <namespace name="tree" ref="top1::tree#top1::tree">
+      <struct name="Array" ref="top1::tree::Array#top1::tree::Array" />
+      <struct name="Bool" ref="top1::tree::Bool#top1::tree::Bool" />
+      <struct name="Float" ref="top1::tree::Float#top1::tree::Float" />
+      <struct name="Int" ref="top1::tree::Int#top1::tree::Int" />
+      <struct name="Map" ref="top1::tree::Map#top1::tree::Map" />
+      <struct name="Null" ref="top1::tree::Null#top1::tree::Null" />
+      <struct name="String" ref="top1::tree::String#top1::tree::String" />
+    </namespace>
+    <namespace name="ui" ref="top1::ui#top1::ui">
+      <namespace name="drawing" ref="top1::ui::drawing#top1::ui::drawing">
+        <namespace name="Colours" ref="top1::ui::drawing::Colours#top1::ui::drawing::Colours" />
+        <namespace name="icons" ref="top1::ui::drawing::icons#top1::ui::drawing::icons">
+          <struct name="Arrow" ref="top1::ui::drawing::icons::Arrow#top1::ui::drawing::icons::Arrow">
+            <brief>A simple arrow</brief>
+          </struct>
+          <struct name="Icon" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon" />
+          <struct name="Note" ref="top1::ui::drawing::icons::Note#top1::ui::drawing::icons::Note">
+            <brief>A musical note</brief>
+          </struct>
+        </namespace>
+        <class name="Canvas" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+        <struct name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+        <class name="Drawable" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+        <struct name="MainColour" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+        <struct name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+        <struct name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+        <class name="SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
+      </namespace>
+      <class name="DefaultScreen" ref="top1::ui::DefaultScreen#top1::ui::DefaultScreen" />
+      <class name="MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
+      <classtemplate name="ModuleScreen" ref="top1::ui::ModuleScreen#top1::ui::ModuleScreen">
+        <templatetypeparameter id="top1::ui::ModuleScreen::M" name="M" />
+      </classtemplate>
+      <struct name="RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+      <class name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+      <classtemplate name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen">
+        <templatetypeparameter id="top1::ui::SelectorScreen::ItemType" name="ItemType" />
+        <struct name="Item" ref="top1::ui::SelectorScreen::Item#top1::ui::SelectorScreen::Item" />
+      </classtemplate>
+      <classtemplate name="WaveformWidget" ref="top1::ui::WaveformWidget#top1::ui::WaveformWidget">
+        <templatetypeparameter id="top1::ui::WaveformWidget::Container" name="Container" />
+        <struct name="iterator" ref="top1::ui::WaveformWidget::iterator#top1::ui::WaveformWidget::iterator" />
+      </classtemplate>
+      <class name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
+    </namespace>
+    <classtemplate name="BasicPolyPtr" ref="top1::BasicPolyPtr#top1::BasicPolyPtr">
+      <templatetypeparameter id="top1::BasicPolyPtr::PtrType" name="PtrType" />
+      <templatetypeparameter id="top1::BasicPolyPtr::Base" name="Base" />
+      <templatetypeparameter id="top1::BasicPolyPtr::Types" name="Types" />
+      <structtemplate name="visitor" ref="top1::BasicPolyPtr::visitor#top1::BasicPolyPtr::visitor">
+        <templatetypeparameter id="top1::BasicPolyPtr::visitor::Cases" name="Cases" />
+      </structtemplate>
+    </classtemplate>
+    <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
+      <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
+      <templatenontypeparameter id="top1::BasicSndFile::_channels" name="_channels">
+        <type name="uint" />
+      </templatenontypeparameter>
+      <struct name="WavHeader" ref="top1::BasicSndFile::WavHeader#top1::BasicSndFile::WavHeader" />
+      <struct name="WavFmt" ref="top1::BasicSndFile::WavFmt#top1::BasicSndFile::WavFmt" />
+      <struct name="AudioChunk" ref="top1::BasicSndFile::AudioChunk#top1::BasicSndFile::AudioChunk" />
+    </classtemplate>
+    <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
+      <brief>TODO: Documentation</brief>
+      <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
+    </class>
+    <class name="DataFile" ref="top1::DataFile#top1::DataFile" />
+    <classtemplate name="DynArray" ref="top1::DynArray#top1::DynArray">
+      <templatetypeparameter id="top1::DynArray::T" name="T" />
+      <templatetypeparameter id="top1::DynArray::A" name="A">
+        <default>
+          <type name="T" />
+        </default>
+      </templatetypeparameter>
+      <templatetypeparameter id="top1::DynArray" />
+      <class name="iterator" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+      <class name="const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </classtemplate>
+    <classtemplate name="EventDispatcher" ref="top1::EventDispatcher#top1::EventDispatcher">
+      <templatetypeparameter id="top1::EventDispatcher::Args" name="Args" />
+    </classtemplate>
+    <class name="File" ref="top1::File#top1::File">
+      <class name="Chunk" ref="top1::File::Chunk#top1::File::Chunk" />
+      <struct name="ChunkFCC" ref="top1::File::ChunkFCC#top1::File::ChunkFCC" />
+      <struct name="Error" ref="top1::File::Error#top1::File::Error" />
+      <struct name="Field" ref="top1::File::Field#top1::File::Field" />
+    </class>
+    <class name="Globals" ref="top1::Globals#top1::Globals" />
+    <structtemplate name="is_iterator" ref="top1::is_iterator#top1::is_iterator">
+      <brief>Extends `std::true_type` if `iter` is an iterator over `type`,
+with category of at least `category`
+</brief>
+      <templatetypeparameter id="top1::is_iterator::iter" name="iter" />
+      <templatetypeparameter id="top1::is_iterator::type" name="type" />
+      <templatetypeparameter id="top1::is_iterator::category" name="category" />
+      <templatetypeparameter id="top1::is_iterator::Enable" name="Enable" />
+    </structtemplate>
+    <structtemplate name="is_number" ref="top1::is_number#top1::is_number">
+      <brief>Any arithmetic type except bool</brief>
+      <templatetypeparameter id="top1::is_number::T" name="T" />
+      <templatetypeparameter id="top1::is_number::Enable" name="Enable" />
+    </structtemplate>
+    <class name="JsonFile" ref="top1::JsonFile#top1::JsonFile" />
+    <structtemplate name="overloaded" ref="top1::overloaded#top1::overloaded">
+      <brief>Overload lambdas</brief>
+    </structtemplate>
+    <struct name="ReadException" ref="top1::ReadException#top1::ReadException" />
+    <classtemplate name="result" ref="top1::result#top1::result">
+      <brief>A sum type, holding either an Ok value, or an Err
+</brief>
+      <templatetypeparameter id="top1::result::ok_t" name="ok_t" />
+      <templatetypeparameter id="top1::result::err_t" name="err_t" />
+      <struct name="result_except" ref="top1::result::result_except#top1::result::result_except" />
+    </classtemplate>
+    <structtemplate name="select_type" ref="top1::select_type#top1::select_type">
+      <brief>has member type `type` which is `T1` if b is `true`,
+otherwise it is `T2`</brief>
+      <templatenontypeparameter id="top1::select_type::b" name="b">
+        <type builtin="yes" name="bool" />
+      </templatenontypeparameter>
+      <templatetypeparameter id="top1::select_type::T1" name="T1" />
+      <templatetypeparameter id="top1::select_type::T2" name="T2" />
+    </structtemplate>
+    <class name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer">
+      <class name="CompareTapeSlice" ref="top1::TapeBuffer::CompareTapeSlice#top1::TapeBuffer::CompareTapeSlice" />
+      <struct name="RingBuffer" ref="top1::TapeBuffer::RingBuffer#top1::TapeBuffer::RingBuffer" />
+      <class name="TapeSliceSet" ref="top1::TapeBuffer::TapeSliceSet#top1::TapeBuffer::TapeSliceSet" />
+    </class>
+    <class name="TapeDiskThread" ref="top1::TapeDiskThread#top1::TapeDiskThread" />
+    <class name="TapeFile" ref="top1::TapeFile#top1::TapeFile">
+      <struct name="SliceData" ref="top1::TapeFile::SliceData#top1::TapeFile::SliceData" />
+      <struct name="SlicesChunk" ref="top1::TapeFile::SlicesChunk#top1::TapeFile::SlicesChunk" />
+      <struct name="TOP1Chunk" ref="top1::TapeFile::TOP1Chunk#top1::TapeFile::TOP1Chunk" />
+      <struct name="TrackSlicesChunk" ref="top1::TapeFile::TrackSlicesChunk#top1::TapeFile::TrackSlicesChunk" />
+    </class>
+    <struct name="Track" ref="top1::Track#top1::Track" />
+    <structtemplate name="TypedField" ref="top1::TypedField#top1::TypedField">
+      <templatetypeparameter id="top1::TypedField::T" name="T" />
+    </structtemplate>
+  </namespace>
+  <method id="readBytes" name="readBytes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="readBytes::data" name="data">
+      <type name="std::array&lt;top1::TapeFile::SliceData, 2048&gt;" qualifier=" &amp;" />
+    </argument>
+  </method>
+  <method id="writeBytes" name="writeBytes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="writeBytes::data" name="data">
+      <type name="std::array&lt;top1::TapeFile::SliceData, 2048&gt;" qualifier=" &amp;" />
+    </argument>
+  </method>
+</index>

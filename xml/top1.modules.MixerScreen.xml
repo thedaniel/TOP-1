@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::MixerScreen" interface="true" name="MixerScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::Mixer&gt;" />
+  </base>
+</class>

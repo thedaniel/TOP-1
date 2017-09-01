@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::timer::GlobalTimerDispatcher" name="GlobalTimerDispatcher" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Writes to file on destruction.</brief>
+  <base access="public">
+    <type name="TimerDispatcher" ref="top1::timer::TimerDispatcher#top1::timer::TimerDispatcher" />
+  </base>
+  <constructor id="top1::timer::GlobalTimerDispatcher::GlobalTimerDispatcher" name="GlobalTimerDispatcher" />
+  <destructor id="top1::timer::GlobalTimerDispatcher::~GlobalTimerDispatcher" name="~GlobalTimerDispatcher" virtual="yes" />
+</struct>

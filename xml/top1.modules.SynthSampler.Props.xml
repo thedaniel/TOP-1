@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct abstract="true" id="top1::modules::SynthSampler::Props" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <enum anonymous="yes" id="top1::modules::SynthSampler::Props::Mode" name="Mode">
+    <enumvalue id="top1::modules::SynthSampler::Props::Fwd" name="Fwd" value="0" />
+    <enumvalue id="top1::modules::SynthSampler::Props::FwdStop" name="FwdStop" value="1" />
+    <enumvalue id="top1::modules::SynthSampler::Props::FwdLoop" name="FwdLoop" value="2" />
+    <enumvalue id="top1::modules::SynthSampler::Props::Bwd" name="Bwd" value="-1" />
+    <enumvalue id="top1::modules::SynthSampler::Props::BwdStop" name="BwdStop" value="-2" />
+    <enumvalue id="top1::modules::SynthSampler::Props::BwdLoop" name="BwdLoop" value="-3" />
+  </enum>
+  <field id="top1::modules::SynthSampler::Props::sampleName" name="sampleName">
+    <type name="Property&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::modules::mode::def, true, top1::modules::mode::plain_set_mode&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::in" name="in">
+    <type name="Property&lt;int, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::out" name="out">
+    <type name="Property&lt;int, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::speed" name="speed">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::mode" name="mode">
+    <type name="Property&lt;int, top1::modules::mode::wrap, true, top1::modules::mode::wrap_mode&lt;int&gt; &gt;" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::playProgress" name="playProgress">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::modules::SynthSampler::Props::trigger" name="trigger">
+    <type builtin="yes" name="bool" />
+  </field>
+  <method id="top1::modules::SynthSampler::Props::bwd" name="bwd">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method id="top1::modules::SynthSampler::Props::fwd" name="fwd">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method id="top1::modules::SynthSampler::Props::length" name="length">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+  </method>
+  <method id="top1::modules::SynthSampler::Props::loop" name="loop">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::SynthSampler::Props::play" name="play">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::modules::SynthSampler::Props::stop" name="stop">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+</struct>

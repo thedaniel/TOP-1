@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::Track" name="Track" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <methodtemplate id="top1::Track::foreach" name="foreach" static="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::Track::foreach::f" name="f">
+      <type name="T" />
+    </argument>
+    <templatetypeparameter id="top1::Track::foreach::T" name="T" />
+    <templatetypeparameter id="top1::Track::foreach" />
+  </methodtemplate>
+  <field id="top1::Track::idx" name="idx">
+    <type name="uint" />
+  </field>
+  <constructor id="top1::Track::Track" name="Track" />
+  <method id="top1::Track::makeIdx" name="makeIdx" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="Track" ref="top1::Track#top1::Track" />
+    </return>
+    <argument id="top1::Track::makeIdx::idx" name="idx">
+      <type name="uint" />
+    </argument>
+  </method>
+  <method id="top1::Track::makeName" name="makeName" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="Track" ref="top1::Track#top1::Track" />
+    </return>
+    <argument id="top1::Track::makeName::name" name="name">
+      <type name="uint" />
+    </argument>
+  </method>
+  <method id="top1::Track::name" name="name">
+    <undocumented-return />
+    <return>
+      <type name="uint" />
+    </return>
+  </method>
+  <method id="top1::Track::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::Track::operator!=::other" name="other">
+      <type name="Track" qualifier=" &amp;" ref="top1::Track#top1::Track" />
+    </argument>
+  </method>
+  <method id="top1::Track::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::Track::operator==::other" name="other">
+      <type name="Track" qualifier=" &amp;" ref="top1::Track#top1::Track" />
+    </argument>
+  </method>
+  <method id="top1::Track::str" name="str">
+    <undocumented-return />
+    <return>
+      <type name="std::string" />
+    </return>
+  </method>
+</struct>

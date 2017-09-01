@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::ByteFile" name="ByteFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>TODO: Documentation</brief>
+  <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::read_bytes::" name="">
+      <type name="OutIter &amp;&amp;" />
+    </argument>
+    <argument id="top1::ByteFile::read_bytes::" name="">
+      <type name="OutIter &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes" />
+  </methodtemplate>
+  <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::read_bytes::" name="">
+      <type name="OutIter &amp;&amp;" />
+    </argument>
+    <argument id="top1::ByteFile::read_bytes::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+    <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::ByteFile::read_bytes" />
+  </methodtemplate>
+  <methodtemplate id="top1::ByteFile::write_bytes" name="write_bytes">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::write_bytes::" name="">
+      <type name="InIter &amp;&amp;" />
+    </argument>
+    <argument id="top1::ByteFile::write_bytes::" name="">
+      <type name="InIter &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes" />
+  </methodtemplate>
+  <methodtemplate id="top1::ByteFile::write_bytes" name="write_bytes">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::write_bytes::" name="">
+      <type name="InIter &amp;&amp;" />
+    </argument>
+    <argument id="top1::ByteFile::write_bytes::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+    <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
+    <templatetypeparameter id="top1::ByteFile::write_bytes" />
+  </methodtemplate>
+  <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
+  <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile" />
+  <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile">
+    <argument id="top1::ByteFile::ByteFile::" name="">
+      <type name="Path" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile">
+    <argument id="top1::ByteFile::ByteFile::" name="">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
+  </constructor>
+  <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile">
+    <argument id="top1::ByteFile::ByteFile::" name="">
+      <type name="ByteFile &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::ByteFile::close" name="close">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::flush" name="flush">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::is_open" name="is_open">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::open" name="open">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::open::" name="">
+      <type name="Path" qualifier=" const &amp;" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::operator=" name="operator=">
+    <undocumented-return />
+    <return>
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </return>
+    <argument id="top1::ByteFile::operator=::" name="">
+      <type name="ByteFile" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::position" name="position">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::read_file" name="read_file">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::seek" name="seek">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
+    </return>
+    <argument id="top1::ByteFile::seek::" name="">
+      <type name="Position" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::write_file" name="write_file">
+    <undocumented-return />
+    <return>
+      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+    </return>
+  </method>
+  <field access="protected" id="top1::ByteFile::fstream" name="fstream">
+    <type name="std::fstream" />
+  </field>
+</class>

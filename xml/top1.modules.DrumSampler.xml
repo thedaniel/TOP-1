@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::modules::DrumSampler" name="DrumSampler" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+  </base>
+  <variable id="top1::modules::DrumSampler::nVoices" name="nVoices">
+    <type name="uint" qualifier=" const" />
+  </variable>
+  <struct name="Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
+  <field id="top1::modules::DrumSampler::maxSampleSize" name="maxSampleSize">
+    <type name="size_t" />
+  </field>
+  <field id="top1::modules::DrumSampler::sampleData" name="sampleData">
+    <type name="DynArray&lt;float, std::allocator&lt;float&gt;, void&gt;" />
+  </field>
+  <field id="top1::modules::DrumSampler::sampleSampleRate" name="sampleSampleRate">
+    <type builtin="yes" name="int" />
+  </field>
+  <field id="top1::modules::DrumSampler::sampleSpeed" name="sampleSpeed">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::modules::DrumSampler::editScreen" name="editScreen">
+    <type name="std::unique_ptr&lt;top1::modules::DrumSampleScreen, std::default_delete&lt;top1::modules::DrumSampleScreen&gt; &gt;" />
+  </field>
+  <field id="top1::modules::DrumSampler::props" name="props">
+    <type name="Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
+  </field>
+  <field id="top1::modules::DrumSampler::currentVoiceIdx" name="currentVoiceIdx">
+    <type name="uint" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::DrumSampler::DrumSampler" name="DrumSampler" />
+  <method abstract="yes" id="top1::modules::DrumSampler::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method abstract="yes" id="top1::modules::DrumSampler::init" name="init" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::init" ref="top1::modules::Module#top1::modules::Module::init" />
+  </method>
+  <method abstract="yes" id="top1::modules::DrumSampler::load" name="load">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::DrumSampler::process" name="process" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::DrumSampler::process::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+    <override name="SynthModule::process" ref="top1::modules::SynthModule#top1::modules::SynthModule::process" />
+  </method>
+  <method id="top1::modules::DrumSampler::samplePath" name="samplePath" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="std::string" />
+    </return>
+    <argument id="top1::modules::DrumSampler::samplePath::name" name="name">
+      <type name="std::string" />
+    </argument>
+  </method>
+</class>

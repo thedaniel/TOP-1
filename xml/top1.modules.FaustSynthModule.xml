@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::FaustSynthModule" name="FaustSynthModule" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="audio::FaustWrapper" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper" />
+  </base>
+  <base access="public">
+    <type name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+  </base>
+  <subclass access="public" name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth" />
+  <constructor id="top1::modules::FaustSynthModule::FaustSynthModule" name="FaustSynthModule">
+    <argument id="top1::modules::FaustSynthModule::FaustSynthModule::fDSP" name="fDSP">
+      <type name="dsp" qualifier="*" />
+    </argument>
+    <argument id="top1::modules::FaustSynthModule::FaustSynthModule::propsPtr" name="propsPtr">
+      <type name="Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+    </argument>
+  </constructor>
+  <method id="top1::modules::FaustSynthModule::process" name="process" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::FaustSynthModule::process::data" name="data">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+    <override name="audio::FaustWrapper::process" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper::process" />
+    <override name="SynthModule::process" ref="top1::modules::SynthModule#top1::modules::SynthModule::process" />
+  </method>
+</class>

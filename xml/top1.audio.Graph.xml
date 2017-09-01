@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::audio::Graph" name="Graph" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::audio::Graph::sum" name="sum">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::audio::Graph::nsamples" name="nsamples">
+    <type name="uint" />
+  </field>
+  <field id="top1::audio::Graph::average" name="average">
+    <type builtin="yes" name="float" />
+  </field>
+  <method id="top1::audio::Graph::add" name="add">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::Graph::add::sample" name="sample">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::Graph::clear" name="clear">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::audio::Graph::clip" name="clip">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <conversionfunction id="top1::audio::Graph::operator float" name="operator float">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </conversionfunction>
+</struct>

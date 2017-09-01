@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::Int" name="Int" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::tree::Int::value" name="value">
+    <type builtin="yes" name="int" />
+  </field>
+  <conversionfunction id="top1::tree::Int::operator int" name="operator int">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+  </conversionfunction>
+  <method id="top1::tree::Int::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator!=::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+  <method id="top1::tree::Int::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator&lt;::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+  <method id="top1::tree::Int::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator&lt;=::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+  <method id="top1::tree::Int::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator==::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+  <method id="top1::tree::Int::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator&gt;::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+  <method id="top1::tree::Int::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Int::operator&gt;=::lhs" name="lhs">
+      <type name="Int" qualifier=" const &amp;" ref="top1::tree::Int#top1::tree::Int" />
+    </argument>
+  </method>
+</struct>

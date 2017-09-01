@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate abstract="true" id="top1::modules::ModuleDispatcher" name="ModuleDispatcher" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Module" ref="top1::modules::Module#top1::modules::Module" />
+  </base>
+  <templatetypeparameter id="top1::modules::ModuleDispatcher::M" name="M" />
+  <field access="protected" id="top1::modules::ModuleDispatcher::modules" name="modules">
+    <type name="std::vector&lt;_Tp, _Alloc&gt;" />
+  </field>
+  <field access="protected" id="top1::modules::ModuleDispatcher::currentModule" name="currentModule">
+    <type name="std::size_t" />
+  </field>
+  <constructor id="top1::modules::ModuleDispatcher::ModuleDispatcher&lt;M&gt;" name="ModuleDispatcher&lt;M&gt;">
+    <brief>*************************************
+*************************************</brief>
+  </constructor>
+  <method id="top1::modules::ModuleDispatcher::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method id="top1::modules::ModuleDispatcher::current" name="current">
+    <undocumented-return />
+    <return>
+      <type name="M" qualifier=" &amp;" />
+    </return>
+  </method>
+  <method id="top1::modules::ModuleDispatcher::current" name="current">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::ModuleDispatcher::current::cur" name="cur">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+  <method id="top1::modules::ModuleDispatcher::registerModule" name="registerModule">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::ModuleDispatcher::registerModule::name" name="name">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::modules::ModuleDispatcher::registerModule::module" name="module">
+      <type name="M" qualifier="*" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::ModuleDispatcher::registerModule" name="registerModule">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::ModuleDispatcher::registerModule::name" name="name">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::modules::ModuleDispatcher::registerModule::module" name="module">
+      <type name="std::unique_ptr&lt;M&gt; &amp;&amp;" />
+    </argument>
+  </method>
+  <method id="top1::modules::ModuleDispatcher::makeNode" name="makeNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="tree::Node" />
+    </return>
+    <override name="Module::makeNode" ref="top1::modules::Module#top1::modules::Module::makeNode" />
+  </method>
+  <method id="top1::modules::ModuleDispatcher::readNode" name="readNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::ModuleDispatcher::readNode::node" name="node">
+      <type name="tree::Node" />
+    </argument>
+    <override name="Module::readNode" ref="top1::modules::Module#top1::modules::Module::readNode" />
+  </method>
+</classtemplate>

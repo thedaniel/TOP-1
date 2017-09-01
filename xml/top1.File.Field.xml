@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::File::Field" interface="true" name="Field" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="TypedField" ref="top1::TypedField#top1::TypedField" />
+  <method abstract="yes" id="top1::File::Field::read" name="read" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::File::Field::read::file" name="file">
+      <type name="File" qualifier="*" ref="top1::File#top1::File" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::File::Field::size" name="size" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="size_t" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::File::Field::write" name="write" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::File::Field::write::file" name="file">
+      <type name="File" qualifier="*" ref="top1::File#top1::File" />
+    </argument>
+  </method>
+</struct>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::audio::RTBuffer" name="RTBuffer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="" />
+  </base>
+  <templatetypeparameter id="top1::audio::RTBuffer::T" name="T" />
+  <constructor id="top1::audio::RTBuffer::RTBuffer&lt;T&gt;" name="RTBuffer&lt;T&gt;">
+    <argument id="top1::audio::RTBuffer::RTBuffer&lt;T&gt;::sizeFactor" name="sizeFactor">
+      <type name="size_type" />
+    </argument>
+  </constructor>
+</classtemplate>

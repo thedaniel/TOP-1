@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::SimpleDrumsModule" interface="true" name="SimpleDrumsModule" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+  </base>
+  <field id="top1::modules::SimpleDrumsModule::voices" name="voices">
+    <type name="std::array&lt;top1::modules::SimpleDrumVoice, 24&gt;" />
+  </field>
+  <field id="top1::modules::SimpleDrumsModule::currentVoiceIdx" name="currentVoiceIdx">
+    <type name="uint" />
+  </field>
+  <field id="top1::modules::SimpleDrumsModule::screen" name="screen">
+    <type name="ui::ModuleScreen&lt;top1::modules::SimpleDrumsModule&gt;::ptr" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::SimpleDrumsModule::SimpleDrumsModule" name="SimpleDrumsModule" />
+  <destructor abstract="yes" id="top1::modules::SimpleDrumsModule::~SimpleDrumsModule" name="~SimpleDrumsModule" virtual="yes" />
+  <method abstract="yes" id="top1::modules::SimpleDrumsModule::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method abstract="yes" id="top1::modules::SimpleDrumsModule::makeNode" name="makeNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="tree::Node" />
+    </return>
+    <override name="Module::makeNode" ref="top1::modules::Module#top1::modules::Module::makeNode" />
+  </method>
+  <method abstract="yes" id="top1::modules::SimpleDrumsModule::process" name="process" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SimpleDrumsModule::process::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+    <override name="SynthModule::process" ref="top1::modules::SynthModule#top1::modules::SynthModule::process" />
+  </method>
+  <method abstract="yes" id="top1::modules::SimpleDrumsModule::readNode" name="readNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SimpleDrumsModule::readNode::" name="">
+      <type name="tree::Node" />
+    </argument>
+    <override name="Module::readNode" ref="top1::modules::Module#top1::modules::Module::readNode" />
+  </method>
+</class>

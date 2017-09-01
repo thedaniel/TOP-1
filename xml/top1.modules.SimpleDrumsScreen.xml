@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::modules::SimpleDrumsScreen" name="SimpleDrumsScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="ui::ModuleScreen&lt;top1::modules::SimpleDrumsModule&gt;" />
+  </base>
+  <constructor id="top1::modules::SimpleDrumsScreen::SimpleDrumsScreen" name="SimpleDrumsScreen">
+    <argument id="top1::modules::SimpleDrumsScreen::SimpleDrumsScreen::module" name="module">
+      <type name="SimpleDrumsModule" qualifier="*" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
+    </argument>
+  </constructor>
+</class>

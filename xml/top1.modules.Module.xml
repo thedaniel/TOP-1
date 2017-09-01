@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::Module" name="Module" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <subclass access="public" name="SequencerModule" ref="top1::modules::SequencerModule#top1::modules::SequencerModule" />
+  <subclass access="public" name="Tapedeck" ref="top1::modules::Tapedeck#top1::modules::Tapedeck" />
+  <subclass access="public" name="ModuleDispatcher" ref="top1::modules::ModuleDispatcher#top1::modules::ModuleDispatcher" />
+  <subclass access="public" name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+  <subclass access="public" name="EffectModule" ref="top1::modules::EffectModule#top1::modules::EffectModule" />
+  <subclass access="public" name="Mixer" ref="top1::modules::Mixer#top1::modules::Mixer" />
+  <subclass access="public" name="Metronome" ref="top1::modules::Metronome#top1::modules::Metronome" />
+  <field id="top1::modules::Module::propsPtr" name="propsPtr">
+    <type name="Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+  </field>
+  <constructor id="top1::modules::Module::Module" name="Module">
+    <argument id="top1::modules::Module::Module::props" name="props">
+      <type name="Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+    </argument>
+  </constructor>
+  <constructor id="top1::modules::Module::Module" name="Module" />
+  <destructor id="top1::modules::Module::~Module" name="~Module" virtual="yes" />
+  <method id="top1::modules::Module::display" name="display" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::modules::Module::exit" name="exit" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::modules::Module::init" name="init" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::modules::Module::makeNode" name="makeNode" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="tree::Node" />
+    </return>
+  </method>
+  <method id="top1::modules::Module::readNode" name="readNode" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Module::readNode::node" name="node">
+      <type name="tree::Node" />
+    </argument>
+  </method>
+</class>

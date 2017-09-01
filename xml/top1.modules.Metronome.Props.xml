@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::Metronome::Props" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <field id="top1::modules::Metronome::Props::bpm" name="bpm">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Metronome::Props::gain" name="gain">
+    <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Metronome::Props::tone" name="tone">
+    <type name="Property&lt;int, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Metronome::Props::trigger" name="trigger">
+    <type name="Property&lt;bool, top1::modules::mode::def, false, top1::modules::mode::toggle_mode&gt;" />
+  </field>
+</struct>

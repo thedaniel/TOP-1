@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::math::vec" name="vec" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::math::vec::x" name="x">
+    <type builtin="yes" name="float" qualifier=" const" />
+  </field>
+  <field id="top1::math::vec::y" name="y">
+    <type builtin="yes" name="float" qualifier=" const" />
+  </field>
+  <constructor id="top1::math::vec::vec" name="vec" />
+  <constructor id="top1::math::vec::vec" name="vec">
+    <argument id="top1::math::vec::vec::x" name="x">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::math::vec::vec::y" name="y">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <method id="top1::math::vec::angle" name="angle">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <method id="top1::math::vec::angleAndLen" name="angleAndLen" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::angleAndLen::a" name="a">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::math::vec::angleAndLen::l" name="l">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::dir" name="dir">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <method id="top1::math::vec::flipSignX" name="flipSignX">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </method>
+  <method id="top1::math::vec::flipSignY" name="flipSignY">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </method>
+  <method id="top1::math::vec::hat" name="hat">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </method>
+  <method id="top1::math::vec::len" name="len">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <method id="top1::math::vec::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::math::vec::operator!=::r" name="r">
+      <type name="vec" qualifier=" const &amp;" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::operator*::s" name="s">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::operator+" name="operator+">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::operator+::r" name="r">
+      <type name="vec" qualifier=" const &amp;" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::operator-::r" name="r">
+      <type name="vec" qualifier=" const &amp;" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </method>
+  <method id="top1::math::vec::operator/" name="operator/">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::operator/::s" name="s">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::math::vec::operator==::r" name="r">
+      <type name="vec" qualifier=" const &amp;" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::rotate" name="rotate">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+    <argument id="top1::math::vec::rotate::angle" name="angle">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::math::vec::swapXY" name="swapXY">
+    <undocumented-return />
+    <return>
+      <type name="vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </method>
+</struct>

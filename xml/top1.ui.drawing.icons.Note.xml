@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::icons::Note" interface="true" name="Note" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>A musical note</brief>
+  <base access="public">
+    <type name="Icon" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon" />
+  </base>
+  <enum anonymous="yes" id="top1::ui::drawing::icons::Note::Direction" name="Direction">
+    <enumvalue id="top1::ui::drawing::icons::Note::Right" name="Right" value="0" />
+    <enumvalue id="top1::ui::drawing::icons::Note::Left" name="Left" value="1" />
+  </enum>
+  <field id="top1::ui::drawing::icons::Note::dir" name="dir">
+    <type name="Direction" ref="top1::ui::drawing::icons::Note#top1::ui::drawing::icons::Note::Direction" />
+  </field>
+  <field id="top1::ui::drawing::icons::Note::filled" name="filled">
+    <brief>Whether the head of the note is filled;</brief>
+    <type builtin="yes" name="bool" />
+  </field>
+  <method abstract="yes" id="top1::ui::drawing::icons::Note::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::drawing::icons::Note::draw::" name="">
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="Icon::draw" ref="top1::ui::drawing::icons::Icon#top1::ui::drawing::icons::Icon::draw" />
+  </method>
+</struct>

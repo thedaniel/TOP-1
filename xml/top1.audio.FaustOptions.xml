@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::audio::FaustOptions" name="FaustOptions" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="UI" />
+  </base>
+  <enum anonymous="yes" id="top1::audio::FaustOptions::OPTTYPE" name="OPTTYPE">
+    <enumvalue id="top1::audio::FaustOptions::FLOAT" name="FLOAT" value="0" />
+    <enumvalue id="top1::audio::FaustOptions::BOOL" name="BOOL" value="1" />
+  </enum>
+  <field id="top1::audio::FaustOptions::props" name="props">
+    <type name="modules::Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+  </field>
+  <constructor id="top1::audio::FaustOptions::FaustOptions" name="FaustOptions" />
+  <constructor id="top1::audio::FaustOptions::FaustOptions" name="FaustOptions">
+    <argument id="top1::audio::FaustOptions::FaustOptions::props" name="props">
+      <type name="modules::Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+    </argument>
+  </constructor>
+  <method id="top1::audio::FaustOptions::addButton" name="addButton" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addButton::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addButton::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addCheckButton" name="addCheckButton" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addCheckButton::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addCheckButton::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addHorizontalBargraph" name="addHorizontalBargraph" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addHorizontalBargraph::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalBargraph::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalBargraph::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalBargraph::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addHorizontalSlider" name="addHorizontalSlider" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::init" name="init">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addHorizontalSlider::step" name="step">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addNumEntry" name="addNumEntry" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addNumEntry::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addNumEntry::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addNumEntry::init" name="init">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addNumEntry::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addNumEntry::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addNumEntry::step" name="step">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addVerticalBargraph" name="addVerticalBargraph" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addVerticalBargraph::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalBargraph::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalBargraph::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalBargraph::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::addVerticalSlider" name="addVerticalSlider" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::zone" name="zone">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::init" name="init">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::addVerticalSlider::step" name="step">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::closeBox" name="closeBox" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::audio::FaustOptions::openHorizontalBox" name="openHorizontalBox" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::openHorizontalBox::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::openTabBox" name="openTabBox" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::openTabBox::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::openVerticalBox" name="openVerticalBox" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::openVerticalBox::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </method>
+  <method id="top1::audio::FaustOptions::registerOption" name="registerOption" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::FaustOptions::registerOption::label" name="label">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::ptr" name="ptr">
+      <type builtin="yes" name="float" qualifier="*" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::init" name="init">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::min" name="min">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::max" name="max">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::step" name="step">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::type" name="type">
+      <type name="OPTTYPE" ref="top1::audio::FaustOptions#top1::audio::FaustOptions::OPTTYPE" />
+    </argument>
+    <argument id="top1::audio::FaustOptions::registerOption::output" name="output">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </method>
+</class>

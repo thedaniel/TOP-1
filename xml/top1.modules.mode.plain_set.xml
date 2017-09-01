@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::mode::plain_set" name="plain_set" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Non-numeric</brief>
+</struct>

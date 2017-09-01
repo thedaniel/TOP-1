@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::modules" name="modules" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <namespace name="detail" ref="top1::modules::detail#top1::modules::detail" />
+  <namespace name="mode" ref="top1::modules::mode#top1::modules::mode" />
+  <class name="DrumSampler" ref="top1::modules::DrumSampler#top1::modules::DrumSampler" />
+  <class name="DrumSampleScreen" ref="top1::modules::DrumSampleScreen#top1::modules::DrumSampleScreen" />
+  <class name="EffectModule" ref="top1::modules::EffectModule#top1::modules::EffectModule" />
+  <class name="EffectModuleDispatcher" ref="top1::modules::EffectModuleDispatcher#top1::modules::EffectModuleDispatcher" />
+  <class name="FaustSynthModule" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule" />
+  <class name="Metronome" ref="top1::modules::Metronome#top1::modules::Metronome" />
+  <class name="MetronomeScreen" ref="top1::modules::MetronomeScreen#top1::modules::MetronomeScreen" />
+  <class name="Mixer" ref="top1::modules::Mixer#top1::modules::Mixer" />
+  <class name="MixerScreen" ref="top1::modules::MixerScreen#top1::modules::MixerScreen" />
+  <class name="Module" ref="top1::modules::Module#top1::modules::Module" />
+  <classtemplate name="ModuleDispatcher" ref="top1::modules::ModuleDispatcher#top1::modules::ModuleDispatcher">
+    <templatetypeparameter id="top1::modules::ModuleDispatcher::M" name="M" />
+  </classtemplate>
+  <class name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  <classtemplate name="Property" ref="top1::modules::Property#top1::modules::Property">
+    <templatetypeparameter id="top1::modules::Property::T" name="T" />
+    <templatetypeparameter id="top1::modules::Property::mode_tag" name="mode_tag">
+      <default>
+        <type name="top1::modules::mode::def" ref="top1::modules::mode::def#top1::modules::mode::def" />
+      </default>
+    </templatetypeparameter>
+    <templatenontypeparameter id="top1::modules::Property::_store" name="_store">
+      <type builtin="yes" name="bool" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::modules::Property::mode_type" name="mode_type">
+      <default>
+        <type name="T" />
+      </default>
+    </templatetypeparameter>
+  </classtemplate>
+  <struct name="PropertyBase" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+  <class name="SequencerModule" ref="top1::modules::SequencerModule#top1::modules::SequencerModule" />
+  <class name="SequencerModuleDispatcher" ref="top1::modules::SequencerModuleDispatcher#top1::modules::SequencerModuleDispatcher" />
+  <class name="SimpleDrumsModule" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
+  <class name="SimpleDrumsScreen" ref="top1::modules::SimpleDrumsScreen#top1::modules::SimpleDrumsScreen" />
+  <class name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice" />
+  <class name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth" />
+  <class name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
+  <class name="SynthModuleDispatcher" ref="top1::modules::SynthModuleDispatcher#top1::modules::SynthModuleDispatcher" />
+  <class name="SynthSampler" ref="top1::modules::SynthSampler#top1::modules::SynthSampler" />
+  <class name="SynthSampleScreen" ref="top1::modules::SynthSampleScreen#top1::modules::SynthSampleScreen" />
+  <class name="Tapedeck" ref="top1::modules::Tapedeck#top1::modules::Tapedeck" />
+  <class name="TapeScreen" ref="top1::modules::TapeScreen#top1::modules::TapeScreen" />
+</namespace>

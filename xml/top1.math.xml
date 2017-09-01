@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::math" name="math" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <functiontemplate id="top1::math::between" name="between">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::math::between::min" name="min">
+      <type name="T" />
+    </argument>
+    <argument id="top1::math::between::max" name="max">
+      <type name="T" />
+    </argument>
+    <argument id="top1::math::between::el" name="el">
+      <type name="T" />
+    </argument>
+    <templatetypeparameter id="top1::math::between::T" name="T" />
+  </functiontemplate>
+  <functiontemplate id="top1::math::modulo" name="modulo">
+    <brief>Real modulo for negative `a` too</brief>
+    <undocumented-return />
+    <return>
+      <type name="T" />
+    </return>
+    <argument id="top1::math::modulo::a" name="a">
+      <type name="T" />
+    </argument>
+    <argument id="top1::math::modulo::b" name="b">
+      <type name="T" />
+    </argument>
+    <templatetypeparameter id="top1::math::modulo::T" name="T" />
+  </functiontemplate>
+  <struct name="vec" ref="top1::math::vec#top1::math::vec" />
+  <function id="top1::math::round" name="round">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+    <argument id="top1::math::round::f" name="f">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::math::round::places" name="places">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+</namespace>

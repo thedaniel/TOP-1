@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::ui" name="ui" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <namespace name="drawing" ref="top1::ui::drawing#top1::ui::drawing" />
+  <class name="DefaultScreen" ref="top1::ui::DefaultScreen#top1::ui::DefaultScreen" />
+  <class name="MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
+  <classtemplate name="ModuleScreen" ref="top1::ui::ModuleScreen#top1::ui::ModuleScreen">
+    <templatetypeparameter id="top1::ui::ModuleScreen::M" name="M" />
+  </classtemplate>
+  <struct name="RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+  <class name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  <classtemplate name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen">
+    <templatetypeparameter id="top1::ui::SelectorScreen::ItemType" name="ItemType" />
+  </classtemplate>
+  <classtemplate name="WaveformWidget" ref="top1::ui::WaveformWidget#top1::ui::WaveformWidget">
+    <templatetypeparameter id="top1::ui::WaveformWidget::Container" name="Container" />
+  </classtemplate>
+  <class name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
+  <enum anonymous="yes" id="top1::ui::Key" name="Key">
+    <enumvalue id="top1::ui::K_NONE" name="K_NONE" value="0" />
+    <enumvalue id="top1::ui::K_RED_UP" name="K_RED_UP" value="1" />
+    <enumvalue id="top1::ui::K_RED_DOWN" name="K_RED_DOWN" value="2" />
+    <enumvalue id="top1::ui::K_RED_CLICK" name="K_RED_CLICK" value="3" />
+    <enumvalue id="top1::ui::K_BLUE_UP" name="K_BLUE_UP" value="4" />
+    <enumvalue id="top1::ui::K_BLUE_DOWN" name="K_BLUE_DOWN" value="5" />
+    <enumvalue id="top1::ui::K_BLUE_CLICK" name="K_BLUE_CLICK" value="6" />
+    <enumvalue id="top1::ui::K_WHITE_UP" name="K_WHITE_UP" value="7" />
+    <enumvalue id="top1::ui::K_WHITE_DOWN" name="K_WHITE_DOWN" value="8" />
+    <enumvalue id="top1::ui::K_WHITE_CLICK" name="K_WHITE_CLICK" value="9" />
+    <enumvalue id="top1::ui::K_GREEN_UP" name="K_GREEN_UP" value="10" />
+    <enumvalue id="top1::ui::K_GREEN_DOWN" name="K_GREEN_DOWN" value="11" />
+    <enumvalue id="top1::ui::K_GREEN_CLICK" name="K_GREEN_CLICK" value="12" />
+    <enumvalue id="top1::ui::K_LEFT" name="K_LEFT" value="13" />
+    <enumvalue id="top1::ui::K_RIGHT" name="K_RIGHT" value="14" />
+    <enumvalue id="top1::ui::K_SHIFT" name="K_SHIFT" value="15" />
+    <enumvalue id="top1::ui::K_PLAY" name="K_PLAY" value="16" />
+    <enumvalue id="top1::ui::K_REC" name="K_REC" value="17" />
+    <enumvalue id="top1::ui::K_TRACK_1" name="K_TRACK_1" value="18" />
+    <enumvalue id="top1::ui::K_TRACK_2" name="K_TRACK_2" value="19" />
+    <enumvalue id="top1::ui::K_TRACK_3" name="K_TRACK_3" value="20" />
+    <enumvalue id="top1::ui::K_TRACK_4" name="K_TRACK_4" value="21" />
+    <enumvalue id="top1::ui::K_QUIT" name="K_QUIT" value="22" />
+    <enumvalue id="top1::ui::K_1" name="K_1" value="23" />
+    <enumvalue id="top1::ui::K_2" name="K_2" value="24" />
+    <enumvalue id="top1::ui::K_3" name="K_3" value="25" />
+    <enumvalue id="top1::ui::K_4" name="K_4" value="26" />
+    <enumvalue id="top1::ui::K_5" name="K_5" value="27" />
+    <enumvalue id="top1::ui::K_6" name="K_6" value="28" />
+    <enumvalue id="top1::ui::K_7" name="K_7" value="29" />
+    <enumvalue id="top1::ui::K_8" name="K_8" value="30" />
+    <enumvalue id="top1::ui::K_9" name="K_9" value="31" />
+    <enumvalue id="top1::ui::K_0" name="K_0" value="32" />
+    <enumvalue id="top1::ui::K_TAPE" name="K_TAPE" value="33" />
+    <enumvalue id="top1::ui::K_MIXER" name="K_MIXER" value="34" />
+    <enumvalue id="top1::ui::K_METRONOME" name="K_METRONOME" value="35" />
+    <enumvalue id="top1::ui::K_SYNTH" name="K_SYNTH" value="36" />
+    <enumvalue id="top1::ui::K_DRUMS" name="K_DRUMS" value="37" />
+    <enumvalue id="top1::ui::K_SAMPLER" name="K_SAMPLER" value="38" />
+    <enumvalue id="top1::ui::K_LOOPER" name="K_LOOPER" value="39" />
+    <enumvalue id="top1::ui::K_LOOP" name="K_LOOP" value="40" />
+    <enumvalue id="top1::ui::K_LOOP_IN" name="K_LOOP_IN" value="41" />
+    <enumvalue id="top1::ui::K_LOOP_OUT" name="K_LOOP_OUT" value="42" />
+    <enumvalue id="top1::ui::K_LIFT" name="K_LIFT" value="43" />
+    <enumvalue id="top1::ui::K_DROP" name="K_DROP" value="44" />
+    <enumvalue id="top1::ui::K_CUT" name="K_CUT" value="45" />
+  </enum>
+  <enum class="yes" id="top1::ui::Rotary" name="Rotary">
+    <enumvalue id="top1::ui::Rotary::Blue" name="Blue" value="0" />
+    <enumvalue id="top1::ui::Rotary::Green" name="Green" value="1" />
+    <enumvalue id="top1::ui::Rotary::White" name="White" value="2" />
+    <enumvalue id="top1::ui::Rotary::Red" name="Red" value="3" />
+  </enum>
+</namespace>

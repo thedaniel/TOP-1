@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::SynthModule" interface="true" name="SynthModule" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Module" ref="top1::modules::Module#top1::modules::Module" />
+  </base>
+  <subclass access="public" name="SimpleDrumsModule" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
+  <subclass access="public" name="SynthSampler" ref="top1::modules::SynthSampler#top1::modules::SynthSampler" />
+  <subclass access="public" name="DrumSampler" ref="top1::modules::DrumSampler#top1::modules::DrumSampler" />
+  <subclass access="public" name="FaustSynthModule" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule" />
+  <method abstract="yes" id="top1::modules::SynthModule::process" name="process" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::SynthModule::process::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+</class>

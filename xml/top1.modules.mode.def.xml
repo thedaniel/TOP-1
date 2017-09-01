@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::mode::def" name="def" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Pass to mode_for_tag, to get the default mode for a type
+Specialize `mode_for_tag` with at least this for each new type</brief>
+</struct>

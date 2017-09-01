@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::Properties" name="Properties" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="PropertyBase" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+  </base>
+  <subclass access="public" name="Tapedeck::Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
+  <subclass access="public" name="Mixer::Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props" />
+  <subclass access="public" name="SuperSawSynth::Props::(anonymous::1)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
+  <subclass access="public" name="SuperSawSynth::Props" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props" />
+  <subclass access="public" name="Metronome::Props" ref="top1::modules::Metronome::Props#top1::modules::Metronome::Props" />
+  <subclass access="public" name="Mixer::Props::TrackInfo" ref="top1::modules::Mixer::Props::TrackInfo#top1::modules::Mixer::Props::TrackInfo" />
+  <subclass access="public" name="SimpleDrumVoice::Props::Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+  <subclass access="public" name="DrumSampler::Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
+  <subclass access="public" name="SimpleDrumVoice::Props::(anonymous::1)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />
+  <subclass access="public" name="SynthSampler::Props" ref="top1::modules::SynthSampler::Props#top1::modules::SynthSampler::Props" />
+  <subclass access="public" name="DrumSampler::Props::VoiceData" ref="top1::modules::DrumSampler::Props::VoiceData#top1::modules::DrumSampler::Props::VoiceData" />
+  <subclass access="public" name="SimpleDrumVoice::Props" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props" />
+  <constructor id="top1::modules::Properties::Properties" name="Properties" />
+  <constructor id="top1::modules::Properties::Properties" name="Properties">
+    <argument id="top1::modules::Properties::Properties::p" name="p">
+      <type name="Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
+    </argument>
+    <argument id="top1::modules::Properties::Properties::n" name="n">
+      <type name="std::string" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::modules::Properties::Properties::s" name="s">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </constructor>
+  <method id="top1::modules::Properties::add" name="add">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Properties::add::ptr" name="ptr">
+      <type name="PropertyBase" qualifier="*" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+    </argument>
+  </method>
+  <method id="top1::modules::Properties::add" name="add">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Properties::add::ptr" name="ptr">
+      <type name="PropertyBase" qualifier=" &amp;" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+    </argument>
+  </method>
+  <method id="top1::modules::Properties::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="__gnu_cxx::__normal_iterator&lt;top1::modules::PropertyBase **, std::vector&lt;top1::modules::PropertyBase *, std::allocator&lt;top1::modules::PropertyBase *&gt; &gt; &gt;" />
+    </return>
+  </method>
+  <method id="top1::modules::Properties::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="__gnu_cxx::__normal_iterator&lt;top1::modules::PropertyBase *const *, std::vector&lt;top1::modules::PropertyBase *, std::allocator&lt;top1::modules::PropertyBase *&gt; &gt; &gt;" />
+    </return>
+  </method>
+  <method id="top1::modules::Properties::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="__gnu_cxx::__normal_iterator&lt;top1::modules::PropertyBase **, std::vector&lt;top1::modules::PropertyBase *, std::allocator&lt;top1::modules::PropertyBase *&gt; &gt; &gt;" />
+    </return>
+  </method>
+  <method id="top1::modules::Properties::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="__gnu_cxx::__normal_iterator&lt;top1::modules::PropertyBase *const *, std::vector&lt;top1::modules::PropertyBase *, std::allocator&lt;top1::modules::PropertyBase *&gt; &gt; &gt;" />
+    </return>
+  </method>
+  <method id="top1::modules::Properties::makeNode" name="makeNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type name="tree::Node" />
+    </return>
+    <override name="PropertyBase::makeNode" ref="top1::modules::PropertyBase#top1::modules::PropertyBase::makeNode" />
+  </method>
+  <method id="top1::modules::Properties::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="PropertyBase" qualifier=" &amp;" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+    </return>
+    <argument id="top1::modules::Properties::operator[]::idx" name="idx">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+  <method id="top1::modules::Properties::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="PropertyBase" qualifier=" &amp;" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+    </return>
+    <argument id="top1::modules::Properties::operator[]::idx" name="idx">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+  <method id="top1::modules::Properties::readNode" name="readNode" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Properties::readNode::n" name="n">
+      <type name="tree::Node" qualifier=" const &amp;" />
+    </argument>
+    <override name="PropertyBase::readNode" ref="top1::modules::PropertyBase#top1::modules::PropertyBase::readNode" />
+  </method>
+  <method id="top1::modules::Properties::reset" name="reset" override="yes" virtual="yes">
+    <brief>Reset all properties</brief>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="PropertyBase::reset" ref="top1::modules::PropertyBase#top1::modules::PropertyBase::reset" />
+  </method>
+  <method id="top1::modules::Properties::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="unsigned long" />
+    </return>
+  </method>
+  <method id="top1::modules::Properties::updateFaust" name="updateFaust" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="PropertyBase::updateFaust" ref="top1::modules::PropertyBase#top1::modules::PropertyBase::updateFaust" />
+  </method>
+  <field access="protected" id="top1::modules::Properties::props" name="props">
+    <type name="std::vector&lt;top1::modules::PropertyBase *, std::allocator&lt;top1::modules::PropertyBase *&gt; &gt;" />
+  </field>
+</class>

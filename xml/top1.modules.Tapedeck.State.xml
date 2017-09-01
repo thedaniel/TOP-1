@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct abstract="true" id="top1::modules::Tapedeck::State" name="State" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <methodtemplate id="top1::modules::Tapedeck::State::forPlayDir" name="forPlayDir">
+    <undocumented-return />
+    <return>
+      <type name="Ret" />
+    </return>
+    <argument id="top1::modules::Tapedeck::State::forPlayDir::forward" name="forward">
+      <type name="Callable1" />
+    </argument>
+    <argument id="top1::modules::Tapedeck::State::forPlayDir::reverse" name="reverse">
+      <type name="Callable2" />
+    </argument>
+    <templatetypeparameter id="top1::modules::Tapedeck::State::forPlayDir::Ret" name="Ret" />
+    <templatetypeparameter id="top1::modules::Tapedeck::State::forPlayDir::Callable1" name="Callable1" />
+    <templatetypeparameter id="top1::modules::Tapedeck::State::forPlayDir::Callable2" name="Callable2" />
+  </methodtemplate>
+  <enum anonymous="yes" id="top1::modules::Tapedeck::State::PlayType" name="PlayType">
+    <enumvalue id="top1::modules::Tapedeck::State::STOPPED" name="STOPPED" value="0" />
+    <enumvalue id="top1::modules::Tapedeck::State::PLAYING" name="PLAYING" value="1" />
+    <enumvalue id="top1::modules::Tapedeck::State::SPOOLING" name="SPOOLING" value="2" />
+  </enum>
+  <field id="top1::modules::Tapedeck::State::playType" name="playType">
+    <type name="PlayType" ref="top1::modules::Tapedeck::State#top1::modules::Tapedeck::State::PlayType" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::readyToRec" name="readyToRec">
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::recLast" name="recLast">
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::playSpeed" name="playSpeed">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::nextSpeed" name="nextSpeed">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::prevSpeed" name="prevSpeed">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::track" name="track">
+    <type name="Track" ref="top1::Track#top1::Track" />
+  </field>
+  <field id="top1::modules::Tapedeck::State::looping" name="looping">
+    <type builtin="yes" name="bool" />
+  </field>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doEaseIn" name="doEaseIn">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doJumps" name="doJumps">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doLoop" name="doLoop">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doPlayAudio" name="doPlayAudio">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doStartRec" name="doStartRec">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doStartSpool" name="doStartSpool">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doSwitchTracks" name="doSwitchTracks">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::doTapeOps" name="doTapeOps">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::play" name="play">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::State::play::speed" name="speed">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::playing" name="playing">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::recording" name="recording">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::spool" name="spool">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::State::spool::speed" name="speed">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::spooling" name="spooling">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::startRecord" name="startRecord">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::stop" name="stop">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::stopped" name="stopped">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::State::stopRecord" name="stopRecord">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+</struct>

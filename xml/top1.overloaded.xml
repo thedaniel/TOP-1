@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::overloaded" name="overloaded" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Overload lambdas</brief>
+  <base access="public">
+    <type name="" />
+  </base>
+  <base access="public">
+    <type name="" />
+  </base>
+  <constructor id="top1::overloaded::overloaded&lt;L1, Ls...&gt;" name="overloaded&lt;L1, Ls...&gt;">
+    <argument id="top1::overloaded::overloaded&lt;L1, Ls...&gt;::l1" name="l1">
+      <type name="L1" />
+    </argument>
+    <argument id="top1::overloaded::overloaded&lt;L1, Ls...&gt;::ls" name="ls">
+      <type name="Ls..." />
+    </argument>
+  </constructor>
+</structtemplate>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::TapeBuffer::RingBuffer" name="RingBuffer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::TapeBuffer::RingBuffer::Size" name="Size">
+    <type name="uint" qualifier=" const" />
+  </variable>
+  <field id="top1::TapeBuffer::RingBuffer::data" name="data">
+    <type name="DynArray&lt;top1::audio::AudioFrame&lt;4, float&gt;, std::allocator&lt;top1::audio::AudioFrame&lt;4, float&gt; &gt;, void&gt;" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::notWritten" name="notWritten">
+    <type name="audio::Section&lt;int&gt;" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::lengthFW" name="lengthFW">
+    <type name="std::atomic_int" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::lengthBW" name="lengthBW">
+    <type name="std::atomic_int" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::playIdx" name="playIdx">
+    <type name="std::atomic_uint" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::posAt0" name="posAt0">
+    <type name="std::atomic_uint" />
+  </field>
+  <method id="top1::TapeBuffer::RingBuffer::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="AudioFrame" qualifier=" &amp;" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::operator[]::i" name="i">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::wrapIdx" name="wrapIdx">
+    <undocumented-return />
+    <return>
+      <type name="uint" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::wrapIdx::index" name="index">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+</struct>

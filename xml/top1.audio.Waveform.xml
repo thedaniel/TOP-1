@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::audio::Waveform" interface="true" name="Waveform" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::audio::Waveform::ratio" name="ratio">
+    <type builtin="yes" name="float" qualifier=" const" />
+  </field>
+  <field id="top1::audio::Waveform::scale" name="scale">
+    <type builtin="yes" name="float" qualifier=" const" />
+  </field>
+  <constructor abstract="yes" id="top1::audio::Waveform::Waveform" name="Waveform">
+    <argument id="top1::audio::Waveform::Waveform::ratio" name="ratio">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::audio::Waveform::Waveform::scale" name="scale">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::audio::Waveform::addFrame" name="addFrame">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::Waveform::addFrame::" name="">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::addPoint" name="addPoint">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::Waveform::addPoint::" name="">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="const_iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::cbegin" name="cbegin">
+    <undocumented-return />
+    <return>
+      <type name="const_iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::cend" name="cend">
+    <undocumented-return />
+    <return>
+      <type name="const_iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::clear" name="clear">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="const_iterator" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::max" name="max">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" qualifier=" &amp;" />
+    </return>
+    <argument id="top1::audio::Waveform::operator[]::" name="">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" qualifier=" const &amp;" />
+    </return>
+    <argument id="top1::audio::Waveform::operator[]::" name="">
+      <type name="std::size_t" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::size" name="size">
+    <undocumented-return />
+    <return>
+      <type name="std::size_t" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::audio::Waveform::timeSpan" name="timeSpan">
+    <undocumented-return />
+    <return>
+      <type name="std::size_t" />
+    </return>
+  </method>
+</class>

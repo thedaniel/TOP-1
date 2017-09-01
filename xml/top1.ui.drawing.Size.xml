@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::Size" name="Size" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::ui::drawing::Size::w" name="w">
+    <type builtin="yes" name="float" />
+  </field>
+  <field id="top1::ui::drawing::Size::h" name="h">
+    <type builtin="yes" name="float" />
+  </field>
+  <constructor id="top1::ui::drawing::Size::Size" name="Size" />
+  <constructor id="top1::ui::drawing::Size::Size" name="Size">
+    <argument id="top1::ui::drawing::Size::Size::w" name="w">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Size::Size::h" name="h">
+      <type builtin="yes" name="float" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ui::drawing::Size::Size" name="Size">
+    <argument id="top1::ui::drawing::Size::Size::v" name="v">
+      <type name="math::vec" ref="top1::math::vec#top1::math::vec" />
+    </argument>
+  </constructor>
+  <method id="top1::ui::drawing::Size::center" name="center">
+    <undocumented-return />
+    <return>
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </return>
+  </method>
+  <conversionfunction id="top1::ui::drawing::Size::operator vec" name="operator vec">
+    <undocumented-return />
+    <return>
+      <type name="math::vec" ref="top1::math::vec#top1::math::vec" />
+    </return>
+  </conversionfunction>
+  <method id="top1::ui::drawing::Size::swapWH" name="swapWH">
+    <undocumented-return />
+    <return>
+      <type name="Size" ref="top1::ui::drawing::Size#top1::ui::drawing::Size" />
+    </return>
+  </method>
+</struct>

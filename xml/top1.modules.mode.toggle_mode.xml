@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::mode::toggle_mode" name="toggle_mode" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::modules::mode::toggle_mode::value" name="value">
+    <type builtin="yes" name="bool" qualifier="*" />
+  </field>
+  <method id="top1::modules::mode::toggle_mode::set" name="set">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::mode::toggle_mode::set::b" name="b">
+      <type builtin="yes" name="bool" />
+    </argument>
+  </method>
+  <method id="top1::modules::mode::toggle_mode::step" name="step">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::mode::toggle_mode::step::steps" name="steps">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+</struct>

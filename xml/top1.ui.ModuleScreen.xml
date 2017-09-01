@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::ui::ModuleScreen" name="ModuleScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  </base>
+  <templatetypeparameter id="top1::ui::ModuleScreen::M" name="M" />
+  <field access="protected" id="top1::ui::ModuleScreen::module" name="module">
+    <type name="M" qualifier="*" />
+  </field>
+  <constructor id="top1::ui::ModuleScreen::ModuleScreen&lt;M&gt;" name="ModuleScreen&lt;M&gt;" />
+  <constructor id="top1::ui::ModuleScreen::ModuleScreen&lt;M&gt;" name="ModuleScreen&lt;M&gt;">
+    <argument id="top1::ui::ModuleScreen::ModuleScreen&lt;M&gt;::module" name="module">
+      <type name="M" qualifier="*" />
+    </argument>
+  </constructor>
+  <destructor id="top1::ui::ModuleScreen::~ModuleScreen&lt;M&gt;" name="~ModuleScreen&lt;M&gt;" virtual="yes" />
+</classtemplate>

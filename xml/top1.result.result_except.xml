@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::result::result_except" name="result_except" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::result::result_except::error" name="error">
+    <type name="result&lt;ok_t, err_t&gt;::Err" />
+  </field>
+</struct>

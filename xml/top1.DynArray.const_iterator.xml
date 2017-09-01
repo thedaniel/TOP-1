@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::DynArray::const_iterator" name="const_iterator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <constructor id="top1::DynArray::const_iterator::const_iterator" name="const_iterator">
+    <argument id="top1::DynArray::const_iterator::const_iterator::ptr" name="ptr">
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator::pointer" />
+    </argument>
+  </constructor>
+  <method id="top1::DynArray::const_iterator::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator!=::rhs" name="rhs">
+      <type name="DynArray&lt;T, A, typename&gt;::iterator" qualifier=" const &amp;" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator::reference" qualifier=" const" />
+    </return>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator+" name="operator+">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator+::rhs" name="rhs">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator++" name="operator++">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator++" name="operator++">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator++::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator-::rhs" name="rhs">
+      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator::difference_type" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator-::rhs" name="rhs">
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" qualifier=" &amp;" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator--" name="operator--">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator--" name="operator--">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator" ref="top1::DynArray::const_iterator#top1::DynArray::const_iterator" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator--::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator-&gt;" name="operator-&gt;">
+    <undocumented-return />
+    <return>
+      <type name="DynArray&lt;T, A, typename&gt;::const_iterator::pointer" qualifier=" const" />
+    </return>
+  </method>
+  <method id="top1::DynArray::const_iterator::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::DynArray::const_iterator::operator==::rhs" name="rhs">
+      <type name="DynArray&lt;T, A, typename&gt;::iterator" qualifier=" const &amp;" ref="top1::DynArray::iterator#top1::DynArray::iterator" />
+    </argument>
+  </method>
+</class>

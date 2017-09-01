@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::audio::detail" name="detail" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <function id="top1::audio::detail::registerAudioBufferResize" name="registerAudioBufferResize">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::audio::detail::registerAudioBufferResize::" name="">
+      <type name="std::function&lt;void (unsigned int)&gt;" />
+    </argument>
+  </function>
+</namespace>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::is_number" name="is_number" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Any arithmetic type except bool</brief>
+  <base access="public">
+    <type name="std::false_type" />
+  </base>
+  <templatetypeparameter id="top1::is_number::T" name="T" />
+  <templatetypeparameter id="top1::is_number::Enable" name="Enable" />
+</structtemplate>

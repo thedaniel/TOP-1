@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct abstract="true" id="top1::timer::Timer" name="Timer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::timer::Timer::running" name="running">
+    <type builtin="yes" name="bool" />
+  </field>
+  <field id="top1::timer::Timer::times" name="times">
+    <type name="std::vector&lt;std::chrono::duration&lt;long, std::ratio&lt;1, 1000000000&gt; &gt;, std::allocator&lt;std::chrono::duration&lt;long, std::ratio&lt;1, 1000000000&gt; &gt; &gt; &gt;" />
+  </field>
+  <field id="top1::timer::Timer::start" name="start">
+    <type name="TimePoint" />
+  </field>
+  <constructor id="top1::timer::Timer::Timer" name="Timer" />
+  <constructor abstract="yes" id="top1::timer::Timer::Timer" name="Timer">
+    <argument id="top1::timer::Timer::Timer::" name="">
+      <type name="Timer &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method id="top1::timer::Timer::calcAvg" name="calcAvg">
+    <undocumented-return />
+    <return>
+      <type name="Duration" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::calcMax" name="calcMax">
+    <undocumented-return />
+    <return>
+      <type name="Duration" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::calcMed" name="calcMed">
+    <undocumented-return />
+    <return>
+      <type name="Duration" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::calcMin" name="calcMin">
+    <undocumented-return />
+    <return>
+      <type name="Duration" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::jsonSerialize" name="jsonSerialize">
+    <undocumented-return />
+    <return>
+      <type name="nlohmann::json" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::numSecs" name="numSecs" static="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="top1::timer::Timer::numSecs::d" name="d">
+      <type name="Duration" />
+    </argument>
+  </method>
+  <method id="top1::timer::Timer::startTimer" name="startTimer">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::timer::Timer::stopTimer" name="stopTimer">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+</struct>

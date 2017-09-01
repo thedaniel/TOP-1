@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::mode::exp" name="exp" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Like `sized_step`, But steps exponentially</brief>
+</struct>

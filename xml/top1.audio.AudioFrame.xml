@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::audio::AudioFrame" name="AudioFrame" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatenontypeparameter id="top1::audio::AudioFrame::nChannels" name="nChannels">
+    <type builtin="yes" name="int" />
+  </templatenontypeparameter>
+  <templatetypeparameter id="top1::audio::AudioFrame::SampleType" name="SampleType" />
+  <variable id="top1::audio::AudioFrame::size" name="size">
+    <type name="uint" qualifier=" const" />
+  </variable>
+  <field id="top1::audio::AudioFrame::data" name="data">
+    <type name="SampleType [nChannels]" />
+  </field>
+  <constructor id="top1::audio::AudioFrame::AudioFrame&lt;nChannels, SampleType&gt;" name="AudioFrame&lt;nChannels, SampleType&gt;" />
+  <constructor id="top1::audio::AudioFrame::AudioFrame&lt;nChannels, SampleType&gt;" name="AudioFrame&lt;nChannels, SampleType&gt;">
+    <argument id="top1::audio::AudioFrame::AudioFrame&lt;nChannels, SampleType&gt;::init" name="init">
+      <type name="SampleType" />
+    </argument>
+  </constructor>
+  <method id="top1::audio::AudioFrame::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="SampleType" qualifier=" &amp;" />
+    </return>
+    <argument id="top1::audio::AudioFrame::operator[]::i" name="i">
+      <type name="uint" />
+    </argument>
+  </method>
+  <method id="top1::audio::AudioFrame::operator[]" name="operator[]">
+    <undocumented-return />
+    <return>
+      <type name="const SampleType" qualifier=" const &amp;" />
+    </return>
+    <argument id="top1::audio::AudioFrame::operator[]::i" name="i">
+      <type name="uint" />
+    </argument>
+  </method>
+</structtemplate>

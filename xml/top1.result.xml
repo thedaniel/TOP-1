@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::result" name="result" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>A sum type, holding either an Ok value, or an Err
+</brief>
+  <doc>Modelled closely after Rust's Result enum.
+
+# Example
+```cpp
+result&lt;std::string, int&gt; open_file(File&amp; f) {
+f.open();
+if (f.error()) {
+return f.errorCode();
+}
+return f.path();
+}
+```</doc>
+  <templatetypeparameter id="top1::result::ok_t" name="ok_t" />
+  <templatetypeparameter id="top1::result::err_t" name="err_t" />
+  <struct name="result_except" ref="top1::result::result_except#top1::result::result_except" />
+  <methodtemplate id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <templatetypeparameter id="top1::result::result&lt;ok_t, err_t&gt;" />
+  </methodtemplate>
+  <constructor id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
+    <argument id="top1::result::result&lt;ok_t, err_t&gt;::ok" name="ok">
+      <type name="result&lt;ok_t, err_t&gt;::Ok" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
+    <argument id="top1::result::result&lt;ok_t, err_t&gt;::ok" name="ok">
+      <type name="Ok &amp;&amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
+    <argument id="top1::result::result&lt;ok_t, err_t&gt;::err" name="err">
+      <type name="result&lt;ok_t, err_t&gt;::Err" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
+    <argument id="top1::result::result&lt;ok_t, err_t&gt;::err" name="err">
+      <type name="Err &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method id="top1::result::is_ok" name="is_ok">
+    <brief>Check if result is ok
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>`true` if the result is `Ok`</doc>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method id="top1::result::is_err" name="is_err">
+    <brief>Check if result is errored
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>`true` if the result is `Err`</doc>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+  <method id="top1::result::ok" name="ok">
+    <brief>Convert into a `std::optional&amp;lt;Ok&amp;gt;`, discarding the error, if any</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;_Tp&gt;" />
+    </return>
+  </method>
+  <method id="top1::result::err" name="err">
+    <brief>Convert into a `std::optional&amp;lt;Err&amp;gt;`, discarding the ok value, if any</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::optional&lt;_Tp&gt;" />
+    </return>
+  </method>
+  <methodtemplate id="top1::result::map" name="map">
+    <brief>Map &amp;lt;top1::result&lt;O, E&amp;gt;&gt; to `result&amp;lt;U, E&amp;gt;` by invoking `op` on a contained
+`Ok` value, leaving an `Err` value untouched
+</brief>
+    <doc>Can be used to compose the result of two functions</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;" ref="top1::result#top1::result" />
+    </return>
+    <argument id="top1::result::map::op" name="op">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::map::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::map_err" name="map_err">
+    <brief>Map `result&amp;lt;O, E&amp;gt;` to `result&amp;lt;O, F&amp;gt;` by invoking `op` on a contained
+`Err` value, leaving an `Ok` value untouched
+</brief>
+    <doc>Can be used to pass through a successful result while handling the error</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;" ref="top1::result#top1::result" />
+    </return>
+    <argument id="top1::result::map_err::op" name="op">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::map_err::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::operator&amp;&amp;" name="operator&amp;&amp;">
+    <brief>Returns `r` if the result is `Ok`, otherwise returns its own `Err` value
+</brief>
+    <doc>Corresponds to the `and` method in rust</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;" ref="top1::result#top1::result" />
+    </return>
+    <argument id="top1::result::operator&amp;&amp;::r" name="r">
+      <type name="result&lt;ok_t, err_t&gt;" qualifier=" const &amp;" ref="top1::result#top1::result" />
+    </argument>
+    <templatetypeparameter id="top1::result::operator&amp;&amp;::Ok2" name="Ok2" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::and_then" name="and_then">
+    <brief>Invokes `f` with the ok value if the result is `Ok`,
+otherwise returns its own `Err` value</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::and_then::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::and_then::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::operator||" name="operator||">
+    <brief>Returns `r` if the result is `Err`, otherwise returns its own `Ok` value
+</brief>
+    <doc>Corresponds to the `or` method in rust</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;" ref="top1::result#top1::result" />
+    </return>
+    <argument id="top1::result::operator||::r" name="r">
+      <type name="result&lt;ok_t, err_t&gt;" qualifier=" const &amp;" ref="top1::result#top1::result" />
+    </argument>
+    <templatetypeparameter id="top1::result::operator||::Ok2" name="Ok2" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::or_else" name="or_else">
+    <brief>Invokes `f` with the error value if the result is `Err`,
+otherwise returns its own `Ok` value</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::or_else::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::or_else::F" name="F" />
+  </methodtemplate>
+  <method id="top1::result::ok_or" name="ok_or">
+    <brief>Returns its own value if the result is `ok`,
+otherwise returns `def`</brief>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;::Ok" />
+    </return>
+    <argument id="top1::result::ok_or::def" name="def">
+      <type name="result&lt;ok_t, err_t&gt;::Ok" qualifier=" const &amp;" />
+    </argument>
+  </method>
+  <method id="top1::result::err_or" name="err_or">
+    <brief>Returns its own value if the result is `err`,
+otherwise returns `def`</brief>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;::Err" />
+    </return>
+    <argument id="top1::result::err_or::def" name="def">
+      <type name="result&lt;ok_t, err_t&gt;::Err" qualifier=" const &amp;" />
+    </argument>
+  </method>
+  <methodtemplate id="top1::result::ok_or_else" name="ok_or_else">
+    <brief>Returns its own value if the result is `ok`,
+otherwise invokes `f` with the error value</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::ok_or_else::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::ok_or_else::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::err_or_else" name="err_or_else">
+    <brief>Returns its own value if the result is `err`,
+otherwise invokes `f` with the ok value</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::err_or_else::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::err_or_else::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::if_ok" name="if_ok">
+    <brief>If ok, call `f(ok)`</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::if_ok::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::if_ok::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::if_err" name="if_err">
+    <brief>If err, call `f(err)`</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::result::if_err::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::if_err::F" name="F" />
+  </methodtemplate>
+  <methodtemplate id="top1::result::wrap" name="wrap">
+    <brief>If ok, call `fo(ok)`, otherwise call `fe(err)`</brief>
+    <undocumented-return />
+    <return>
+      <type name="Ret" />
+    </return>
+    <argument id="top1::result::wrap::fo" name="fo">
+      <type name="FO &amp;&amp;" />
+    </argument>
+    <argument id="top1::result::wrap::fe" name="fe">
+      <type name="FE &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::wrap::FO" name="FO" />
+    <templatetypeparameter id="top1::result::wrap::FE" name="FE" />
+    <templatetypeparameter id="top1::result::wrap::Ret" name="Ret">
+      <default>
+        <type name="FO" />
+      </default>
+    </templatetypeparameter>
+  </methodtemplate>
+  <methodtemplate id="top1::result::visit" name="visit">
+    <brief>If ok, call `visitor(ok)`, otherwise call `visitor(err)`</brief>
+    <undocumented-return />
+    <return>
+      <type name="Ret" />
+    </return>
+    <argument id="top1::result::visit::visitor" name="visitor">
+      <type name="V &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::result::visit::V" name="V" />
+    <templatetypeparameter id="top1::result::visit::Ret" name="Ret">
+      <default>
+        <type name="V" />
+      </default>
+    </templatetypeparameter>
+  </methodtemplate>
+  <method id="top1::result::may_throw" name="may_throw">
+    <brief>Return ok, or throw a `result_except&amp;lt;Err&amp;gt;` holding the error value.
+</brief>
+    <doc>Evil, but useful</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;::Ok" />
+    </return>
+  </method>
+</classtemplate>

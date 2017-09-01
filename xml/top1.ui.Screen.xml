@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::ui::Screen" name="Screen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="drawing::Drawable" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+  </base>
+  <subclass access="public" name="DefaultScreen" ref="top1::ui::DefaultScreen#top1::ui::DefaultScreen" />
+  <subclass access="public" name="ModuleScreen" ref="top1::ui::ModuleScreen#top1::ui::ModuleScreen" />
+  <subclass access="public" name="MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
+  <subclass access="public" name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen" />
+  <constructor id="top1::ui::Screen::Screen" name="Screen" />
+  <method id="top1::ui::Screen::exit" name="exit" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ui::Screen::init" name="init" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ui::Screen::keypress" name="keypress" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::Screen::keypress::" name="">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+  </method>
+  <method id="top1::ui::Screen::keyrelease" name="keyrelease" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::Screen::keyrelease::" name="">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+  </method>
+  <method id="top1::ui::Screen::rotary" name="rotary" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::Screen::rotary::" name="">
+      <type name="RotaryEvent" ref="top1::ui::RotaryEvent#top1::ui::RotaryEvent" />
+    </argument>
+  </method>
+</class>

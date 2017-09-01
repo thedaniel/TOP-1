@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate abstract="true" id="top1::modules::Property" name="Property" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="PropertyBase" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
+  </base>
+  <templatetypeparameter id="top1::modules::Property::T" name="T" />
+  <templatetypeparameter id="top1::modules::Property::mode_tag" name="mode_tag">
+    <default>
+      <type name="top1::modules::mode::def" ref="top1::modules::mode::def#top1::modules::mode::def" />
+    </default>
+  </templatetypeparameter>
+  <templatenontypeparameter id="top1::modules::Property::_store" name="_store">
+    <type builtin="yes" name="bool" />
+  </templatenontypeparameter>
+  <templatetypeparameter id="top1::modules::Property::mode_type" name="mode_type">
+    <default>
+      <type name="T" />
+    </default>
+  </templatetypeparameter>
+</classtemplate>

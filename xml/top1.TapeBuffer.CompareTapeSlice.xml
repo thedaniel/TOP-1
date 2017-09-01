@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::TapeBuffer::CompareTapeSlice" name="CompareTapeSlice" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <method id="top1::TapeBuffer::CompareTapeSlice::operator()" name="operator()">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::TapeBuffer::CompareTapeSlice::operator()::e1" name="e1">
+      <type name="TapeSlice" qualifier=" const &amp;" />
+    </argument>
+    <argument id="top1::TapeBuffer::CompareTapeSlice::operator()::e2" name="e2">
+      <type name="TapeSlice" qualifier=" const &amp;" />
+    </argument>
+  </method>
+</class>

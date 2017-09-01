@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ui::drawing::icons::Icon" name="Icon" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
+  </base>
+  <subclass access="public" name="Note" ref="top1::ui::drawing::icons::Note#top1::ui::drawing::icons::Note">
+    <brief>A musical note</brief>
+  </subclass>
+  <subclass access="public" name="Arrow" ref="top1::ui::drawing::icons::Arrow#top1::ui::drawing::icons::Arrow">
+    <brief>A simple arrow</brief>
+  </subclass>
+  <field id="top1::ui::drawing::icons::Icon::colour" name="colour">
+    <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </field>
+  <field id="top1::ui::drawing::icons::Icon::lineWidth" name="lineWidth">
+    <type builtin="yes" name="float" />
+  </field>
+  <method id="top1::ui::drawing::icons::Icon::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::drawing::icons::Icon::draw::" name="">
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="Drawable::draw" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable::draw" />
+  </method>
+</struct>

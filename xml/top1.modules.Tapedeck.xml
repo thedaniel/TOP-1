@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::modules::Tapedeck" name="Tapedeck" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Module" ref="top1::modules::Module#top1::modules::Module" />
+  </base>
+  <struct name="Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
+  <struct name="State" ref="top1::modules::Tapedeck::State#top1::modules::Tapedeck::State" />
+  <field id="top1::modules::Tapedeck::state" name="state">
+    <type name="State" ref="top1::modules::Tapedeck::State#top1::modules::Tapedeck::State" />
+  </field>
+  <field id="top1::modules::Tapedeck::props" name="props">
+    <type name="Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
+  </field>
+  <field id="top1::modules::Tapedeck::procGraph" name="procGraph">
+    <type name="audio::Graph" ref="top1::audio::Graph#top1::audio::Graph" />
+  </field>
+  <field id="top1::modules::Tapedeck::trackBuffer" name="trackBuffer">
+    <type name="audio::RTBuffer&lt;top1::audio::AudioFrame&lt;4, float&gt; &gt;" />
+  </field>
+  <field id="top1::modules::Tapedeck::tapeBuffer" name="tapeBuffer">
+    <type name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer" />
+  </field>
+  <field id="top1::modules::Tapedeck::loopSect" name="loopSect">
+    <type name="audio::Section&lt;int&gt;" />
+  </field>
+  <field id="top1::modules::Tapedeck::recSect" name="recSect">
+    <type name="audio::Section&lt;int&gt;" />
+  </field>
+  <field id="top1::modules::Tapedeck::overruns" name="overruns">
+    <type name="uint" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::Tapedeck::Tapedeck" name="Tapedeck" />
+  <constructor abstract="yes" id="top1::modules::Tapedeck::Tapedeck" name="Tapedeck">
+    <argument id="top1::modules::Tapedeck::Tapedeck::" name="">
+      <type name="Tapedeck" qualifier=" &amp;" ref="top1::modules::Tapedeck#top1::modules::Tapedeck" />
+    </argument>
+  </constructor>
+  <constructor abstract="yes" id="top1::modules::Tapedeck::Tapedeck" name="Tapedeck">
+    <argument id="top1::modules::Tapedeck::Tapedeck::" name="">
+      <type name="Tapedeck &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method abstract="yes" id="top1::modules::Tapedeck::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::exit" name="exit" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::exit" ref="top1::modules::Module#top1::modules::Module::exit" />
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::goToBar" name="goToBar">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::goToBar::bar" name="bar">
+      <type name="BeatPos" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::goToBarRel" name="goToBarRel">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::goToBarRel::bars" name="bars">
+      <type name="BeatPos" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::goToLoopIn" name="goToLoopIn">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::goToLoopOut" name="goToLoopOut">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::init" name="init" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::init" ref="top1::modules::Module#top1::modules::Module::init" />
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::loopInHere" name="loopInHere">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::loopOutHere" name="loopOutHere">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::modules::Tapedeck::position" name="position">
+    <undocumented-return />
+    <return>
+      <type name="TapeTime" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::postProcess" name="postProcess">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::postProcess::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::preProcess" name="preProcess">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Tapedeck::preProcess::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+  <method abstract="yes" id="top1::modules::Tapedeck::timeUntil" name="timeUntil">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="top1::modules::Tapedeck::timeUntil::tt" name="tt">
+      <type name="TapeTime" />
+    </argument>
+  </method>
+</class>

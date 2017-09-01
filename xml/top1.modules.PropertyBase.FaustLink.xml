@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::PropertyBase::FaustLink" name="FaustLink" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <enum anonymous="yes" id="top1::modules::PropertyBase::FaustLink::Type" name="Type">
+    <enumvalue id="top1::modules::PropertyBase::FaustLink::None" name="None" value="0" />
+    <enumvalue id="top1::modules::PropertyBase::FaustLink::Input" name="Input" value="1" />
+    <enumvalue id="top1::modules::PropertyBase::FaustLink::Output" name="Output" value="2" />
+  </enum>
+  <field id="top1::modules::PropertyBase::FaustLink::ptr" name="ptr">
+    <type builtin="yes" name="float" qualifier="*" />
+  </field>
+  <field id="top1::modules::PropertyBase::FaustLink::type" name="type">
+    <type name="Type" ref="top1::modules::PropertyBase::FaustLink#top1::modules::PropertyBase::FaustLink::Type" />
+  </field>
+</struct>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::Globals" name="Globals" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::Globals::dataFile" name="dataFile">
+    <type name="DataFile" ref="top1::DataFile#top1::DataFile" />
+  </variable>
+  <variable id="top1::Globals::drums" name="drums">
+    <type name="modules::SynthModuleDispatcher" ref="top1::modules::SynthModuleDispatcher#top1::modules::SynthModuleDispatcher" />
+  </variable>
+  <variable id="top1::Globals::effect" name="effect">
+    <type name="modules::EffectModuleDispatcher" ref="top1::modules::EffectModuleDispatcher#top1::modules::EffectModuleDispatcher" />
+  </variable>
+  <variable id="top1::Globals::events" name="events">
+    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/core/globals.hpp:29:19)" ref="top1::Globals#top1::Globals::(anonymous::1)" />
+  </variable>
+  <variable id="top1::Globals::jackAudio" name="jackAudio">
+    <type name="audio::JackAudio" ref="top1::audio::JackAudio#top1::audio::JackAudio" />
+  </variable>
+  <variable id="top1::Globals::metronome" name="metronome">
+    <type name="modules::Metronome" ref="top1::modules::Metronome#top1::modules::Metronome" />
+  </variable>
+  <variable id="top1::Globals::mixer" name="mixer">
+    <type name="modules::Mixer" ref="top1::modules::Mixer#top1::modules::Mixer" />
+  </variable>
+  <variable id="top1::Globals::notifyExit" name="notifyExit">
+    <type name="std::condition_variable" />
+  </variable>
+  <variable id="top1::Globals::samplerate" name="samplerate">
+    <type name="uint" />
+  </variable>
+  <variable id="top1::Globals::synth" name="synth">
+    <type name="modules::SynthModuleDispatcher" ref="top1::modules::SynthModuleDispatcher#top1::modules::SynthModuleDispatcher" />
+  </variable>
+  <variable id="top1::Globals::tapedeck" name="tapedeck">
+    <type name="modules::Tapedeck" ref="top1::modules::Tapedeck#top1::modules::Tapedeck" />
+  </variable>
+  <variable id="top1::Globals::ui" name="ui">
+    <type name="ui::MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
+  </variable>
+  <struct anonymous="yes" id="top1::Globals::(anonymous::1)" name="(anonymous::1)">
+    <field id="top1::Globals::preInit" name="preInit">
+      <type name="EventDispatcher&lt;&gt;" />
+    </field>
+    <field id="top1::Globals::postInit" name="postInit">
+      <type name="EventDispatcher&lt;&gt;" />
+    </field>
+    <field id="top1::Globals::preExit" name="preExit">
+      <type name="EventDispatcher&lt;&gt;" />
+    </field>
+    <field id="top1::Globals::postExit" name="postExit">
+      <type name="EventDispatcher&lt;&gt;" />
+    </field>
+    <field id="top1::Globals::bufferSizeChanged" name="bufferSizeChanged">
+      <type name="EventDispatcher&lt;unsigned int&gt;" />
+    </field>
+    <field id="top1::Globals::samplerateChanged" name="samplerateChanged">
+      <type name="EventDispatcher&lt;unsigned int&gt;" />
+    </field>
+  </struct>
+  <method id="top1::Globals::exit" name="exit" static="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::Globals::init" name="init" static="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::Globals::running" name="running" static="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+  </method>
+</class>

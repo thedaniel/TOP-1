@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::ui::DefaultScreen" interface="true" name="DefaultScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
+  </base>
+  <method abstract="yes" id="top1::ui::DefaultScreen::draw" name="draw" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ui::DefaultScreen::draw::ctx" name="ctx">
+      <type name="drawing::Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </argument>
+    <override name="drawing::Drawable::draw" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable::draw" />
+  </method>
+  <method abstract="yes" id="top1::ui::DefaultScreen::keypress" name="keypress" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::ui::DefaultScreen::keypress::key" name="key">
+      <type name="Key" ref="top1::ui#top1::ui::Key" />
+    </argument>
+    <override name="Screen::keypress" ref="top1::ui::Screen#top1::ui::Screen::keypress" />
+  </method>
+</class>

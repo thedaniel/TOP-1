@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::Mixer" interface="true" name="Mixer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Module" ref="top1::modules::Module#top1::modules::Module" />
+  </base>
+  <struct name="Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props" />
+  <field id="top1::modules::Mixer::props" name="props">
+    <type name="Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props" />
+  </field>
+  <field id="top1::modules::Mixer::graphs" name="graphs">
+    <type name="std::array&lt;top1::audio::Graph, 4&gt;" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::Mixer::Mixer" name="Mixer" />
+  <method abstract="yes" id="top1::modules::Mixer::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method abstract="yes" id="top1::modules::Mixer::process" name="process">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::Mixer::process::" name="">
+      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+  </method>
+</class>

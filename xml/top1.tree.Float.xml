@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::tree::Float" name="Float" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::tree::Float::value" name="value">
+    <type builtin="yes" name="float" />
+  </field>
+  <conversionfunction id="top1::tree::Float::operator float" name="operator float">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="float" />
+    </return>
+  </conversionfunction>
+  <method id="top1::tree::Float::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator!=::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+  <method id="top1::tree::Float::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator&lt;::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+  <method id="top1::tree::Float::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator&lt;=::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+  <method id="top1::tree::Float::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator==::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+  <method id="top1::tree::Float::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator&gt;::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+  <method id="top1::tree::Float::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::tree::Float::operator&gt;=::lhs" name="lhs">
+      <type name="Float" qualifier=" const &amp;" ref="top1::tree::Float#top1::tree::Float" />
+    </argument>
+  </method>
+</struct>

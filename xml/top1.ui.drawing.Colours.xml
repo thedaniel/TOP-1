@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::ui::drawing::Colours" name="Colours" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::ui::drawing::Colours::Black" name="Black">
+    <type name="Colour" qualifier=" const" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::Blue" name="Blue">
+    <type name="MainColour" qualifier=" const" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::Gray60" name="Gray60">
+    <type name="Colour" qualifier=" const" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::Gray70" name="Gray70">
+    <type name="Colour" qualifier=" const" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::Green" name="Green">
+    <type name="MainColour" qualifier=" const" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::Red" name="Red">
+    <type name="MainColour" qualifier=" const" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  </variable>
+  <variable id="top1::ui::drawing::Colours::White" name="White">
+    <type name="MainColour" qualifier=" const" ref="top1::ui::drawing::MainColour#top1::ui::drawing::MainColour" />
+  </variable>
+</namespace>

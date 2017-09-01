@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::modules::SimpleDrumVoice::Props" name="Props" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+  </base>
+  <struct anonymous="yes" id="top1::modules::SimpleDrumVoice::Props::(anonymous::1)" name="(anonymous::1)">
+    <base access="public">
+      <type name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
+    </base>
+    <field id="top1::modules::SimpleDrumVoice::Props::attack" name="attack">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+    <field id="top1::modules::SimpleDrumVoice::Props::sustain" name="sustain">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+    <field id="top1::modules::SimpleDrumVoice::Props::release" name="release">
+      <type name="Property&lt;float, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;float&gt; &gt;" />
+    </field>
+  </struct>
+  <struct name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+  <field id="top1::modules::SimpleDrumVoice::Props::D1" name="D1">
+    <type name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::D2" name="D2">
+    <type name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::envelope" name="envelope">
+    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/modules/simple-drums.hpp:26:7)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />
+  </field>
+  <field id="top1::modules::SimpleDrumVoice::Props::trigger" name="trigger">
+    <type name="Property&lt;bool, top1::modules::mode::def, false, top1::modules::mode::toggle_mode&gt;" />
+  </field>
+</struct>
