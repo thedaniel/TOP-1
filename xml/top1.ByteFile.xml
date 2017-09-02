@@ -1,16 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class abstract="true" id="top1::ByteFile" name="ByteFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>TODO: Documentation</brief>
+  <subclass access="public" name="SoundFile" ref="top1::SoundFile#top1::SoundFile" />
+  <methodtemplate id="top1::ByteFile::for_chunks_in_range" name="for_chunks_in_range">
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::ByteFile::for_chunks_in_range::" name="">
+      <type name="Position" />
+    </argument>
+    <argument id="top1::ByteFile::for_chunks_in_range::" name="">
+      <type name="Position" />
+    </argument>
+    <argument id="top1::ByteFile::for_chunks_in_range::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::ByteFile::for_chunks_in_range::F" name="F" />
+    <templatetypeparameter id="top1::ByteFile::for_chunks_in_range::F" name="F" />
+  </methodtemplate>
   <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
-      <type name="OutIter &amp;&amp;" />
+      <type name="OutIter" />
     </argument>
     <argument id="top1::ByteFile::read_bytes::" name="">
-      <type name="OutIter &amp;&amp;" />
+      <type name="OutIter" />
     </argument>
     <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
     <templatetypeparameter id="top1::ByteFile::read_bytes" />
@@ -20,10 +38,10 @@
   <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
-      <type name="OutIter &amp;&amp;" />
+      <type name="OutIter" />
     </argument>
     <argument id="top1::ByteFile::read_bytes::" name="">
       <type builtin="yes" name="int" />
@@ -33,16 +51,31 @@
     <templatetypeparameter id="top1::ByteFile::read_bytes::OutIter" name="OutIter" />
     <templatetypeparameter id="top1::ByteFile::read_bytes" />
   </methodtemplate>
+  <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ByteFile::read_bytes::" name="">
+      <type name="bytes&lt;len&gt;" qualifier=" &amp;" ref="top1::ByteFile::bytes#top1::ByteFile::bytes" />
+    </argument>
+    <templatenontypeparameter id="top1::ByteFile::read_bytes::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+    <templatenontypeparameter id="top1::ByteFile::read_bytes::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+  </methodtemplate>
   <methodtemplate id="top1::ByteFile::write_bytes" name="write_bytes">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::write_bytes::" name="">
-      <type name="InIter &amp;&amp;" />
+      <type name="InIter" />
     </argument>
     <argument id="top1::ByteFile::write_bytes::" name="">
-      <type name="InIter &amp;&amp;" />
+      <type name="InIter" />
     </argument>
     <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
     <templatetypeparameter id="top1::ByteFile::write_bytes" />
@@ -52,10 +85,10 @@
   <methodtemplate id="top1::ByteFile::write_bytes" name="write_bytes">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::write_bytes::" name="">
-      <type name="InIter &amp;&amp;" />
+      <type name="InIter" />
     </argument>
     <argument id="top1::ByteFile::write_bytes::" name="">
       <type builtin="yes" name="int" />
@@ -65,6 +98,27 @@
     <templatetypeparameter id="top1::ByteFile::write_bytes::InIter" name="InIter" />
     <templatetypeparameter id="top1::ByteFile::write_bytes" />
   </methodtemplate>
+  <methodtemplate id="top1::ByteFile::write_bytes" name="write_bytes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::ByteFile::write_bytes::" name="">
+      <type name="bytes&lt;len&gt;" qualifier=" const &amp;" ref="top1::ByteFile::bytes#top1::ByteFile::bytes" />
+    </argument>
+    <templatenontypeparameter id="top1::ByteFile::write_bytes::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+    <templatenontypeparameter id="top1::ByteFile::write_bytes::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+  </methodtemplate>
+  <structtemplate name="bytes" ref="top1::ByteFile::bytes#top1::ByteFile::bytes">
+    <templatenontypeparameter id="top1::ByteFile::bytes::len" name="len">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+  </structtemplate>
+  <struct name="Chunk" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
   <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
   <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile" />
   <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile">
@@ -82,16 +136,17 @@
       <type name="ByteFile &amp;&amp;" />
     </argument>
   </constructor>
+  <destructor abstract="yes" id="top1::ByteFile::~ByteFile" name="~ByteFile" virtual="yes" />
   <method abstract="yes" id="top1::ByteFile::close" name="close">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
   </method>
   <method abstract="yes" id="top1::ByteFile::flush" name="flush">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
   </method>
   <method abstract="yes" id="top1::ByteFile::is_open" name="is_open">
@@ -103,7 +158,7 @@
   <method abstract="yes" id="top1::ByteFile::open" name="open">
     <undocumented-return />
     <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::open::" name="">
       <type name="Path" qualifier=" const &amp;" />
@@ -121,34 +176,25 @@
   <method abstract="yes" id="top1::ByteFile::position" name="position">
     <undocumented-return />
     <return>
-      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
-    </return>
-  </method>
-  <method abstract="yes" id="top1::ByteFile::read_file" name="read_file">
-    <undocumented-return />
-    <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type name="Position" />
     </return>
   </method>
   <method abstract="yes" id="top1::ByteFile::seek" name="seek">
     <undocumented-return />
     <return>
-      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
+      <type name="Position" />
     </return>
     <argument id="top1::ByteFile::seek::" name="">
       <type name="Position" />
+    </argument>
+    <argument id="top1::ByteFile::seek::" name="">
+      <type name="std::ios_base::seekdir" />
     </argument>
   </method>
   <method abstract="yes" id="top1::ByteFile::size" name="size">
     <undocumented-return />
     <return>
-      <type name="result&lt;int, top1::ByteFile::Error&gt;" />
-    </return>
-  </method>
-  <method abstract="yes" id="top1::ByteFile::write_file" name="write_file">
-    <undocumented-return />
-    <return>
-      <type name="result&lt;void, top1::ByteFile::Error&gt;" />
+      <type name="Position" />
     </return>
   </method>
   <field access="protected" id="top1::ByteFile::fstream" name="fstream">

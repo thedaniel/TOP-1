@@ -394,6 +394,12 @@ Specialize this for each mode</brief>
     </classtemplate>
     <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
       <brief>TODO: Documentation</brief>
+      <structtemplate name="bytes" ref="top1::ByteFile::bytes#top1::ByteFile::bytes">
+        <templatenontypeparameter id="top1::ByteFile::bytes::len" name="len">
+          <type name="std::size_t" />
+        </templatenontypeparameter>
+      </structtemplate>
+      <struct name="Chunk" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
       <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
     </class>
     <class name="DataFile" ref="top1::DataFile#top1::DataFile" />
@@ -418,6 +424,17 @@ Specialize this for each mode</brief>
       <struct name="Field" ref="top1::File::Field#top1::File::Field" />
     </class>
     <class name="Globals" ref="top1::Globals#top1::Globals" />
+    <structtemplate name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes">
+      <brief>Get an integer with `N` bytes
+</brief>
+      <templatenontypeparameter id="top1::int_n_bytes::N" name="N">
+        <type builtin="yes" name="int" />
+      </templatenontypeparameter>
+    </structtemplate>
+    <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+    <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+    <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+    <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
     <structtemplate name="is_iterator" ref="top1::is_iterator#top1::is_iterator">
       <brief>Extends `std::true_type` if `iter` is an iterator over `type`,
 with category of at least `category`
@@ -453,6 +470,9 @@ otherwise it is `T2`</brief>
       <templatetypeparameter id="top1::select_type::T1" name="T1" />
       <templatetypeparameter id="top1::select_type::T2" name="T2" />
     </structtemplate>
+    <class name="SoundFile" ref="top1::SoundFile#top1::SoundFile">
+      <struct name="Info" ref="top1::SoundFile::Info#top1::SoundFile::Info" />
+    </class>
     <class name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer">
       <class name="CompareTapeSlice" ref="top1::TapeBuffer::CompareTapeSlice#top1::TapeBuffer::CompareTapeSlice" />
       <struct name="RingBuffer" ref="top1::TapeBuffer::RingBuffer#top1::TapeBuffer::RingBuffer" />

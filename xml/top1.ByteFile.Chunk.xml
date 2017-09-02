@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::ByteFile::Chunk" name="Chunk" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::ByteFile::Chunk::file" name="file">
+    <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+  </field>
+  <field id="top1::ByteFile::Chunk::offset" name="offset">
+    <type name="Position" />
+  </field>
+  <field id="top1::ByteFile::Chunk::id" name="id">
+    <type name="bytes&lt;4&gt;" />
+  </field>
+  <field id="top1::ByteFile::Chunk::size" name="size">
+    <type name="bytes&lt;4&gt;" />
+  </field>
+  <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
+    <argument id="top1::ByteFile::Chunk::Chunk::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
+  </constructor>
+  <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
+    <argument id="top1::ByteFile::Chunk::Chunk::o" name="o">
+      <type name="Chunk" qualifier=" &amp;" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
+    </argument>
+  </constructor>
+  <method id="top1::ByteFile::Chunk::read" name="read">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::Chunk::read_fields" name="read_fields" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::Chunk::seek_past" name="seek_past">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::Chunk::seek_to" name="seek_to">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::Chunk::write" name="write">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::Chunk::write_fields" name="write_fields" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+</struct>

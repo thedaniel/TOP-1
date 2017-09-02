@@ -94,6 +94,17 @@
   </classtemplate>
   <class name="File" ref="top1::File#top1::File" />
   <class name="Globals" ref="top1::Globals#top1::Globals" />
+  <structtemplate name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes">
+    <brief>Get an integer with `N` bytes
+</brief>
+    <templatenontypeparameter id="top1::int_n_bytes::N" name="N">
+      <type builtin="yes" name="int" />
+    </templatenontypeparameter>
+  </structtemplate>
+  <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+  <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+  <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
+  <struct name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes" />
   <structtemplate name="is_iterator" ref="top1::is_iterator#top1::is_iterator">
     <brief>Extends `std::true_type` if `iter` is an iterator over `type`,
 with category of at least `category`
@@ -128,6 +139,7 @@ otherwise it is `T2`</brief>
     <templatetypeparameter id="top1::select_type::T1" name="T1" />
     <templatetypeparameter id="top1::select_type::T2" name="T2" />
   </structtemplate>
+  <class name="SoundFile" ref="top1::SoundFile#top1::SoundFile" />
   <class name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer" />
   <class name="TapeDiskThread" ref="top1::TapeDiskThread#top1::TapeDiskThread" />
   <class name="TapeFile" ref="top1::TapeFile#top1::TapeFile" />

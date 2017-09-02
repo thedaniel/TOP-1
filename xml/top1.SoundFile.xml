@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class abstract="true" id="top1::SoundFile" name="SoundFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="private">
+    <type name="ByteFile" ref="top1::ByteFile#top1::ByteFile" />
+    <brief>TODO: Documentation</brief>
+  </base>
+  <methodtemplate id="top1::SoundFile::read_samples" name="read_samples">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::read_samples::" name="">
+      <type name="OutIter" />
+    </argument>
+    <argument id="top1::SoundFile::read_samples::" name="">
+      <type name="OutIter" />
+    </argument>
+    <templatetypeparameter id="top1::SoundFile::read_samples::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::SoundFile::read_samples" />
+    <templatetypeparameter id="top1::SoundFile::read_samples::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::SoundFile::read_samples" />
+  </methodtemplate>
+  <methodtemplate id="top1::SoundFile::read_samples" name="read_samples">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::read_samples::" name="">
+      <type name="OutIter" />
+    </argument>
+    <argument id="top1::SoundFile::read_samples::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+    <templatetypeparameter id="top1::SoundFile::read_samples::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::SoundFile::read_samples" />
+    <templatetypeparameter id="top1::SoundFile::read_samples::OutIter" name="OutIter" />
+    <templatetypeparameter id="top1::SoundFile::read_samples" />
+  </methodtemplate>
+  <methodtemplate id="top1::SoundFile::write_samples" name="write_samples">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::write_samples::" name="">
+      <type name="InIter" />
+    </argument>
+    <argument id="top1::SoundFile::write_samples::" name="">
+      <type name="InIter" />
+    </argument>
+    <templatetypeparameter id="top1::SoundFile::write_samples::InIter" name="InIter" />
+    <templatetypeparameter id="top1::SoundFile::write_samples" />
+    <templatetypeparameter id="top1::SoundFile::write_samples::InIter" name="InIter" />
+    <templatetypeparameter id="top1::SoundFile::write_samples" />
+  </methodtemplate>
+  <methodtemplate id="top1::SoundFile::write_samples" name="write_samples">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::write_samples::" name="">
+      <type name="InIter" />
+    </argument>
+    <argument id="top1::SoundFile::write_samples::" name="">
+      <type builtin="yes" name="int" />
+    </argument>
+    <templatetypeparameter id="top1::SoundFile::write_samples::InIter" name="InIter" />
+    <templatetypeparameter id="top1::SoundFile::write_samples" />
+    <templatetypeparameter id="top1::SoundFile::write_samples::InIter" name="InIter" />
+    <templatetypeparameter id="top1::SoundFile::write_samples" />
+  </methodtemplate>
+  <struct name="Info" ref="top1::SoundFile::Info#top1::SoundFile::Info" />
+  <enum class="yes" id="top1::SoundFile::Error" name="Error">
+    <enumvalue id="top1::SoundFile::Error::UnrecognizedFileType" name="UnrecognizedFileType" value="0" />
+  </enum>
+  <field id="top1::SoundFile::info" name="info">
+    <type name="Info" ref="top1::SoundFile::Info#top1::SoundFile::Info" />
+  </field>
+  <field id="top1::SoundFile::path" name="path">
+    <type name="ByteFile::Path" />
+  </field>
+  <constructor abstract="yes" id="top1::SoundFile::SoundFile" name="SoundFile" />
+  <method abstract="yes" id="top1::SoundFile::close" name="close" override="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="ByteFile::close" ref="top1::ByteFile#top1::ByteFile::close" />
+  </method>
+  <method abstract="yes" id="top1::SoundFile::flush" name="flush" override="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="ByteFile::flush" ref="top1::ByteFile#top1::ByteFile::flush" />
+  </method>
+  <method abstract="yes" id="top1::SoundFile::length" name="length">
+    <undocumented-return />
+    <return>
+      <type name="Position" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::SoundFile::open" name="open" override="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::open::" name="">
+      <type name="ByteFile::Path" qualifier=" const &amp;" />
+    </argument>
+    <override name="ByteFile::open" ref="top1::ByteFile#top1::ByteFile::open" />
+  </method>
+  <method abstract="yes" id="top1::SoundFile::position" name="position" override="yes">
+    <undocumented-return />
+    <return>
+      <type name="Position" />
+    </return>
+    <override name="ByteFile::position" ref="top1::ByteFile#top1::ByteFile::position" />
+  </method>
+  <method abstract="yes" id="top1::SoundFile::seek" name="seek" override="yes">
+    <undocumented-return />
+    <return>
+      <type name="Position" />
+    </return>
+    <override name="ByteFile::seek" ref="top1::ByteFile#top1::ByteFile::seek" />
+  </method>
+</class>
