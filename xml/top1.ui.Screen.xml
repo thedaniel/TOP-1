@@ -8,6 +8,7 @@
   <subclass access="public" name="MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
   <subclass access="public" name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen" />
   <constructor id="top1::ui::Screen::Screen" name="Screen" />
+  <destructor id="top1::ui::Screen::~Screen" name="~Screen" virtual="yes" />
   <method id="top1::ui::Screen::exit" name="exit" virtual="yes">
     <undocumented-return />
     <return>

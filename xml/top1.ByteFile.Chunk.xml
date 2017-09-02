@@ -3,18 +3,21 @@
   <field id="top1::ByteFile::Chunk::file" name="file">
     <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
   </field>
-  <field id="top1::ByteFile::Chunk::offset" name="offset">
-    <type name="Position" />
-  </field>
   <field id="top1::ByteFile::Chunk::id" name="id">
     <type name="bytes&lt;4&gt;" />
   </field>
   <field id="top1::ByteFile::Chunk::size" name="size">
     <type name="bytes&lt;4&gt;" />
   </field>
+  <field id="top1::ByteFile::Chunk::offset" name="offset">
+    <type name="Position" />
+  </field>
   <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
     <argument id="top1::ByteFile::Chunk::Chunk::file" name="file">
       <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
+    <argument id="top1::ByteFile::Chunk::Chunk::id" name="id">
+      <type name="bytes&lt;4&gt;" />
     </argument>
   </constructor>
   <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
@@ -22,6 +25,7 @@
       <type name="Chunk" qualifier=" &amp;" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
     </argument>
   </constructor>
+  <destructor id="top1::ByteFile::Chunk::~Chunk" name="~Chunk" virtual="yes" />
   <method id="top1::ByteFile::Chunk::read" name="read">
     <undocumented-return />
     <return>
