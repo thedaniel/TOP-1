@@ -1,12 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class id="top1::ui::Screen" name="Screen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+Represents a view that covers the entire screen
+
+If it belongs to a module, use <ref ref="top1::ui::ModuleScreen#top1::ui::ModuleScreen">top1::ui::ModuleScreen</ref>.
+</doc>
   <base access="public">
     <type name="drawing::Drawable" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
   </base>
+  <subclass access="public" name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen" />
   <subclass access="public" name="DefaultScreen" ref="top1::ui::DefaultScreen#top1::ui::DefaultScreen" />
   <subclass access="public" name="ModuleScreen" ref="top1::ui::ModuleScreen#top1::ui::ModuleScreen" />
   <subclass access="public" name="MainUI" ref="top1::ui::MainUI#top1::ui::MainUI" />
-  <subclass access="public" name="SelectorScreen" ref="top1::ui::SelectorScreen#top1::ui::SelectorScreen" />
   <constructor id="top1::ui::Screen::Screen" name="Screen" />
   <destructor id="top1::ui::Screen::~Screen" name="~Screen" virtual="yes" />
   <method id="top1::ui::Screen::exit" name="exit" virtual="yes">
@@ -16,14 +21,24 @@
     </return>
   </method>
   <method id="top1::ui::Screen::init" name="init" virtual="yes">
+    <doc>
+Run by MainUI when switching to this screen
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
   </method>
   <method id="top1::ui::Screen::keypress" name="keypress" virtual="yes">
+    <doc>
+Run by MainUI when a key is pressed
+
+@key the pressed key
+@return true if the key was used.
+</doc>
     <undocumented-return />
     <return>
+      <doc>true if the key was used.</doc>
       <type builtin="yes" name="bool" />
     </return>
     <argument id="top1::ui::Screen::keypress::" name="">
@@ -31,8 +46,15 @@
     </argument>
   </method>
   <method id="top1::ui::Screen::keyrelease" name="keyrelease" virtual="yes">
+    <doc>
+Run by MainUI when a key is released
+
+@key the released key
+@return true if the key was used.
+</doc>
     <undocumented-return />
     <return>
+      <doc>true if the key was used.</doc>
       <type builtin="yes" name="bool" />
     </return>
     <argument id="top1::ui::Screen::keyrelease::" name="">
@@ -40,6 +62,9 @@
     </argument>
   </method>
   <method id="top1::ui::Screen::rotary" name="rotary" virtual="yes">
+    <doc>
+This should be used for handling rotary events
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />

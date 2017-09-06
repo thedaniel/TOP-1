@@ -1,9 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class abstract="true" id="top1::ui::drawing::Drawable" name="Drawable" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+Anything that can be drawn on screen.
+Holds a pointer to its parent
+</doc>
   <subclass access="public" name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
   <subclass access="public" name="SizedDrawable" ref="top1::ui::drawing::SizedDrawable#top1::ui::drawing::SizedDrawable" />
   <constructor id="top1::ui::drawing::Drawable::Drawable" name="Drawable" />
   <method abstract="yes" id="top1::ui::drawing::Drawable::draw" name="draw" virtual="yes">
+    <doc>
+Draw this widget to the context.
+Called from the parent's draw method.
+@param ctx the canvas to draw on.
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />

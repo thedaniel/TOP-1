@@ -1,14 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <namespace id="top1::ui::drawing" name="drawing" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <variable id="top1::ui::drawing::FONT_BOLD" name="FONT_BOLD">
-    <type name="NanoCanvas::Font" />
-  </variable>
-  <variable id="top1::ui::drawing::FONT_LIGHT" name="FONT_LIGHT">
-    <type name="NanoCanvas::Font" />
-  </variable>
-  <variable id="top1::ui::drawing::FONT_NORM" name="FONT_NORM">
-    <type name="NanoCanvas::Font" />
-  </variable>
   <variable id="top1::ui::drawing::HEIGHT" name="HEIGHT">
     <type name="uint" qualifier=" const" />
   </variable>
@@ -16,6 +7,7 @@
     <type name="uint" qualifier=" const" />
   </variable>
   <namespace name="Colours" ref="top1::ui::drawing::Colours#top1::ui::drawing::Colours" />
+  <namespace name="Fonts" ref="top1::ui::drawing::Fonts#top1::ui::drawing::Fonts" />
   <namespace name="icons" ref="top1::ui::drawing::icons#top1::ui::drawing::icons" />
   <class name="Canvas" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
   <struct name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />

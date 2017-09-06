@@ -9,7 +9,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::EffectModule::process::" name="">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
 </class>

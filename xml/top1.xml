@@ -10,6 +10,24 @@
     </argument>
     <templatetypeparameter id="top1::&lt;deduction guide for overloaded&gt;::Ls" name="Ls" />
   </functiontemplate>
+  <functiontemplate id="top1::for_each_n" name="for_each_n">
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::for_each_n::first" name="first">
+      <type name="InputIt &amp;&amp;" />
+    </argument>
+    <argument id="top1::for_each_n::n" name="n">
+      <type name="Size" />
+    </argument>
+    <argument id="top1::for_each_n::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::for_each_n::InputIt" name="InputIt" />
+    <templatetypeparameter id="top1::for_each_n::Size" name="Size" />
+    <templatetypeparameter id="top1::for_each_n::F" name="F" />
+  </functiontemplate>
   <functiontemplate id="top1::generate_sequence" name="generate_sequence">
     <undocumented-return />
     <return>
@@ -22,6 +40,65 @@
       <type builtin="yes" name="int" />
     </templatenontypeparameter>
     <templatetypeparameter id="top1::generate_sequence::Func" name="Func" />
+  </functiontemplate>
+  <functiontemplate id="top1::indexed_for" name="indexed_for">
+    <brief>`for_each` with access to an index value
+</brief>
+    <doc>For each item in range `[first, last)`, invoke `f` with args
+`*iter, i` where `iter` is the current iterator, and `i` is
+an incrementing value, starting at zero. Use this instead of
+raw indexed loops wherever possible.
+
+</doc>
+    <undocumented-return />
+    <return>
+      <doc>The number of iterations performed</doc>
+      <type name="InputIt" />
+    </return>
+    <argument id="top1::indexed_for::first" name="first">
+      <doc>Input iterator to the begining of the range</doc>
+      <type name="InputIt &amp;&amp;" />
+    </argument>
+    <argument id="top1::indexed_for::last" name="last">
+      <doc>Input iterator to the end of the range</doc>
+      <type name="InputIt &amp;&amp;" />
+    </argument>
+    <argument id="top1::indexed_for::f" name="f">
+      <doc>Must be invocable with arguments `value_type`, `std::size_t`</doc>
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::indexed_for::InputIt" name="InputIt" />
+    <templatetypeparameter id="top1::indexed_for::F" name="F" />
+  </functiontemplate>
+  <functiontemplate id="top1::indexed_for_n" name="indexed_for_n">
+    <brief>`for_each_n` with access to an index value
+</brief>
+    <doc>for `n` iterations, invoke `f` with args `*iter, i`
+where `iter` is the current iterator starting with `first`,
+and `i` is an incrementing value, starting at zero.
+Use this instead of raw indexed loops wherever possible.
+
+</doc>
+    <undocumented-return />
+    <return>
+      <doc>An iterator one past the last one visited</doc>
+      <type name="InputIt" />
+    </return>
+    <argument id="top1::indexed_for_n::first" name="first">
+      <doc>Input iterator to the begining of the range</doc>
+      <type name="InputIt &amp;&amp;" />
+    </argument>
+    <argument id="top1::indexed_for_n::n" name="n">
+      <doc>Number of iterations to go through</doc>
+      <type name="Size &amp;&amp;" />
+    </argument>
+    <argument id="top1::indexed_for_n::f" name="f">
+      <doc>Must be invocable with arguments `value_type`, `std::size_t`</doc>
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::indexed_for_n::InputIt" name="InputIt" />
+    <templatetypeparameter id="top1::indexed_for_n::Size" name="Size" />
+    <templatetypeparameter id="top1::indexed_for_n::F" name="F" />
   </functiontemplate>
   <functiontemplate id="top1::join_strings" name="join_strings">
     <brief>Joins a sequence of strings, separating them using `js`</brief>
@@ -65,10 +142,10 @@
   <namespace name="ui" ref="top1::ui#top1::ui" />
   <templatetypeparameter id="top1::L1" name="L1" />
   <templatetypeparameter id="top1::Ls" name="Ls" />
-  <classtemplate name="BasicPolyPtr" ref="top1::BasicPolyPtr#top1::BasicPolyPtr">
-    <templatetypeparameter id="top1::BasicPolyPtr::PtrType" name="PtrType" />
-    <templatetypeparameter id="top1::BasicPolyPtr::Base" name="Base" />
-    <templatetypeparameter id="top1::BasicPolyPtr::Types" name="Types" />
+  <classtemplate name="basic_poly_ptr" ref="top1::basic_poly_ptr#top1::basic_poly_ptr">
+    <templatetypeparameter id="top1::basic_poly_ptr::Storage" name="Storage" />
+    <templatetypeparameter id="top1::basic_poly_ptr::Base" name="Base" />
+    <templatetypeparameter id="top1::basic_poly_ptr::Types" name="Types" />
   </classtemplate>
   <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
     <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
@@ -79,6 +156,11 @@
   <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
     <brief>TODO: Documentation</brief>
   </class>
+  <structtemplate name="bytes" ref="top1::bytes#top1::bytes">
+    <templatenontypeparameter id="top1::bytes::len" name="len">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+  </structtemplate>
   <class name="DataFile" ref="top1::DataFile#top1::DataFile" />
   <classtemplate name="DynArray" ref="top1::DynArray#top1::DynArray">
     <templatetypeparameter id="top1::DynArray::T" name="T" />

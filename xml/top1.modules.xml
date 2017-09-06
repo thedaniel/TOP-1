@@ -15,6 +15,7 @@
   <classtemplate name="ModuleDispatcher" ref="top1::modules::ModuleDispatcher#top1::modules::ModuleDispatcher">
     <templatetypeparameter id="top1::modules::ModuleDispatcher::M" name="M" />
   </classtemplate>
+  <class name="NukeSynth" ref="top1::modules::NukeSynth#top1::modules::NukeSynth" />
   <class name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
   <classtemplate name="Property" ref="top1::modules::Property#top1::modules::Property">
     <templatetypeparameter id="top1::modules::Property::T" name="T" />

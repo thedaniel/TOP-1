@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<class id="top1::modules::NukeSynth" interface="true" name="NukeSynth" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="FaustSynthModule" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule" />
+  </base>
+  <struct name="Props" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props" />
+  <field id="top1::modules::NukeSynth::props" name="props">
+    <type name="Props" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props" />
+  </field>
+  <constructor abstract="yes" id="top1::modules::NukeSynth::NukeSynth" name="NukeSynth" />
+  <method abstract="yes" id="top1::modules::NukeSynth::display" name="display" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <override name="Module::display" ref="top1::modules::Module#top1::modules::Module::display" />
+  </method>
+  <method abstract="yes" id="top1::modules::NukeSynth::process" name="process" override="yes" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::modules::NukeSynth::process::" name="">
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+    </argument>
+    <override name="FaustSynthModule::process" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule::process" />
+  </method>
+</class>

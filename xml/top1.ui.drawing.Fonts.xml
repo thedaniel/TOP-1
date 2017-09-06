@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<namespace id="top1::ui::drawing::Fonts" name="Fonts" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::ui::drawing::Fonts::Bold" name="Bold">
+    <type name="NanoCanvas::Font" />
+  </variable>
+  <variable id="top1::ui::drawing::Fonts::Light" name="Light">
+    <type name="NanoCanvas::Font" />
+  </variable>
+  <variable id="top1::ui::drawing::Fonts::Norm" name="Norm">
+    <type name="NanoCanvas::Font" />
+  </variable>
+</namespace>

@@ -1,71 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
-<struct abstract="true" id="top1::audio::ProcessData" name="ProcessData" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <methodtemplate id="top1::audio::ProcessData::process" name="process">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::audio::ProcessData::process::p" name="p">
-      <type name="const Processor" qualifier=" const &amp;" />
-    </argument>
-    <templatetypeparameter id="top1::audio::ProcessData::process::Processor" name="Processor" />
-  </methodtemplate>
-  <methodtemplate id="top1::audio::ProcessData::process" name="process">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::audio::ProcessData::process::p" name="p">
-      <type name="const Processor" qualifier=" const &amp;" />
-    </argument>
-    <argument id="top1::audio::ProcessData::process::_nframes" name="_nframes">
-      <type name="uint" />
-    </argument>
-    <templatetypeparameter id="top1::audio::ProcessData::process::Processor" name="Processor" />
-  </methodtemplate>
+<struct id="top1::audio::ProcessData" name="ProcessData" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <struct name="AudioData" ref="top1::audio::ProcessData::AudioData#top1::audio::ProcessData::AudioData" />
+  <struct name="Range" ref="top1::audio::ProcessData::Range#top1::audio::ProcessData::Range" />
   <field id="top1::audio::ProcessData::audio" name="audio">
     <type name="AudioData" ref="top1::audio::ProcessData::AudioData#top1::audio::ProcessData::AudioData" />
   </field>
   <field id="top1::audio::ProcessData::nframes" name="nframes">
-    <type name="uint" />
+    <type builtin="yes" name="int" />
   </field>
   <field id="top1::audio::ProcessData::midi" name="midi">
-    <type name="std::vector&lt;top1::BasicPolyPtr&lt;top1::detail::smart_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt;, std::allocator&lt;top1::BasicPolyPtr&lt;top1::detail::smart_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt; &gt; &gt;" />
+    <type name="std::vector&lt;top1::basic_poly_ptr&lt;top1::detail::unique_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt;, std::allocator&lt;top1::basic_poly_ptr&lt;top1::detail::unique_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt; &gt; &gt;" />
   </field>
-  <constructor abstract="yes" id="top1::audio::ProcessData::ProcessData" name="ProcessData" />
-  <constructor abstract="yes" id="top1::audio::ProcessData::ProcessData" name="ProcessData">
-    <argument id="top1::audio::ProcessData::ProcessData::" name="">
-      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
-    </argument>
-  </constructor>
-  <constructor abstract="yes" id="top1::audio::ProcessData::ProcessData" name="ProcessData">
-    <argument id="top1::audio::ProcessData::ProcessData::" name="">
-      <type name="ProcessData &amp;&amp;" />
-    </argument>
-  </constructor>
-  <method id="top1::audio::ProcessData::clear" name="clear">
+  <method id="top1::audio::ProcessData::slice" name="slice">
     <undocumented-return />
     <return>
-      <type builtin="yes" name="void" />
+      <type name="ProcessData" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </return>
-  </method>
-  <method abstract="yes" id="top1::audio::ProcessData::operator=" name="operator=">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::audio::ProcessData::operator=::" name="">
-      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
-    </argument>
-  </method>
-  <method abstract="yes" id="top1::audio::ProcessData::operator=" name="operator=">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::audio::ProcessData::operator=::" name="">
-      <type name="ProcessData &amp;&amp;" />
+    <argument id="top1::audio::ProcessData::slice::bounds" name="bounds">
+      <type name="Range" ref="top1::audio::ProcessData::Range#top1::audio::ProcessData::Range" />
     </argument>
   </method>
 </struct>

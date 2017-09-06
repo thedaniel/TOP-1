@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::ByteFile::Chunk" name="Chunk" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <field id="top1::ByteFile::Chunk::file" name="file">
-    <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
-  </field>
   <field id="top1::ByteFile::Chunk::id" name="id">
     <type name="bytes&lt;4&gt;" />
   </field>
@@ -13,9 +10,6 @@
     <type name="Position" />
   </field>
   <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
-    <argument id="top1::ByteFile::Chunk::Chunk::file" name="file">
-      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
-    </argument>
     <argument id="top1::ByteFile::Chunk::Chunk::id" name="id">
       <type name="bytes&lt;4&gt;" />
     </argument>
@@ -31,35 +25,53 @@
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::read::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
   <method id="top1::ByteFile::Chunk::read_fields" name="read_fields" virtual="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::read_fields::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
   <method id="top1::ByteFile::Chunk::seek_past" name="seek_past">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::seek_past::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
   <method id="top1::ByteFile::Chunk::seek_to" name="seek_to">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::seek_to::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
   <method id="top1::ByteFile::Chunk::write" name="write">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::write::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
   <method id="top1::ByteFile::Chunk::write_fields" name="write_fields" virtual="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::ByteFile::Chunk::write_fields::file" name="file">
+      <type name="ByteFile" qualifier=" &amp;" ref="top1::ByteFile#top1::ByteFile" />
+    </argument>
   </method>
 </struct>

@@ -1,16 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::ByteFile::Error" name="Error" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <base access="public">
+    <type name="std::exception" />
+  </base>
   <enum class="yes" id="top1::ByteFile::Error::Type" name="Type">
     <enumvalue id="top1::ByteFile::Error::Type::FileNotOpen" name="FileNotOpen" value="0" />
     <enumvalue id="top1::ByteFile::Error::Type::ExceptionThrown" name="ExceptionThrown" value="1" />
-    <enumvalue id="top1::ByteFile::Error::Type::BoundsExceeded" name="BoundsExceeded" value="2" />
+    <enumvalue id="top1::ByteFile::Error::Type::PastEnd" name="PastEnd" value="2" />
   </enum>
   <field id="top1::ByteFile::Error::type" name="type">
     <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />
+  </field>
+  <field id="top1::ByteFile::Error::message" name="message">
+    <type name="std::string" />
   </field>
   <constructor id="top1::ByteFile::Error::Error" name="Error">
     <argument id="top1::ByteFile::Error::Error::t" name="t">
       <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />
     </argument>
+    <argument id="top1::ByteFile::Error::Error::m" name="m">
+      <type name="std::string" />
+    </argument>
   </constructor>
+  <method id="top1::ByteFile::Error::enumString" name="enumString" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="std::string" />
+    </return>
+    <argument id="top1::ByteFile::Error::enumString::t" name="t">
+      <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />
+    </argument>
+  </method>
+  <method id="top1::ByteFile::Error::what" name="what" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </return>
+  </method>
 </struct>

@@ -21,7 +21,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::SuperSawSynth::process::" name="">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
     <override name="FaustSynthModule::process" ref="top1::modules::FaustSynthModule#top1::modules::FaustSynthModule::process" />
   </method>

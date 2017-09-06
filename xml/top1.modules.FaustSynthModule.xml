@@ -7,6 +7,7 @@
     <type name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
   </base>
   <subclass access="public" name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth" />
+  <subclass access="public" name="NukeSynth" ref="top1::modules::NukeSynth#top1::modules::NukeSynth" />
   <constructor id="top1::modules::FaustSynthModule::FaustSynthModule" name="FaustSynthModule">
     <argument id="top1::modules::FaustSynthModule::FaustSynthModule::fDSP" name="fDSP">
       <type name="dsp" qualifier="*" />
@@ -21,7 +22,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::FaustSynthModule::process::data" name="data">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
     <override name="audio::FaustWrapper::process" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper::process" />
     <override name="SynthModule::process" ref="top1::modules::SynthModule#top1::modules::SynthModule::process" />

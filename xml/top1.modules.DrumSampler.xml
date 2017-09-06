@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class abstract="true" id="top1::modules::DrumSampler" name="DrumSampler" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+A sampler with 24 individual voices, laid out over the keys.
+</doc>
   <base access="public">
     <type name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
   </base>
@@ -55,7 +58,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::DrumSampler::process::" name="">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
     <override name="SynthModule::process" ref="top1::modules::SynthModule#top1::modules::SynthModule::process" />
   </method>

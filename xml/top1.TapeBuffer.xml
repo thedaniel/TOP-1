@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class abstract="true" id="top1::TapeBuffer" name="TapeBuffer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+A Wrapper for ringbuffers, used for the tapemodule.
+</doc>
   <class name="CompareTapeSlice" ref="top1::TapeBuffer::CompareTapeSlice#top1::TapeBuffer::CompareTapeSlice" />
   <struct name="RingBuffer" ref="top1::TapeBuffer::RingBuffer#top1::TapeBuffer::RingBuffer" />
   <class name="TapeSliceSet" ref="top1::TapeBuffer::TapeSliceSet#top1::TapeBuffer::TapeSliceSet" />
@@ -39,6 +42,10 @@
     </return>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::goTo" name="goTo">
+    <doc>
+Jumps to another position in the tape
+@param tapePos position to jump to
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
@@ -69,8 +76,16 @@
     </return>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::readBW" name="readBW">
+    <doc>
+Reads backwards along the tape, moving the playPoint.
+@param nframes number of frames to read.
+@return a vector of length nframes with the data. The data will be in the
+       read order, meaning reverse.
+</doc>
     <undocumented-return />
     <return>
+      <doc>a vector of length nframes with the data. The data will be in the
+       read order, meaning reverse.</doc>
       <type name="std::vector&lt;top1::audio::AudioFrame&lt;4, float&gt;, std::allocator&lt;top1::audio::AudioFrame&lt;4, float&gt; &gt; &gt;" />
     </return>
     <argument id="top1::TapeBuffer::readBW::nframes" name="nframes">
@@ -78,8 +93,14 @@
     </argument>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::readFW" name="readFW">
+    <doc>
+Reads forwards along the tape, moving the playPoint.
+@param nframes number of frames to read.
+@return a vector of length nframes with the data.
+</doc>
     <undocumented-return />
     <return>
+      <doc>a vector of length nframes with the data.</doc>
       <type name="std::vector&lt;top1::audio::AudioFrame&lt;4, float&gt;, std::allocator&lt;top1::audio::AudioFrame&lt;4, float&gt; &gt; &gt;" />
     </return>
     <argument id="top1::TapeBuffer::readFW::nframes" name="nframes">
@@ -93,8 +114,17 @@
     </return>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::writeBW" name="writeBW">
+    <doc>
+Write data to the tape.
+@param data the data to write. Will be written in reverse order.
+@param offset the end of the data will be at playPoint + offset
+@param writeFunc the function used to write the data. Run for each frame,
+  recieves the original and the new data as arguments.
+@return the amount of unwritten frames
+</doc>
     <undocumented-return />
     <return>
+      <doc>the amount of unwritten frames</doc>
       <type name="uint" />
     </return>
     <argument id="top1::TapeBuffer::writeBW::data" name="data">
@@ -108,8 +138,17 @@
     </argument>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::writeFW" name="writeFW">
+    <doc>
+Write data to the tape.
+@param data the data to write.
+@param offset the end of the data will be at playPoint - offset
+@param writeFunc the function used to write the data. Run for each frame,
+  recieves the original and the new data as arguments.
+@return the amount of unwritten frames
+</doc>
     <undocumented-return />
     <return>
+      <doc>the amount of unwritten frames</doc>
       <type name="uint" />
     </return>
     <argument id="top1::TapeBuffer::writeFW::data" name="data">
@@ -149,6 +188,7 @@
     <type name="std::unique_ptr&lt;top1::TapeDiskThread, std::default_delete&lt;top1::TapeDiskThread&gt; &gt;" />
   </field>
   <field access="protected" id="top1::TapeBuffer::playPoint" name="playPoint">
+    <brief>The current position on the tape, counted in frames from the beginning</brief>
     <type name="std::atomic_uint" />
   </field>
   <field access="protected" id="top1::TapeBuffer::readData" name="readData">

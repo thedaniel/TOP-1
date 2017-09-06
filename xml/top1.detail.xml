@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <namespace id="top1::detail" name="detail" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <variable id="top1::detail::baseType" name="baseType">
+  <variable id="top1::detail::base_index" name="base_index">
     <type name="TypeIndex" qualifier=" const" />
   </variable>
   <functiontemplate id="top1::detail::generate_sequence_impl" name="generate_sequence_impl">
@@ -19,22 +19,27 @@
       <type builtin="yes" name="int" />
     </templatenontypeparameter>
   </functiontemplate>
-  <variable id="top1::detail::invalidType" name="invalidType">
+  <variable id="top1::detail::invalid_index" name="invalid_index">
     <type name="TypeIndex" qualifier=" const" />
   </variable>
-  <structtemplate name="FunctionArgs" ref="top1::detail::FunctionArgs#top1::detail::FunctionArgs">
-    <templatetypeparameter id="top1::detail::FunctionArgs::T" name="T" />
+  <structtemplate name="type_for_index" ref="top1::detail::type_for_index#top1::detail::type_for_index">
+    <templatetypeparameter id="top1::detail::type_for_index::Base" name="Base" />
+    <templatenontypeparameter id="top1::detail::type_for_index::I" name="I">
+      <type name="top1::detail::TypeIndex" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::detail::type_for_index::Ts" name="Ts" />
   </structtemplate>
-  <structtemplate name="FunctionArgsBase" ref="top1::detail::FunctionArgsBase#top1::detail::FunctionArgsBase">
-    <templatetypeparameter id="top1::detail::FunctionArgsBase::R" name="R" />
-    <templatetypeparameter id="top1::detail::FunctionArgsBase::Args" name="Args" />
+  <structtemplate name="type_index_impl" ref="top1::detail::type_index_impl#top1::detail::type_index_impl">
+    <templatetypeparameter id="top1::detail::type_index_impl::Base" name="Base" />
+    <templatetypeparameter id="top1::detail::type_index_impl::T" name="T" />
+    <templatenontypeparameter id="top1::detail::type_index_impl::I" name="I">
+      <type name="top1::detail::TypeIndex" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::detail::type_index_impl::Ts" name="Ts" />
   </structtemplate>
-  <structtemplate name="getTypeIndex" ref="top1::detail::getTypeIndex#top1::detail::getTypeIndex">
-    <templatetypeparameter id="top1::detail::getTypeIndex::Base" name="Base" />
-    <templatetypeparameter id="top1::detail::getTypeIndex::T" name="T" />
-    <templatetypeparameter id="top1::detail::getTypeIndex::Ts" name="Ts" />
-  </structtemplate>
-  <structtemplate name="smart_poly_storage" ref="top1::detail::smart_poly_storage#top1::detail::smart_poly_storage">
-    <templatetypeparameter id="top1::detail::smart_poly_storage::T" name="T" />
+  <structtemplate name="unique_poly_storage" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage">
+    <brief>Storage type for `unique_poly_ptr`
+</brief>
+    <templatetypeparameter id="top1::detail::unique_poly_storage::T" name="T" />
   </structtemplate>
 </namespace>

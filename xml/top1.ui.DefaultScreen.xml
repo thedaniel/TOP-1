@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class id="top1::ui::DefaultScreen" interface="true" name="DefaultScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+The default screen, shown on boot
+</doc>
   <base access="public">
     <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
   </base>

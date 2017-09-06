@@ -57,7 +57,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
-      <type name="bytes&lt;len&gt;" qualifier=" &amp;" ref="top1::ByteFile::bytes#top1::ByteFile::bytes" />
+      <type name="bytes&lt;len&gt;" qualifier=" &amp;" ref="top1::bytes#top1::bytes" />
     </argument>
     <templatenontypeparameter id="top1::ByteFile::read_bytes::N" name="N">
       <type name="std::size_t" />
@@ -104,7 +104,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::ByteFile::write_bytes::" name="">
-      <type name="bytes&lt;len&gt;" qualifier=" const &amp;" ref="top1::ByteFile::bytes#top1::ByteFile::bytes" />
+      <type name="bytes&lt;len&gt;" qualifier=" const &amp;" ref="top1::bytes#top1::bytes" />
     </argument>
     <templatenontypeparameter id="top1::ByteFile::write_bytes::N" name="N">
       <type name="std::size_t" />
@@ -113,13 +113,11 @@
       <type name="std::size_t" />
     </templatenontypeparameter>
   </methodtemplate>
-  <structtemplate name="bytes" ref="top1::ByteFile::bytes#top1::ByteFile::bytes">
-    <templatenontypeparameter id="top1::ByteFile::bytes::len" name="len">
-      <type name="std::size_t" />
-    </templatenontypeparameter>
-  </structtemplate>
   <struct name="Chunk" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
   <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
+  <field id="top1::ByteFile::path" name="path">
+    <type name="Path" />
+  </field>
   <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile" />
   <constructor abstract="yes" id="top1::ByteFile::ByteFile" name="ByteFile">
     <argument id="top1::ByteFile::ByteFile::" name="">
@@ -138,6 +136,12 @@
   </constructor>
   <destructor abstract="yes" id="top1::ByteFile::~ByteFile" name="~ByteFile" virtual="yes" />
   <method abstract="yes" id="top1::ByteFile::close" name="close">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::create_file" name="create_file" virtual="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
@@ -179,6 +183,12 @@
       <type name="Position" />
     </return>
   </method>
+  <method abstract="yes" id="top1::ByteFile::read_file" name="read_file" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </method>
   <method abstract="yes" id="top1::ByteFile::seek" name="seek">
     <undocumented-return />
     <return>
@@ -195,6 +205,12 @@
     <undocumented-return />
     <return>
       <type name="Position" />
+    </return>
+  </method>
+  <method abstract="yes" id="top1::ByteFile::write_file" name="write_file" virtual="yes">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
     </return>
   </method>
   <field access="protected" id="top1::ByteFile::fstream" name="fstream">

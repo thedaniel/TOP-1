@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <classtemplate id="top1::ui::ModuleScreen" name="ModuleScreen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+A screen that belongs to a module of type M
+</doc>
   <base access="public">
     <type name="Screen" ref="top1::ui::Screen#top1::ui::Screen" />
   </base>

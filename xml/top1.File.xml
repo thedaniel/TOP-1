@@ -64,6 +64,10 @@
   <struct name="Error" ref="top1::File::Error#top1::File::Error" />
   <struct name="Field" ref="top1::File::Field#top1::File::Field" />
   <field id="top1::File::mutex" name="mutex">
+    <doc>
+Provided here for when accessing the file.
+This class will never lock the mutex itself.
+</doc>
     <type name="std::recursive_mutex" />
   </field>
   <field id="top1::File::path" name="path">

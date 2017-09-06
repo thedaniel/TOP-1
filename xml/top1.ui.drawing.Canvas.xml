@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class id="top1::ui::drawing::Canvas" name="Canvas" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+A modified NanoCanvas interface.
+
+Allows for usage of <ref ref="top1::ui::drawing::Point#top1::ui::drawing::Point">top1::ui::drawing::Point</ref> and <ref ref="top1::ui::drawing::Size#top1::ui::drawing::Size">top1::ui::drawing::Size</ref> classes
+</doc>
   <base access="public">
     <type name="NanoCanvas::Canvas" />
   </base>
@@ -166,6 +171,27 @@
     </return>
     <argument id="top1::ui::drawing::Canvas::draw::d" name="d">
       <type name="Drawable" qualifier=" &amp;" ref="top1::ui::drawing::Drawable#top1::ui::drawing::Drawable" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::draw" name="draw">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::draw::d" name="d">
+      <type name="Drawable &amp;&amp;" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Canvas::drawAt" name="drawAt">
+    <undocumented-return />
+    <return>
+      <type name="Canvas" qualifier=" &amp;" ref="top1::ui::drawing::Canvas#top1::ui::drawing::Canvas" />
+    </return>
+    <argument id="top1::ui::drawing::Canvas::drawAt::p" name="p">
+      <type name="Point" ref="top1::ui::drawing::Point#top1::ui::drawing::Point" />
+    </argument>
+    <argument id="top1::ui::drawing::Canvas::drawAt::d" name="d">
+      <type name="Drawable &amp;&amp;" />
     </argument>
   </method>
   <method id="top1::ui::drawing::Canvas::drawAt" name="drawAt">

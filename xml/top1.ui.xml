@@ -16,6 +16,9 @@
   </classtemplate>
   <class name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
   <enum anonymous="yes" id="top1::ui::Key" name="Key">
+    <doc>
+Used for keypresses
+</doc>
     <enumvalue id="top1::ui::K_NONE" name="K_NONE" value="0" />
     <enumvalue id="top1::ui::K_RED_UP" name="K_RED_UP" value="1" />
     <enumvalue id="top1::ui::K_RED_DOWN" name="K_RED_DOWN" value="2" />

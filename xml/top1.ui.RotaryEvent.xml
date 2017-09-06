@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::ui::RotaryEvent" name="RotaryEvent" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+Passed to `Screen::rotary`
+</doc>
   <field id="top1::ui::RotaryEvent::rotary" name="rotary">
     <brief>The rotary at which the event occured</brief>
     <type name="Rotary" ref="top1::ui#top1::ui::Rotary" />

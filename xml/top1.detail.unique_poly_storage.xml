@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::detail::unique_poly_storage" name="unique_poly_storage" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>Storage type for `unique_poly_ptr`
+</brief>
+  <doc>poly_ptr needs some operations that are not supported by
+`std::unique_ptr`.</doc>
+  <templatetypeparameter id="top1::detail::unique_poly_storage::T" name="T" />
+  <field id="top1::detail::unique_poly_storage::ptr" name="ptr">
+    <type name="std::unique_ptr&lt;_Tp, _Dp&gt;" />
+  </field>
+  <constructor id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;" name="unique_poly_storage&lt;T&gt;">
+    <argument id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;::ptr" name="ptr">
+      <type name="T" qualifier="*" />
+    </argument>
+  </constructor>
+  <constructor id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;" name="unique_poly_storage&lt;T&gt;">
+    <argument id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;::o" name="o">
+      <type name="unique_poly_storage" qualifier=" &amp;" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
+    </argument>
+  </constructor>
+  <constructor id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;" name="unique_poly_storage&lt;T&gt;">
+    <argument id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;::o" name="o">
+      <type name="unique_poly_storage&lt;T&gt; &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method id="top1::detail::unique_poly_storage::operator=" name="operator=">
+    <undocumented-return />
+    <return>
+      <type name="unique_poly_storage" qualifier=" &amp;" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator=::o" name="o">
+      <type name="unique_poly_storage" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
+    </argument>
+  </method>
+  <conversionfunction id="top1::detail::unique_poly_storage::operator type-parameter-0-0 *" name="operator type-parameter-0-0 *">
+    <undocumented-return />
+    <return>
+      <type name="T" qualifier="*" />
+    </return>
+  </conversionfunction>
+  <method id="top1::detail::unique_poly_storage::operator-&gt;" name="operator-&gt;">
+    <undocumented-return />
+    <return>
+      <type name="T" qualifier="*" />
+    </return>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="T" qualifier=" &amp;" />
+    </return>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator==::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator!=::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator&lt;" name="operator&lt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator&lt;::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator&gt;" name="operator&gt;">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator&gt;::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator&lt;=" name="operator&lt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator&lt;=::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator&gt;=" name="operator&gt;=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator&gt;=::o" name="o">
+      <type name="T" qualifier="*" />
+    </argument>
+  </method>
+</structtemplate>

@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <classtemplate id="top1::DynArray" name="DynArray" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+STL-compatible dynamic array.
+
+Useful for buffers that only have to be resized when
+jack changes the buffersize
+</doc>
   <templatetypeparameter id="top1::DynArray::T" name="T" />
   <templatetypeparameter id="top1::DynArray::A" name="A">
     <default>
@@ -118,6 +124,10 @@
     </return>
   </method>
   <method id="top1::DynArray::resize" name="resize">
+    <doc>
+Resize the array.
+Discards all data.
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
@@ -127,6 +137,9 @@
     </argument>
   </method>
   <method id="top1::DynArray::clear" name="clear">
+    <doc>
+Fills the array with zeros
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />

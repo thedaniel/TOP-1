@@ -1,15 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::audio::ProcessData::AudioData" name="AudioData" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <field id="top1::audio::ProcessData::AudioData::outL" name="outL">
-    <type name="RTBuffer&lt;float&gt;" />
+    <brief>Sound data to the physical output</brief>
+    <type name="gsl::span&lt;float, -1&gt;" />
   </field>
   <field id="top1::audio::ProcessData::AudioData::outR" name="outR">
-    <type name="RTBuffer&lt;float&gt;" />
+    <brief>Sound data to the physical output</brief>
+    <type name="gsl::span&lt;float, -1&gt;" />
   </field>
   <field id="top1::audio::ProcessData::AudioData::input" name="input">
-    <type name="RTBuffer&lt;float&gt;" />
+    <brief>Sound data from the physical input</brief>
+    <type name="gsl::span&lt;float, -1&gt;" />
   </field>
   <field id="top1::audio::ProcessData::AudioData::proc" name="proc">
-    <type name="RTBuffer&lt;float&gt;" />
+    <brief>The sound that is passed between modules</brief>
+    <type name="gsl::span&lt;float, -1&gt;" />
+  </field>
+  <field id="top1::audio::ProcessData::AudioData::offset" name="offset">
+    <brief>The location of the spans relative to the audio buffer
+</brief>
+    <doc>Will mostly be zero, but is set on `slice`</doc>
+    <type builtin="yes" name="int" />
   </field>
 </struct>

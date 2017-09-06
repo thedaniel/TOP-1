@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::audio::ProcessData::Range" name="Range" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::audio::ProcessData::Range::i" name="i">
+    <type builtin="yes" name="int" />
+  </field>
+  <field id="top1::audio::ProcessData::Range::o" name="o">
+    <type builtin="yes" name="int" />
+  </field>
+</struct>

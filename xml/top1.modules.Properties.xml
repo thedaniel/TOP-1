@@ -5,10 +5,12 @@
   </base>
   <subclass access="public" name="Tapedeck::Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
   <subclass access="public" name="Mixer::Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props" />
+  <subclass access="public" name="NukeSynth::Props" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props" />
   <subclass access="public" name="SuperSawSynth::Props::(anonymous::1)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
   <subclass access="public" name="SuperSawSynth::Props" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props" />
   <subclass access="public" name="Metronome::Props" ref="top1::modules::Metronome::Props#top1::modules::Metronome::Props" />
   <subclass access="public" name="Mixer::Props::TrackInfo" ref="top1::modules::Mixer::Props::TrackInfo#top1::modules::Mixer::Props::TrackInfo" />
+  <subclass access="public" name="NukeSynth::Props::(anonymous::1)" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props::(anonymous::1)" />
   <subclass access="public" name="SimpleDrumVoice::Props::Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
   <subclass access="public" name="DrumSampler::Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
   <subclass access="public" name="SimpleDrumVoice::Props::(anonymous::1)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />

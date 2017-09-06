@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate id="top1::basic_poly_ptr" name="basic_poly_ptr" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+A pointer type to help with polymorphism
+
+A `poly_ptr` is instantiatetd with a base type, and a list of types
+that inherit from the base. It is then implicitly convertable to the
+base class, and explicitly convertible to the child type that currently
+stored. In this sense, it behaves a bit like a `std::variant`, with the
+added difference of not providing storage for the enclosed type.
+
+Two partial specializations, &amp;lt;top1::poly\_ptr&amp;gt; and &amp;lt;top1::unique\_poly\_ptr&amp;gt;
+are provided. &amp;lt;top1::poly\_ptr&amp;gt; uses raw pointers for storage, and as such
+ownership should be managed elsewhere. &amp;lt;top1::unique\_poly\_ptr&amp;gt; uses
+`std::unique_ptr`, and therefore owns its elements.
+
+This is especially useful for storing a predefined set of types,
+that all inherit from the same base class, in a container.
+In the TOP-1 it's used for midi events, to be able to store the
+events in a vector, and only access the subtypes when necessary.
+
+You should use either `top1::poly_ptr` or `top1::unique_poly_ptr`
+in nearly all cases.
+
+@Storage The underlying pointer to use for storage.
+        Must be pointer-like (TODO: define)
+@Base The base class.
+@Types All of the possible types. Must all inherit from <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">Base</ref>.
+</doc>
+  <templatetypeparameter id="top1::basic_poly_ptr::Storage" name="Storage" />
+  <templatetypeparameter id="top1::basic_poly_ptr::Base" name="Base" />
+  <templatetypeparameter id="top1::basic_poly_ptr::Types" name="Types" />
+  <variable id="top1::basic_poly_ptr::invalid_index" name="invalid_index">
+    <type name="detail::TypeIndex" qualifier=" const" />
+  </variable>
+  <variable id="top1::basic_poly_ptr::base_index" name="base_index">
+    <type name="detail::TypeIndex" qualifier=" const" />
+  </variable>
+  <constructor id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <brief>Default constructor. Stores a nullptr</brief>
+  </constructor>
+  <constructor id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <brief>Construct from storage type</brief>
+    <argument id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::" name="">
+      <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::storage_type" qualifier=" const &amp;" />
+    </argument>
+  </constructor>
+  <constructor id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <brief>Move storage into this</brief>
+    <argument id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::" name="">
+      <type name="storage_type &amp;&amp;" />
+    </argument>
+  </constructor>
+  <methodtemplate id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <brief>Construct from a pointer to `T`
+</brief>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::t" name="t">
+      <doc>Will be stored. Must have a lifetime at least as long as this object.
+It will be passed to the storage type, which decides what to do with
+it. In the case of a `unique_poly_ptr`, this means <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::t">t</ref> will be
+destroyed with this object. With a non-owning `poly_ptr`, the
+lifetime will not be affected.</doc>
+      <type name="T" qualifier="*" />
+    </argument>
+    <templatetypeparameter id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+      <default>
+        <type name="T" />
+      </default>
+    </templatetypeparameter>
+    <templatetypeparameter id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::E" name="E" />
+  </methodtemplate>
+  <constructor id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <argument id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::" name="">
+      <type name="basic_poly_ptr" qualifier=" const &amp;" ref="top1::basic_poly_ptr#top1::basic_poly_ptr" />
+    </argument>
+  </constructor>
+  <constructor id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;" name="basic_poly_ptr&lt;Storage, Base, Types...&gt;">
+    <argument id="top1::basic_poly_ptr::basic_poly_ptr&lt;Storage, Base, Types...&gt;::" name="">
+      <type name="basic_poly_ptr&lt;Storage, Base, Types...&gt; &amp;&amp;" />
+    </argument>
+  </constructor>
+  <method id="top1::basic_poly_ptr::operator=" name="operator=">
+    <undocumented-return />
+    <return>
+      <type name="basic_poly_ptr" qualifier=" &amp;" ref="top1::basic_poly_ptr#top1::basic_poly_ptr" />
+    </return>
+    <argument id="top1::basic_poly_ptr::operator=::" name="">
+      <type name="basic_poly_ptr" ref="top1::basic_poly_ptr#top1::basic_poly_ptr" />
+    </argument>
+  </method>
+  <methodtemplate id="top1::basic_poly_ptr::is" name="is">
+    <brief>Check if the `poly_ptr` currently holds a value of type &amp;lt;T&amp;gt;
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>`true` if the currently stored type is `T`,
+or if `T` is <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref></doc>
+      <type name="std::enable_if_t" />
+    </return>
+    <templatetypeparameter id="top1::basic_poly_ptr::is::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::is::T" name="T" />
+  </methodtemplate>
+  <methodtemplate id="top1::basic_poly_ptr::is" name="is">
+    <brief>Check if the `poly_ptr` currently holds a value of type &amp;lt;T&amp;gt;
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>`true` if the currently stored type is `T`,
+or if `T` is <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref></doc>
+      <type name="std::enable_if_t" />
+    </return>
+    <templatenontypeparameter id="top1::basic_poly_ptr::is::I" name="I">
+      <type name="top1::basic_poly_ptr&lt;Storage, Base, Types&gt;::index_type" />
+    </templatenontypeparameter>
+    <templatenontypeparameter id="top1::basic_poly_ptr::is::I" name="I">
+      <type name="top1::detail::TypeIndex" />
+    </templatenontypeparameter>
+  </methodtemplate>
+  <methodtemplate id="top1::basic_poly_ptr::get" name="get">
+    <brief>Get the value of type `T`
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>A reference to the stored value, if the `poly_ptr` is holding a
+type `T`, which is not null. If the `poly_ptr` is holding any
+other type, it will throw `std::bad_cast`</doc>
+      <type name="std::enable_if_t" />
+    </return>
+    <templatetypeparameter id="top1::basic_poly_ptr::get::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::get::T" name="T" />
+  </methodtemplate>
+  <methodtemplate id="top1::basic_poly_ptr::get" name="get">
+    <brief>Get the value of type with index T
+</brief>
+    <undocumented-return />
+    <return>
+      <doc>A reference to the stored value, if the `poly_ptr` is holding a
+type `T`, which is not null. If the `poly_ptr` is holding any
+other type, it will throw `std::bad_cast`</doc>
+      <type name="std::enable_if_t" />
+    </return>
+    <templatenontypeparameter id="top1::basic_poly_ptr::get::I" name="I">
+      <type name="top1::basic_poly_ptr&lt;Storage, Base, Types&gt;::index_type" />
+    </templatenontypeparameter>
+    <templatenontypeparameter id="top1::basic_poly_ptr::get::I" name="I">
+      <type name="top1::detail::TypeIndex" />
+    </templatenontypeparameter>
+  </methodtemplate>
+  <methodtemplate id="top1::basic_poly_ptr::operator=" name="operator=">
+    <brief>Update the stored value and type
+</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::basic_poly_ptr::operator=::t" name="t">
+      <doc>Will be stored. It must have a lifetime at least as long as this
+object. It will be passed to the storage type, which decides what to
+do with it. In the case of a `unique_poly_ptr`, this means <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::operator=::t">t</ref> will
+be destroyed with this object. With a non-owning `poly_ptr`, the
+lifetime will not be affected.</doc>
+      <type name="T" qualifier="*" />
+    </argument>
+    <templatetypeparameter id="top1::basic_poly_ptr::operator=::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::operator=::T" name="T" />
+  </methodtemplate>
+  <methodtemplate id="top1::basic_poly_ptr::operator=" name="operator=">
+    <brief>Update the stored value and type
+</brief>
+    <undocumented-return />
+    <return>
+      <type name="std::enable_if_t" />
+    </return>
+    <argument id="top1::basic_poly_ptr::operator=::t" name="t">
+      <doc>Will be stored. It must have a lifetime at least as long as this
+object. It will be passed to the storage type, which decides what to
+do with it. In the case of a `unique_poly_ptr`, this means <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::operator=::t">t</ref> will
+be destroyed with this object. With a non-owning `poly_ptr`, the
+lifetime will not be affected.</doc>
+      <type name="T" qualifier=" &amp;" />
+    </argument>
+    <templatetypeparameter id="top1::basic_poly_ptr::operator=::T" name="T" />
+    <templatetypeparameter id="top1::basic_poly_ptr::operator=::T" name="T" />
+  </methodtemplate>
+  <method id="top1::basic_poly_ptr::base" name="base">
+    <brief>Dereference the stored value as the base class
+</brief>
+    <doc>This method is what differentiates the `poly_ptr` from a variant of
+pointers. In any non-null state, the value can be accessed as a <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref>.
+
+Invoking this method while the `poly_ptr` is storing null, is undefined
+behaviour.
+
+</doc>
+    <undocumented-return />
+    <return>
+      <doc>a reference to the stored base.</doc>
+      <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::base_type" qualifier=" &amp;" />
+    </return>
+  </method>
+  <method id="top1::basic_poly_ptr::operator*" name="operator*">
+    <brief>Dereference the internal pointer as <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref>
+    </brief>
+    <doc>An alias to &amp;lt;base()&amp;gt;</doc>
+    <undocumented-return />
+    <return>
+      <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::base_type" qualifier=" &amp;" />
+    </return>
+  </method>
+  <method id="top1::basic_poly_ptr::operator-&gt;" name="operator-&gt;">
+    <brief>Access the stored value as <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref>*</brief>
+    <undocumented-return />
+    <return>
+      <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::base_type" qualifier="*" />
+    </return>
+  </method>
+  <conversionfunction id="top1::basic_poly_ptr::operator type-parameter-0-1 *" name="operator type-parameter-0-1 *">
+    <brief>Implicitly convert to <ref ref="top1::basic_poly_ptr#top1::basic_poly_ptr::Base">top1::basic_poly_ptr::Base</ref>*</brief>
+    <undocumented-return />
+    <return>
+      <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::base_type" qualifier="*" />
+    </return>
+  </conversionfunction>
+  <methodtemplate id="top1::basic_poly_ptr::match" name="match">
+    <brief>Pattern matching with lambdas
+</brief>
+    <doc>TODO: Document</doc>
+    <undocumented-return />
+    <return>
+      <type name="std::common_type_t" />
+    </return>
+    <argument id="top1::basic_poly_ptr::match::f" name="f">
+      <type name="Funcs &amp;&amp;..." />
+    </argument>
+    <templatetypeparameter id="top1::basic_poly_ptr::match::Funcs" name="Funcs" />
+    <templatetypeparameter id="top1::basic_poly_ptr::match::Funcs" name="Funcs" />
+  </methodtemplate>
+  <field access="protected" id="top1::basic_poly_ptr::index" name="index">
+    <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::index_type" />
+  </field>
+  <field access="protected" id="top1::basic_poly_ptr::store" name="store">
+    <type name="basic_poly_ptr&lt;Storage, Base, Types&gt;::storage_type" />
+  </field>
+</classtemplate>

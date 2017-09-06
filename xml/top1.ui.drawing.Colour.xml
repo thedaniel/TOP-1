@@ -42,12 +42,48 @@
       <type builtin="yes" name="float" />
     </argument>
   </method>
+  <method id="top1::ui::drawing::Colour::bytes" name="bytes" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </return>
+    <argument id="top1::ui::drawing::Colour::bytes::r" name="r">
+      <type name="uint8_t" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::bytes::g" name="g">
+      <type name="uint8_t" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::bytes::b" name="b">
+      <type name="uint8_t" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::bytes::a" name="a">
+      <type name="uint8_t" />
+    </argument>
+  </method>
   <method id="top1::ui::drawing::Colour::dim" name="dim">
     <undocumented-return />
     <return>
       <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
     </return>
     <argument id="top1::ui::drawing::Colour::dim::amount" name="amount">
+      <type builtin="yes" name="float" />
+    </argument>
+  </method>
+  <method id="top1::ui::drawing::Colour::floats" name="floats" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="Colour" ref="top1::ui::drawing::Colour#top1::ui::drawing::Colour" />
+    </return>
+    <argument id="top1::ui::drawing::Colour::floats::r" name="r">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::floats::g" name="g">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::floats::b" name="b">
+      <type builtin="yes" name="float" />
+    </argument>
+    <argument id="top1::ui::drawing::Colour::floats::a" name="a">
       <type builtin="yes" name="float" />
     </argument>
   </method>

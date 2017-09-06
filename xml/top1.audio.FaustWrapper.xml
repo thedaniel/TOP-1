@@ -22,7 +22,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::audio::FaustWrapper::process::data" name="data">
-      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
   <field access="protected" id="top1::audio::FaustWrapper::opts" name="opts">
@@ -41,21 +41,27 @@
     </return>
   </method>
   <method abstract="yes" access="protected" id="top1::audio::FaustWrapper::postBuffers" name="postBuffers" virtual="yes">
+    <doc>
+Put the data back into the chain
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::audio::FaustWrapper::postBuffers::" name="">
-      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
   <method abstract="yes" access="protected" id="top1::audio::FaustWrapper::prepBuffers" name="prepBuffers" virtual="yes">
+    <doc>
+Copy the relevant data into inBuffer
+</doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::audio::FaustWrapper::prepBuffers::" name="">
-      <type name="ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
 </class>

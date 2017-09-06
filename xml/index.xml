@@ -151,6 +151,12 @@ If you are interested, come chat with me at my [discord server](https://discord.
  - [mapbox/variant](https://github.com/mapbox/variant), one of the best variant implementations out there
 
 And of course, none of this would be posible without [spacemacs](http://spacemacs.org/), because i would've given up programming long ago</doc>
+  <category name="algorithms" ref="algorithms#algorithms" />
+  <category name="installing" ref="installing#installing">
+    <brief># In Ubuntu 16.04
+This is the recommended version to run in a VM.
+</brief>
+  </category>
   <namespace name="top1" ref="top1#top1">
     <namespace name="audio" ref="top1::audio#top1::audio">
       <namespace name="detail" ref="top1::audio::detail#top1::audio::detail" />
@@ -169,6 +175,7 @@ And of course, none of this would be posible without [spacemacs](http://spacemac
       <class name="JackAudio" ref="top1::audio::JackAudio#top1::audio::JackAudio" />
       <struct name="ProcessData" ref="top1::audio::ProcessData#top1::audio::ProcessData">
         <struct name="AudioData" ref="top1::audio::ProcessData::AudioData#top1::audio::ProcessData::AudioData" />
+        <struct name="Range" ref="top1::audio::ProcessData::Range#top1::audio::ProcessData::Range" />
       </struct>
       <classtemplate name="RTBuffer" ref="top1::audio::RTBuffer#top1::audio::RTBuffer">
         <templatetypeparameter id="top1::audio::RTBuffer::T" name="T" />
@@ -179,20 +186,25 @@ And of course, none of this would be posible without [spacemacs](http://spacemac
       <class name="Waveform" ref="top1::audio::Waveform#top1::audio::Waveform" />
     </namespace>
     <namespace name="detail" ref="top1::detail#top1::detail">
-      <structtemplate name="FunctionArgs" ref="top1::detail::FunctionArgs#top1::detail::FunctionArgs">
-        <templatetypeparameter id="top1::detail::FunctionArgs::T" name="T" />
+      <structtemplate name="type_for_index" ref="top1::detail::type_for_index#top1::detail::type_for_index">
+        <templatetypeparameter id="top1::detail::type_for_index::Base" name="Base" />
+        <templatenontypeparameter id="top1::detail::type_for_index::I" name="I">
+          <type name="top1::detail::TypeIndex" />
+        </templatenontypeparameter>
+        <templatetypeparameter id="top1::detail::type_for_index::Ts" name="Ts" />
       </structtemplate>
-      <structtemplate name="FunctionArgsBase" ref="top1::detail::FunctionArgsBase#top1::detail::FunctionArgsBase">
-        <templatetypeparameter id="top1::detail::FunctionArgsBase::R" name="R" />
-        <templatetypeparameter id="top1::detail::FunctionArgsBase::Args" name="Args" />
+      <structtemplate name="type_index_impl" ref="top1::detail::type_index_impl#top1::detail::type_index_impl">
+        <templatetypeparameter id="top1::detail::type_index_impl::Base" name="Base" />
+        <templatetypeparameter id="top1::detail::type_index_impl::T" name="T" />
+        <templatenontypeparameter id="top1::detail::type_index_impl::I" name="I">
+          <type name="top1::detail::TypeIndex" />
+        </templatenontypeparameter>
+        <templatetypeparameter id="top1::detail::type_index_impl::Ts" name="Ts" />
       </structtemplate>
-      <structtemplate name="getTypeIndex" ref="top1::detail::getTypeIndex#top1::detail::getTypeIndex">
-        <templatetypeparameter id="top1::detail::getTypeIndex::Base" name="Base" />
-        <templatetypeparameter id="top1::detail::getTypeIndex::T" name="T" />
-        <templatetypeparameter id="top1::detail::getTypeIndex::Ts" name="Ts" />
-      </structtemplate>
-      <structtemplate name="smart_poly_storage" ref="top1::detail::smart_poly_storage#top1::detail::smart_poly_storage">
-        <templatetypeparameter id="top1::detail::smart_poly_storage::T" name="T" />
+      <structtemplate name="unique_poly_storage" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage">
+        <brief>Storage type for `unique_poly_ptr`
+</brief>
+        <templatetypeparameter id="top1::detail::unique_poly_storage::T" name="T" />
       </structtemplate>
     </namespace>
     <namespace name="math" ref="top1::math#top1::math">
@@ -275,6 +287,9 @@ Specialize this for each mode</brief>
       <classtemplate name="ModuleDispatcher" ref="top1::modules::ModuleDispatcher#top1::modules::ModuleDispatcher">
         <templatetypeparameter id="top1::modules::ModuleDispatcher::M" name="M" />
       </classtemplate>
+      <class name="NukeSynth" ref="top1::modules::NukeSynth#top1::modules::NukeSynth">
+        <struct name="Props" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props" />
+      </class>
       <class name="Properties" ref="top1::modules::Properties#top1::modules::Properties" />
       <classtemplate name="Property" ref="top1::modules::Property#top1::modules::Property">
         <templatetypeparameter id="top1::modules::Property::T" name="T" />
@@ -341,6 +356,7 @@ Specialize this for each mode</brief>
     <namespace name="ui" ref="top1::ui#top1::ui">
       <namespace name="drawing" ref="top1::ui::drawing#top1::ui::drawing">
         <namespace name="Colours" ref="top1::ui::drawing::Colours#top1::ui::drawing::Colours" />
+        <namespace name="Fonts" ref="top1::ui::drawing::Fonts#top1::ui::drawing::Fonts" />
         <namespace name="icons" ref="top1::ui::drawing::icons#top1::ui::drawing::icons">
           <struct name="Arrow" ref="top1::ui::drawing::icons::Arrow#top1::ui::drawing::icons::Arrow">
             <brief>A simple arrow</brief>
@@ -375,13 +391,10 @@ Specialize this for each mode</brief>
       </classtemplate>
       <class name="Widget" ref="top1::ui::Widget#top1::ui::Widget" />
     </namespace>
-    <classtemplate name="BasicPolyPtr" ref="top1::BasicPolyPtr#top1::BasicPolyPtr">
-      <templatetypeparameter id="top1::BasicPolyPtr::PtrType" name="PtrType" />
-      <templatetypeparameter id="top1::BasicPolyPtr::Base" name="Base" />
-      <templatetypeparameter id="top1::BasicPolyPtr::Types" name="Types" />
-      <structtemplate name="visitor" ref="top1::BasicPolyPtr::visitor#top1::BasicPolyPtr::visitor">
-        <templatetypeparameter id="top1::BasicPolyPtr::visitor::Cases" name="Cases" />
-      </structtemplate>
+    <classtemplate name="basic_poly_ptr" ref="top1::basic_poly_ptr#top1::basic_poly_ptr">
+      <templatetypeparameter id="top1::basic_poly_ptr::Storage" name="Storage" />
+      <templatetypeparameter id="top1::basic_poly_ptr::Base" name="Base" />
+      <templatetypeparameter id="top1::basic_poly_ptr::Types" name="Types" />
     </classtemplate>
     <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
       <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
@@ -394,14 +407,14 @@ Specialize this for each mode</brief>
     </classtemplate>
     <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
       <brief>TODO: Documentation</brief>
-      <structtemplate name="bytes" ref="top1::ByteFile::bytes#top1::ByteFile::bytes">
-        <templatenontypeparameter id="top1::ByteFile::bytes::len" name="len">
-          <type name="std::size_t" />
-        </templatenontypeparameter>
-      </structtemplate>
       <struct name="Chunk" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
       <struct name="Error" ref="top1::ByteFile::Error#top1::ByteFile::Error" />
     </class>
+    <structtemplate name="bytes" ref="top1::bytes#top1::bytes">
+      <templatenontypeparameter id="top1::bytes::len" name="len">
+        <type name="std::size_t" />
+      </templatenontypeparameter>
+    </structtemplate>
     <class name="DataFile" ref="top1::DataFile#top1::DataFile" />
     <classtemplate name="DynArray" ref="top1::DynArray#top1::DynArray">
       <templatetypeparameter id="top1::DynArray::T" name="T" />
@@ -490,6 +503,30 @@ otherwise it is `T2`</brief>
       <templatetypeparameter id="top1::TypedField::T" name="T" />
     </structtemplate>
   </namespace>
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
+  <templatetypeparameter id="S" name="S" />
+  <templatetypeparameter id="B" name="B" />
+  <templatetypeparameter id="Ts" name="Ts" />
   <method id="readBytes" name="readBytes">
     <undocumented-return />
     <return>

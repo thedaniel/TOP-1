@@ -115,7 +115,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::Tapedeck::postProcess::" name="">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
   <method abstract="yes" id="top1::modules::Tapedeck::preProcess" name="preProcess">
@@ -124,7 +124,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::modules::Tapedeck::preProcess::" name="">
-      <type name="audio::ProcessData" qualifier=" &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
+      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
     </argument>
   </method>
   <method abstract="yes" id="top1::modules::Tapedeck::timeUntil" name="timeUntil">

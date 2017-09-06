@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::SoundFile::Info" name="Info" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <enum class="yes" id="top1::SoundFile::Info::Type" name="Type">
-    <enumvalue id="top1::SoundFile::Info::Type::AIFF" name="AIFF" value="0" />
-    <enumvalue id="top1::SoundFile::Info::Type::WAVE" name="WAVE" value="1" />
+    <enumvalue id="top1::SoundFile::Info::Type::WAVE" name="WAVE" value="0" />
+    <enumvalue id="top1::SoundFile::Info::Type::AIFF" name="AIFF" value="1" />
   </enum>
   <field id="top1::SoundFile::Info::type" name="type">
     <type name="Type" ref="top1::SoundFile::Info#top1::SoundFile::Info::Type" />
