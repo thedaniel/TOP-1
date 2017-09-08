@@ -13,12 +13,12 @@
     <type name="Type" ref="top1::ReadException#top1::ReadException::Type" />
   </field>
   <field id="top1::ReadException::message" name="message">
-    <type name="std::string" />
+    <type name="std::__cxx11::string" />
   </field>
   <constructor id="top1::ReadException::ReadException" name="ReadException" />
   <constructor id="top1::ReadException::ReadException" name="ReadException">
     <argument id="top1::ReadException::ReadException::message" name="message">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <constructor id="top1::ReadException::ReadException" name="ReadException">
@@ -31,7 +31,7 @@
       <type name="Type" ref="top1::ReadException#top1::ReadException::Type" />
     </argument>
     <argument id="top1::ReadException::ReadException::message" name="message">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <method id="top1::ReadException::what" name="what" virtual="yes">

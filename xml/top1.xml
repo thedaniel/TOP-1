@@ -10,6 +10,30 @@
     </argument>
     <templatetypeparameter id="top1::&lt;deduction guide for overloaded&gt;::Ls" name="Ls" />
   </functiontemplate>
+  <functiontemplate id="top1::for_both" name="for_both">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::for_both::f1" name="f1">
+      <type name="Iter1 &amp;&amp;" />
+    </argument>
+    <argument id="top1::for_both::l1" name="l1">
+      <type name="Iter1 &amp;&amp;" />
+    </argument>
+    <argument id="top1::for_both::f2" name="f2">
+      <type name="Iter2 &amp;&amp;" />
+    </argument>
+    <argument id="top1::for_both::l2" name="l2">
+      <type name="Iter2 &amp;&amp;" />
+    </argument>
+    <argument id="top1::for_both::f" name="f">
+      <type name="F &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::for_both::Iter1" name="Iter1" />
+    <templatetypeparameter id="top1::for_both::Iter2" name="Iter2" />
+    <templatetypeparameter id="top1::for_both::F" name="F" />
+  </functiontemplate>
   <functiontemplate id="top1::for_each_n" name="for_each_n">
     <undocumented-return />
     <return>
@@ -53,7 +77,7 @@ raw indexed loops wherever possible.
     <undocumented-return />
     <return>
       <doc>The number of iterations performed</doc>
-      <type name="InputIt" />
+      <type name="std::size_t" />
     </return>
     <argument id="top1::indexed_for::first" name="first">
       <doc>Input iterator to the begining of the range</doc>
@@ -104,7 +128,7 @@ Use this instead of raw indexed loops wherever possible.
     <brief>Joins a sequence of strings, separating them using `js`</brief>
     <undocumented-return />
     <return>
-      <type name="std::string" />
+      <type name="std::__cxx11::string" />
     </return>
     <argument id="top1::join_strings::b" name="b">
       <type name="StrIterator" />

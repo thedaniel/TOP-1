@@ -2,7 +2,7 @@
 <class abstract="true" id="top1::JsonFile" name="JsonFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <subclass access="public" name="DataFile" ref="top1::DataFile#top1::DataFile" />
   <field id="top1::JsonFile::path" name="path">
-    <type name="std::string" />
+    <type name="std::__cxx11::string" />
   </field>
   <field id="top1::JsonFile::data" name="data">
     <type name="tree::Node" />
@@ -10,7 +10,7 @@
   <constructor id="top1::JsonFile::JsonFile" name="JsonFile" />
   <constructor id="top1::JsonFile::JsonFile" name="JsonFile">
     <argument id="top1::JsonFile::JsonFile::_path" name="_path">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <constructor abstract="yes" id="top1::JsonFile::JsonFile" name="JsonFile">

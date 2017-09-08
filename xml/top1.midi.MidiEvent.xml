@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::midi::MidiEvent" name="MidiEvent" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <subclass access="public" name="NoteOnEvent" ref="top1::midi::NoteOnEvent#top1::midi::NoteOnEvent" />
   <subclass access="public" name="NoteOffEvent" ref="top1::midi::NoteOffEvent#top1::midi::NoteOffEvent" />
+  <subclass access="public" name="NoteOnEvent" ref="top1::midi::NoteOnEvent#top1::midi::NoteOnEvent" />
   <subclass access="public" name="ControlChangeEvent" ref="top1::midi::ControlChangeEvent#top1::midi::ControlChangeEvent" />
   <enum anonymous="yes" id="top1::midi::MidiEvent::EventType" name="EventType">
     <enumvalue id="top1::midi::MidiEvent::NOTE_OFF" name="NOTE_OFF" value="8" />

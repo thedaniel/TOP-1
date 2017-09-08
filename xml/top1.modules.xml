@@ -38,7 +38,7 @@
   <class name="SequencerModuleDispatcher" ref="top1::modules::SequencerModuleDispatcher#top1::modules::SequencerModuleDispatcher" />
   <class name="SimpleDrumsModule" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
   <class name="SimpleDrumsScreen" ref="top1::modules::SimpleDrumsScreen#top1::modules::SimpleDrumsScreen" />
-  <class name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice" />
+  <struct name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice" />
   <class name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth" />
   <class name="SynthModule" ref="top1::modules::SynthModule#top1::modules::SynthModule" />
   <class name="SynthModuleDispatcher" ref="top1::modules::SynthModuleDispatcher#top1::modules::SynthModuleDispatcher" />

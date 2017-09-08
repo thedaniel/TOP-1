@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate abstract="true" id="top1::ByteFile::bytes" name="bytes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatenontypeparameter id="top1::ByteFile::bytes::len" name="len">
+    <type name="std::size_t" />
+  </templatenontypeparameter>
+  <field id="top1::ByteFile::bytes::data" name="data">
+    <type name="std::byte [len]" />
+  </field>
+  <constructor abstract="yes" id="top1::ByteFile::bytes::bytes&lt;len&gt;" name="bytes&lt;len&gt;" />
+  <constructor id="top1::ByteFile::bytes::bytes&lt;len&gt;" name="bytes&lt;len&gt;">
+    <argument id="top1::ByteFile::bytes::bytes&lt;len&gt;::bs" name="bs">
+      <type name="std::initializer_list&lt;std::byte&gt;" qualifier=" const" />
+    </argument>
+  </constructor>
+  <method id="top1::ByteFile::bytes::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="std::byte" qualifier="*" />
+    </return>
+  </method>
+  <method id="top1::ByteFile::bytes::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="std::byte" qualifier="*" />
+    </return>
+  </method>
+  <conversionfunction id="top1::ByteFile::bytes::operator char *" name="operator char *">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="char" qualifier="*" />
+    </return>
+  </conversionfunction>
+</structtemplate>

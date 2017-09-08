@@ -5,10 +5,10 @@
     <enumvalue id="top1::File::Error::ERROR" name="ERROR" value="1" />
   </enum>
   <field id="top1::File::Error::status" name="status">
-    <type name="enum (anonymous enum at /home/travis/build/topisani/TOP-1/src/util/top1file.hpp:134:7)" ref="top1::File::Error#top1::File::Error::(anonymous::1)" />
+    <type name="enum (anonymous enum at /home/topisani/Documents/Programming/TOP-1/src/util/top1file.hpp:134:7)" ref="top1::File::Error#top1::File::Error::(anonymous::1)" />
   </field>
   <field id="top1::File::Error::message" name="message">
-    <type name="std::string" />
+    <type name="std::__cxx11::string" />
   </field>
   <method id="top1::File::Error::log" name="log">
     <undocumented-return />

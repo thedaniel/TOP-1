@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <index xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <brief># TOP-1: **T**otally **O**riginal **P**roject-**1**
+  <brief># TOP-1: Totally Original Project-1
 [![Build Status](https://travis-ci.org/topisani/TOP-1.svg?branch=master)](https://travis-ci.org/topisani/TOP-1)
 </brief>
   <doc>Ah, who doesnt love the [op-1](http://teenage.engineering/products/op-1)? Its a magical beast of modern technology! Everything you need to play around with electronic music, in one self-contained device. Its pretty close to perfect, but not quite - its simplicity is its power, but it's also the source of its shortcomings. And then of course, it's not open source.
@@ -10,8 +10,10 @@ Come chat with me at my [discord server](https://discord.gg/4cV9Ucz) if you're i
 ### Introducing the TOP-1!  
 To be fair, the TOP-1 is an op-1 clone. But i like to think it's a bit more than that. Some differences will be subtle, and some differences will be big. Especially the non-core modules will differ greatly, as most of them are designed fully independently. The UI too varies, from the tapedeck, which is practically the same, to the metronome, which is very different (see both below);
 
-&amp;lt;img src="images/tapedeck.png" width="300px" alt="Tapedeck"&amp;gt; &amp;lt;img src="images/mixer.png" width="300px" alt="Mixer"&amp;gt;
-&amp;lt;img src="images/metronome.gif" width="300px" alt="Metronome"&amp;gt; &amp;lt;img src="images/simple-drums.png" width="300px" alt="Drum Synth"&amp;gt;
+&amp;lt;div class="screenshots"&amp;gt;
+![Tapedeck](images/tapedeck.png) ![Mixer](images/mixer.png) &amp;lt;br&amp;gt;
+![Metronome](images/metronome.gif) ![Drum Synth](images/simple-drums.png)
+&amp;lt;/div&amp;gt;
 
 # Current Progress  
 The tapedeck is completed, with a few bugs left to iron out, and with the addition of the metronome, mixer, and input selector, the software is just about ready to be used for recording with external synthesizers. It runs in an OpenGLFW window, and the buttons and rotaries are emulated with keyboard shortcuts.
@@ -314,11 +316,11 @@ Specialize this for each mode</brief>
       <class name="SequencerModuleDispatcher" ref="top1::modules::SequencerModuleDispatcher#top1::modules::SequencerModuleDispatcher" />
       <class name="SimpleDrumsModule" ref="top1::modules::SimpleDrumsModule#top1::modules::SimpleDrumsModule" />
       <class name="SimpleDrumsScreen" ref="top1::modules::SimpleDrumsScreen#top1::modules::SimpleDrumsScreen" />
-      <class name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice">
+      <struct name="SimpleDrumVoice" ref="top1::modules::SimpleDrumVoice#top1::modules::SimpleDrumVoice">
         <struct name="Props" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props">
           <struct name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
         </struct>
-      </class>
+      </struct>
       <class name="SuperSawSynth" ref="top1::modules::SuperSawSynth#top1::modules::SuperSawSynth">
         <struct name="Props" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props" />
       </class>

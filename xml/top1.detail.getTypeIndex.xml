@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::detail::getTypeIndex" name="getTypeIndex" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::detail::getTypeIndex::Base" name="Base" />
+  <templatetypeparameter id="top1::detail::getTypeIndex::T" name="T" />
+  <templatetypeparameter id="top1::detail::getTypeIndex::Ts" name="Ts" />
+</structtemplate>

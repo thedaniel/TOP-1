@@ -3,7 +3,7 @@
   <base access="public">
     <type name="Module" ref="top1::modules::Module#top1::modules::Module" />
   </base>
-  <base access="public">
+  <base access="private">
     <type name="audio::FaustWrapper" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper" />
   </base>
   <struct name="Props" ref="top1::modules::Metronome::Props#top1::modules::Metronome::Props" />
@@ -48,17 +48,7 @@
       <type name="BeatPos" />
     </argument>
   </method>
-  <method abstract="yes" id="top1::modules::Metronome::postBuffers" name="postBuffers" override="yes" virtual="yes">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::modules::Metronome::postBuffers::" name="">
-      <type name="audio::ProcessData" qualifier=" const &amp;" ref="top1::audio::ProcessData#top1::audio::ProcessData" />
-    </argument>
-    <override name="audio::FaustWrapper::postBuffers" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper::postBuffers" />
-  </method>
-  <method abstract="yes" id="top1::modules::Metronome::process" name="process" override="yes" virtual="yes">
+  <method abstract="yes" id="top1::modules::Metronome::process" name="process" override="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />

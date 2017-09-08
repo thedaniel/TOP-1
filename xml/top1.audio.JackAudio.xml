@@ -7,7 +7,7 @@
     <type name="size_t" qualifier=" const" />
   </field>
   <field id="top1::audio::JackAudio::clientName" name="clientName">
-    <type name="std::string" qualifier=" const" />
+    <type name="std::__cxx11::string" qualifier=" const" />
   </field>
   <constructor id="top1::audio::JackAudio::JackAudio" name="JackAudio" />
   <method abstract="yes" id="top1::audio::JackAudio::exit" name="exit">

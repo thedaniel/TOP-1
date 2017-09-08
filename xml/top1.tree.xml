@@ -60,7 +60,7 @@
       <type name="Node" />
     </return>
     <argument id="top1::tree::makeNode::s" name="s">
-      <type name="std::string" />
+      <type name="std::__cxx11::string" />
     </argument>
   </function>
   <function id="top1::tree::readNode" name="readNode">
@@ -93,7 +93,7 @@
   <function id="top1::tree::readNode" name="readNode">
     <undocumented-return />
     <return>
-      <type name="std::optional&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;" />
+      <type name="std::optional&lt;std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;" />
     </return>
     <argument id="top1::tree::readNode::n" name="n">
       <type name="Node" />

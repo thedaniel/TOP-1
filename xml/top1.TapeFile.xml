@@ -16,7 +16,7 @@
   <constructor id="top1::TapeFile::TapeFile" name="TapeFile" />
   <constructor id="top1::TapeFile::TapeFile" name="TapeFile">
     <argument id="top1::TapeFile::TapeFile::path" name="path">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <constructor abstract="yes" id="top1::TapeFile::TapeFile" name="TapeFile">

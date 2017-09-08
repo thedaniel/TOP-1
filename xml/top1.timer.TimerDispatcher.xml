@@ -10,7 +10,7 @@
       <type name="auto" />
     </return>
     <argument id="top1::timer::TimerDispatcher::timedCall::name" name="name">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
     <argument id="top1::timer::TimerDispatcher::timedCall::f" name="f">
       <type name="Callable &amp;&amp;" />
@@ -22,10 +22,10 @@
     <templatetypeparameter id="top1::timer::TimerDispatcher::timedCall::Args" name="Args" />
   </methodtemplate>
   <field id="top1::timer::TimerDispatcher::timers" name="timers">
-    <type name="std::unordered_map&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::timer::Timer, std::hash&lt;std::string&gt;, std::equal_to&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;const std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::timer::Timer&gt; &gt; &gt;" />
+    <type name="std::unordered_map&lt;std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::timer::Timer, std::hash&lt;std::__cxx11::string&gt;, std::equal_to&lt;std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt;, std::allocator&lt;std::pair&lt;const std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::timer::Timer&gt; &gt; &gt;" />
   </field>
   <field id="top1::timer::TimerDispatcher::path" name="path">
-    <type name="std::string" />
+    <type name="std::__cxx11::string" />
   </field>
   <destructor id="top1::timer::TimerDispatcher::~TimerDispatcher" name="~TimerDispatcher" virtual="yes" />
   <method id="top1::timer::TimerDispatcher::jsonSerialize" name="jsonSerialize">
@@ -40,7 +40,7 @@
       <type name="ScopeTimer" ref="top1::timer::ScopeTimer#top1::timer::ScopeTimer" />
     </return>
     <argument id="top1::timer::TimerDispatcher::timeScope::name" name="name">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </method>
   <method id="top1::timer::TimerDispatcher::writeToFile" name="writeToFile">

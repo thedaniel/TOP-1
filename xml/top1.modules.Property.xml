@@ -17,4 +17,10 @@
       <type name="T" />
     </default>
   </templatetypeparameter>
+  <field id="top1::modules::Property::init" name="init">
+    <type name="Property&lt;T, mode_tag, _store, mode_type&gt;::Value" />
+  </field>
+  <field id="top1::modules::Property::mode" name="mode">
+    <type name="Property&lt;T, mode_tag, _store, mode_type&gt;::Mode" />
+  </field>
 </classtemplate>

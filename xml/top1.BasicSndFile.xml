@@ -25,7 +25,7 @@
   <constructor id="top1::BasicSndFile::BasicSndFile&lt;sample_type, _channels&gt;" name="BasicSndFile&lt;sample_type, _channels&gt;" />
   <constructor id="top1::BasicSndFile::BasicSndFile&lt;sample_type, _channels&gt;" name="BasicSndFile&lt;sample_type, _channels&gt;">
     <argument id="top1::BasicSndFile::BasicSndFile&lt;sample_type, _channels&gt;::path" name="path">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <destructor id="top1::BasicSndFile::~BasicSndFile&lt;sample_type, _channels&gt;" name="~BasicSndFile&lt;sample_type, _channels&gt;" virtual="yes" />
@@ -117,7 +117,7 @@
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::BasicSndFile::open::path" name="path">
-      <type name="std::string" qualifier=" const &amp;" />
+      <type name="std::__cxx11::string" qualifier=" const &amp;" />
     </argument>
     <override name="File::open" ref="top1::File#top1::File::open" />
   </method>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<class id="top1::modules::SimpleDrumVoice" interface="true" name="SimpleDrumVoice" xmlns="http://jessevdk.github.com/cldoc/1.0">
+<struct id="top1::modules::SimpleDrumVoice" interface="true" name="SimpleDrumVoice" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <base access="public">
     <type name="audio::FaustWrapper" ref="top1::audio::FaustWrapper#top1::audio::FaustWrapper" />
   </base>
@@ -8,4 +8,4 @@
     <type name="Props" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props" />
   </field>
   <constructor abstract="yes" id="top1::modules::SimpleDrumVoice::SimpleDrumVoice" name="SimpleDrumVoice" />
-</class>
+</struct>

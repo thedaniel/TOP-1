@@ -110,7 +110,7 @@ Reads forwards along the tape, moving the playPoint.
   <method abstract="yes" id="top1::TapeBuffer::timeStr" name="timeStr">
     <undocumented-return />
     <return>
-      <type name="std::string" />
+      <type name="std::__cxx11::string" />
     </return>
   </method>
   <method abstract="yes" id="top1::TapeBuffer::writeBW" name="writeBW">
@@ -198,7 +198,7 @@ Write data to the tape.
     <type name="std::atomic_bool" />
   </field>
   <field access="protected" id="top1::TapeBuffer::clipboard" name="clipboard">
-    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/util/tapebuffer.hpp:96:5)" ref="top1::TapeBuffer#top1::TapeBuffer::(anonymous::1)" />
+    <type name="struct (anonymous struct at /home/topisani/Documents/Programming/TOP-1/src/util/tapebuffer.hpp:96:5)" ref="top1::TapeBuffer#top1::TapeBuffer::(anonymous::1)" />
   </field>
   <method abstract="yes" access="protected" id="top1::TapeBuffer::movePlaypointAbs" name="movePlaypointAbs">
     <undocumented-return />

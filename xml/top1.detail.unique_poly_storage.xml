@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<structtemplate id="top1::detail::unique_poly_storage" name="unique_poly_storage" xmlns="http://jessevdk.github.com/cldoc/1.0">
+<structtemplate abstract="true" id="top1::detail::unique_poly_storage" name="unique_poly_storage" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>Storage type for `unique_poly_ptr`
 </brief>
   <doc>poly_ptr needs some operations that are not supported by
@@ -13,7 +13,7 @@
       <type name="T" qualifier="*" />
     </argument>
   </constructor>
-  <constructor id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;" name="unique_poly_storage&lt;T&gt;">
+  <constructor abstract="yes" id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;" name="unique_poly_storage&lt;T&gt;">
     <argument id="top1::detail::unique_poly_storage::unique_poly_storage&lt;T&gt;::o" name="o">
       <type name="unique_poly_storage" qualifier=" &amp;" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
     </argument>
@@ -29,7 +29,16 @@
       <type name="unique_poly_storage" qualifier=" &amp;" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
     </return>
     <argument id="top1::detail::unique_poly_storage::operator=::o" name="o">
-      <type name="unique_poly_storage" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
+      <type name="unique_poly_storage&lt;T&gt; &amp;&amp;" />
+    </argument>
+  </method>
+  <method id="top1::detail::unique_poly_storage::operator=" name="operator=">
+    <undocumented-return />
+    <return>
+      <type name="unique_poly_storage" qualifier=" &amp;" ref="top1::detail::unique_poly_storage#top1::detail::unique_poly_storage" />
+    </return>
+    <argument id="top1::detail::unique_poly_storage::operator=::o" name="o">
+      <type name="T" qualifier="*" />
     </argument>
   </method>
   <conversionfunction id="top1::detail::unique_poly_storage::operator type-parameter-0-0 *" name="operator type-parameter-0-0 *">

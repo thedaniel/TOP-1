@@ -59,10 +59,10 @@
   <method id="top1::modules::SynthSampler::samplePath" name="samplePath" static="yes">
     <undocumented-return />
     <return>
-      <type name="std::string" />
+      <type name="std::__cxx11::string" />
     </return>
     <argument id="top1::modules::SynthSampler::samplePath::name" name="name">
-      <type name="std::string" />
+      <type name="std::__cxx11::string" />
     </argument>
   </method>
 </class>

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<structtemplate id="top1::detail::FunctionArgs" name="FunctionArgs" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <templatetypeparameter id="top1::detail::FunctionArgs::T" name="T" />
+</structtemplate>

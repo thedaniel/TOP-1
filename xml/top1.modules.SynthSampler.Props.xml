@@ -12,7 +12,7 @@
     <enumvalue id="top1::modules::SynthSampler::Props::BwdLoop" name="BwdLoop" value="-3" />
   </enum>
   <field id="top1::modules::SynthSampler::Props::sampleName" name="sampleName">
-    <type name="Property&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::modules::mode::def, true, top1::modules::mode::plain_set_mode&lt;std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;" />
+    <type name="Property&lt;std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;, top1::modules::mode::def, true, top1::modules::mode::plain_set_mode&lt;std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; &gt; &gt;" />
   </field>
   <field id="top1::modules::SynthSampler::Props::in" name="in">
     <type name="Property&lt;int, top1::modules::mode::def, true, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />

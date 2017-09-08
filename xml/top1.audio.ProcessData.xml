@@ -9,7 +9,7 @@
     <type builtin="yes" name="int" />
   </field>
   <field id="top1::audio::ProcessData::midi" name="midi">
-    <type name="std::vector&lt;top1::basic_poly_ptr&lt;top1::detail::unique_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt;, std::allocator&lt;top1::basic_poly_ptr&lt;top1::detail::unique_poly_storage&lt;top1::midi::MidiEvent&gt;, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt; &gt; &gt;" />
+    <type name="std::vector&lt;top1::basic_poly_ptr&lt;top1::midi::MidiEvent *, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt;, std::allocator&lt;top1::basic_poly_ptr&lt;top1::midi::MidiEvent *, top1::midi::MidiEvent, top1::midi::NoteOnEvent, top1::midi::NoteOffEvent, top1::midi::ControlChangeEvent&gt; &gt; &gt;" />
   </field>
   <method id="top1::audio::ProcessData::slice" name="slice">
     <undocumented-return />

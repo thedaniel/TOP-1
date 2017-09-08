@@ -25,7 +25,7 @@
     <type name="Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
   </field>
   <field id="top1::modules::SimpleDrumVoice::Props::envelope" name="envelope">
-    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/modules/simple-drums.hpp:26:7)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />
+    <type name="struct (anonymous struct at /home/topisani/Documents/Programming/TOP-1/src/modules/simple-drums.hpp:25:7)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />
   </field>
   <field id="top1::modules::SimpleDrumVoice::Props::trigger" name="trigger">
     <type name="Property&lt;bool, top1::modules::mode::def, false, top1::modules::mode::toggle_mode&gt;" />
