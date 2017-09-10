@@ -128,7 +128,7 @@ Use this instead of raw indexed loops wherever possible.
     <brief>Joins a sequence of strings, separating them using `js`</brief>
     <undocumented-return />
     <return>
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </return>
     <argument id="top1::join_strings::b" name="b">
       <type name="StrIterator" />

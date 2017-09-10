@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::tree::String" name="String" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <field id="top1::tree::String::value" name="value">
-    <type name="std::__cxx11::string" />
+    <type name="std::string" />
   </field>
   <constructor id="top1::tree::String::String" name="String">
     <argument id="top1::tree::String::String::s" name="s">
-      <type name="std::__cxx11::string" qualifier=" const &amp;" />
+      <type name="std::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <constructor id="top1::tree::String::String" name="String">
@@ -16,7 +16,7 @@
   <conversionfunction id="top1::tree::String::operator basic_string" name="operator basic_string">
     <undocumented-return />
     <return>
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </return>
   </conversionfunction>
   <method id="top1::tree::String::operator!=" name="operator!=">

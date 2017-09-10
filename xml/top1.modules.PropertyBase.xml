@@ -4,7 +4,7 @@
   <subclass access="public" name="Property" ref="top1::modules::Property#top1::modules::Property" />
   <struct name="FaustLink" ref="top1::modules::PropertyBase::FaustLink#top1::modules::PropertyBase::FaustLink" />
   <field id="top1::modules::PropertyBase::name" name="name">
-    <type name="std::__cxx11::string" />
+    <type name="std::string" />
   </field>
   <field id="top1::modules::PropertyBase::store" name="store">
     <type builtin="yes" name="bool" />
@@ -14,7 +14,7 @@
   </field>
   <constructor id="top1::modules::PropertyBase::PropertyBase" name="PropertyBase">
     <argument id="top1::modules::PropertyBase::PropertyBase::name" name="name">
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </argument>
     <argument id="top1::modules::PropertyBase::PropertyBase::store" name="store">
       <type builtin="yes" name="bool" />

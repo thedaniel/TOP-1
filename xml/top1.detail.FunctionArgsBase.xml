@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<structtemplate id="top1::detail::FunctionArgsBase" name="FunctionArgsBase" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <templatetypeparameter id="top1::detail::FunctionArgsBase::R" name="R" />
-  <templatetypeparameter id="top1::detail::FunctionArgsBase::Args" name="Args" />
-</structtemplate>

@@ -65,10 +65,10 @@ A sampler with 24 individual voices, laid out over the keys.
   <method id="top1::modules::DrumSampler::samplePath" name="samplePath" static="yes">
     <undocumented-return />
     <return>
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </return>
     <argument id="top1::modules::DrumSampler::samplePath::name" name="name">
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </argument>
   </method>
 </class>

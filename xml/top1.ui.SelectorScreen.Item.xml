@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::ui::SelectorScreen::Item" name="Item" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <field id="top1::ui::SelectorScreen::Item::name" name="name">
-    <type name="std::__cxx11::string" />
+    <type name="std::string" />
   </field>
   <field id="top1::ui::SelectorScreen::Item::value" name="value">
     <type name="ItemType" />

@@ -12,20 +12,20 @@
     <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />
   </field>
   <field id="top1::ByteFile::Error::message" name="message">
-    <type name="std::__cxx11::string" />
+    <type name="std::string" />
   </field>
   <constructor id="top1::ByteFile::Error::Error" name="Error">
     <argument id="top1::ByteFile::Error::Error::t" name="t">
       <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />
     </argument>
     <argument id="top1::ByteFile::Error::Error::m" name="m">
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </argument>
   </constructor>
   <method id="top1::ByteFile::Error::enumString" name="enumString" static="yes">
     <undocumented-return />
     <return>
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </return>
     <argument id="top1::ByteFile::Error::enumString::t" name="t">
       <type name="Type" ref="top1::ByteFile::Error#top1::ByteFile::Error::Type" />

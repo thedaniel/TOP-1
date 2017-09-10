@@ -4,7 +4,6 @@
     <type name="PropertyBase" ref="top1::modules::PropertyBase#top1::modules::PropertyBase" />
   </base>
   <subclass access="public" name="Tapedeck::Props" ref="top1::modules::Tapedeck::Props#top1::modules::Tapedeck::Props" />
-  <subclass access="public" name="DrumSampler::Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
   <subclass access="public" name="Mixer::Props" ref="top1::modules::Mixer::Props#top1::modules::Mixer::Props" />
   <subclass access="public" name="NukeSynth::Props" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props" />
   <subclass access="public" name="SuperSawSynth::Props::(anonymous::1)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
@@ -13,6 +12,7 @@
   <subclass access="public" name="Mixer::Props::TrackInfo" ref="top1::modules::Mixer::Props::TrackInfo#top1::modules::Mixer::Props::TrackInfo" />
   <subclass access="public" name="NukeSynth::Props::(anonymous::1)" ref="top1::modules::NukeSynth::Props#top1::modules::NukeSynth::Props::(anonymous::1)" />
   <subclass access="public" name="SimpleDrumVoice::Props::Osc" ref="top1::modules::SimpleDrumVoice::Props::Osc#top1::modules::SimpleDrumVoice::Props::Osc" />
+  <subclass access="public" name="DrumSampler::Props" ref="top1::modules::DrumSampler::Props#top1::modules::DrumSampler::Props" />
   <subclass access="public" name="SimpleDrumVoice::Props::(anonymous::1)" ref="top1::modules::SimpleDrumVoice::Props#top1::modules::SimpleDrumVoice::Props::(anonymous::1)" />
   <subclass access="public" name="SynthSampler::Props" ref="top1::modules::SynthSampler::Props#top1::modules::SynthSampler::Props" />
   <subclass access="public" name="DrumSampler::Props::VoiceData" ref="top1::modules::DrumSampler::Props::VoiceData#top1::modules::DrumSampler::Props::VoiceData" />
@@ -23,7 +23,7 @@
       <type name="Properties" qualifier="*" ref="top1::modules::Properties#top1::modules::Properties" />
     </argument>
     <argument id="top1::modules::Properties::Properties::n" name="n">
-      <type name="std::__cxx11::string" qualifier=" const &amp;" />
+      <type name="std::string" qualifier=" const &amp;" />
     </argument>
     <argument id="top1::modules::Properties::Properties::s" name="s">
       <type builtin="yes" name="bool" />

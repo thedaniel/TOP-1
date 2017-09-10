@@ -21,7 +21,7 @@
     </field>
   </struct>
   <field id="top1::modules::SuperSawSynth::Props::envelope" name="envelope">
-    <type name="struct (anonymous struct at /home/topisani/Documents/Programming/TOP-1/src/modules/super-saw-synth.hpp:15:7)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
+    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/modules/super-saw-synth.hpp:15:7)" ref="top1::modules::SuperSawSynth::Props#top1::modules::SuperSawSynth::Props::(anonymous::1)" />
   </field>
   <field id="top1::modules::SuperSawSynth::Props::key" name="key">
     <type name="Property&lt;int, top1::modules::mode::def, false, top1::modules::mode::sized_step_mode&lt;int&gt; &gt;" />

@@ -71,7 +71,7 @@ This class will never lock the mutex itself.
     <type name="std::recursive_mutex" />
   </field>
   <field id="top1::File::path" name="path">
-    <type name="std::__cxx11::string" />
+    <type name="std::string" />
   </field>
   <field id="top1::File::error" name="error">
     <type name="Error" ref="top1::File::Error#top1::File::Error" />
@@ -79,7 +79,7 @@ This class will never lock the mutex itself.
   <constructor id="top1::File::File" name="File" />
   <constructor id="top1::File::File" name="File">
     <argument id="top1::File::File::path" name="path">
-      <type name="std::__cxx11::string" qualifier=" const &amp;" />
+      <type name="std::string" qualifier=" const &amp;" />
     </argument>
   </constructor>
   <constructor abstract="yes" id="top1::File::File" name="File">
@@ -126,7 +126,7 @@ This class will never lock the mutex itself.
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::File::open::path" name="path">
-      <type name="std::__cxx11::string" qualifier=" const &amp;" />
+      <type name="std::string" qualifier=" const &amp;" />
     </argument>
   </method>
   <method abstract="yes" id="top1::File::readChunks" name="readChunks">

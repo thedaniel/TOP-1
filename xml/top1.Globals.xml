@@ -10,7 +10,7 @@
     <type name="modules::EffectModuleDispatcher" ref="top1::modules::EffectModuleDispatcher#top1::modules::EffectModuleDispatcher" />
   </variable>
   <variable id="top1::Globals::events" name="events">
-    <type name="struct (anonymous struct at /home/topisani/Documents/Programming/TOP-1/src/core/globals.hpp:29:19)" ref="top1::Globals#top1::Globals::(anonymous::1)" />
+    <type name="struct (anonymous struct at /home/travis/build/topisani/TOP-1/src/core/globals.hpp:29:19)" ref="top1::Globals#top1::Globals::(anonymous::1)" />
   </variable>
   <variable id="top1::Globals::jackAudio" name="jackAudio">
     <type name="audio::JackAudio" ref="top1::audio::JackAudio#top1::audio::JackAudio" />

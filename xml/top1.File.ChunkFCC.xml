@@ -35,7 +35,7 @@
   <method id="top1::File::ChunkFCC::str" name="str">
     <undocumented-return />
     <return>
-      <type name="std::__cxx11::string" />
+      <type name="std::string" />
     </return>
   </method>
 </struct>
