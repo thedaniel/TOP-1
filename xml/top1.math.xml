@@ -31,6 +31,16 @@
     <templatetypeparameter id="top1::math::modulo::T" name="T" />
   </functiontemplate>
   <struct name="vec" ref="top1::math::vec#top1::math::vec" />
+  <function id="top1::math::log2" name="log2">
+    <brief>Compile time log2</brief>
+    <undocumented-return />
+    <return>
+      <type name="size_t" />
+    </return>
+    <argument id="top1::math::log2::n" name="n">
+      <type name="size_t" />
+    </argument>
+  </function>
   <function id="top1::math::round" name="round">
     <undocumented-return />
     <return>

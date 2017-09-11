@@ -145,16 +145,4 @@ Fills the array with zeros
       <type builtin="yes" name="void" />
     </return>
   </method>
-  <method id="top1::DynArray::copyFrom" name="copyFrom">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="top1::DynArray::copyFrom::loc" name="loc">
-      <type name="DynArray&lt;T, A, typename&gt;::pointer" />
-    </argument>
-    <argument id="top1::DynArray::copyFrom::n" name="n">
-      <type name="DynArray&lt;T, A, typename&gt;::size_type" />
-    </argument>
-  </method>
 </classtemplate>
