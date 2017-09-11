@@ -22,7 +22,7 @@
   <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
     <undocumented-return />
     <return>
-      <type builtin="yes" name="void" />
+      <type name="result&lt;ok_t, err_t&gt;" ref="top1::result#top1::result" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
       <type name="OutIter" />
@@ -38,7 +38,7 @@
   <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
     <undocumented-return />
     <return>
-      <type builtin="yes" name="void" />
+      <type name="result&lt;void, long&gt;" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
       <type name="OutIter" />
@@ -54,7 +54,7 @@
   <methodtemplate id="top1::ByteFile::read_bytes" name="read_bytes">
     <undocumented-return />
     <return>
-      <type builtin="yes" name="void" />
+      <type name="result&lt;void, long&gt;" />
     </return>
     <argument id="top1::ByteFile::read_bytes::" name="">
       <type name="bytes&lt;len&gt;" qualifier=" &amp;" ref="top1::bytes#top1::bytes" />

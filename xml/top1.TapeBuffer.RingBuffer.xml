@@ -1,10 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::TapeBuffer::RingBuffer" name="RingBuffer" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <variable id="top1::TapeBuffer::RingBuffer::mask" name="mask">
+    <type name="uint" qualifier=" const" />
+  </variable>
   <variable id="top1::TapeBuffer::RingBuffer::Size" name="Size">
     <type name="uint" qualifier=" const" />
   </variable>
+  <struct name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
   <field id="top1::TapeBuffer::RingBuffer::data" name="data">
-    <type name="DynArray&lt;top1::audio::AudioFrame&lt;4, float&gt;, std::allocator&lt;top1::audio::AudioFrame&lt;4, float&gt; &gt;, void&gt;" />
+    <type name="std::array&lt;top1::audio::AudioFrame&lt;4, float&gt;, 262144&gt;" />
   </field>
   <field id="top1::TapeBuffer::RingBuffer::notWritten" name="notWritten">
     <type name="audio::Section&lt;int&gt;" />
@@ -21,6 +25,18 @@
   <field id="top1::TapeBuffer::RingBuffer::posAt0" name="posAt0">
     <type name="std::atomic_uint" />
   </field>
+  <method id="top1::TapeBuffer::RingBuffer::begin" name="begin">
+    <undocumented-return />
+    <return>
+      <type name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::end" name="end">
+    <undocumented-return />
+    <return>
+      <type name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+  </method>
   <method id="top1::TapeBuffer::RingBuffer::operator[]" name="operator[]">
     <undocumented-return />
     <return>

@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <class abstract="true" id="top1::SoundFile" name="SoundFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <base access="protected">
+  <base access="public">
     <type name="ByteFile" ref="top1::ByteFile#top1::ByteFile" />
     <brief>TODO: Documentation</brief>
   </base>
+  <subclass access="public" name="TapeFile" ref="top1::TapeFile#top1::TapeFile" />
   <methodtemplate id="top1::SoundFile::read_samples" name="read_samples">
     <undocumented-return />
     <return>
@@ -119,6 +120,18 @@
   <field access="protected" id="top1::SoundFile::audioOffset" name="audioOffset">
     <type name="ByteFile::Position" />
   </field>
+  <method access="protected" id="top1::SoundFile::add_custom_chunks" name="add_custom_chunks" virtual="yes">
+    <brief>When extending <ref ref="top1::SoundFile#top1::SoundFile::SoundFile">top1::SoundFile::SoundFile</ref>, override this function.
+</brief>
+    <doc>It should push back any custom metadata chunks to `v`</doc>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::add_custom_chunks::v" name="v">
+      <type name="std::vector&lt;std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt;, std::allocator&lt;std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt; &gt; &gt;" qualifier=" &amp;" />
+    </argument>
+  </method>
   <method access="protected" id="top1::SoundFile::bytes_to_sample" name="bytes_to_sample">
     <undocumented-return />
     <return>
@@ -126,6 +139,21 @@
     </return>
     <argument id="top1::SoundFile::bytes_to_sample::bytes" name="bytes">
       <type name="bytes&lt;4&gt;" />
+    </argument>
+  </method>
+  <method access="protected" id="top1::SoundFile::replace_custom_chunk" name="replace_custom_chunk" virtual="yes">
+    <brief>When extending <ref ref="top1::SoundFile#top1::SoundFile::SoundFile">top1::SoundFile::SoundFile</ref>, override this function.
+</brief>
+    <doc>It should check the id of `ptr`, and if it matches,
+swap it with an instance of the correct class.
+If the chunk is unknown, leave it alone. After this,
+<ref ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk::read">top1::ByteFile::Chunk::read</ref> will be invoked on `ptr`.</doc>
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="top1::SoundFile::replace_custom_chunk::ptr" name="ptr">
+      <type name="std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt;" qualifier=" &amp;" />
     </argument>
   </method>
   <method access="protected" id="top1::SoundFile::sample_to_bytes" name="sample_to_bytes">

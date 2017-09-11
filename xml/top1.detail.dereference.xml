@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::detail::dereference" name="dereference" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>A function object used to call `operator*()`</brief>
+  <methodtemplate id="top1::detail::dereference::operator()" name="operator()">
+    <doc>@return `*iter`</doc>
+    <undocumented-return />
+    <return>
+      <doc>`*iter`</doc>
+      <type name="decltype(auto)" />
+    </return>
+    <argument id="top1::detail::dereference::operator()::iter" name="iter">
+      <type name="Iter &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::detail::dereference::operator()::Iter" name="Iter" />
+  </methodtemplate>
+  <methodtemplate id="top1::detail::dereference::operator()" name="operator()">
+    <doc>@return `*iter`</doc>
+    <undocumented-return />
+    <return>
+      <doc>`*iter`</doc>
+      <type name="decltype(auto)" />
+    </return>
+    <argument id="top1::detail::dereference::operator()::iter" name="iter">
+      <type name="const Iter &amp;&amp;" />
+    </argument>
+    <templatetypeparameter id="top1::detail::dereference::operator()::Iter" name="Iter" />
+  </methodtemplate>
+</struct>

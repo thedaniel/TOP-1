@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::result::result_except" name="result_except" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <field id="top1::result::result_except::error" name="error">
-    <type name="result&lt;ok_t, err_t&gt;::Err" />
+  <brief>Thrown from <ref ref="top1::result#top1::result::unwrap_ok">top1::result::unwrap_ok</ref> and <ref ref="top1::result#top1::result::unwrap_err">top1::result::unwrap_err</ref>.
+</brief>
+  <doc>Holds an instance of the `result` it was thrown from</doc>
+  <field id="top1::result::result_except::res" name="res">
+    <type name="result" ref="top1::result#top1::result" />
   </field>
 </struct>

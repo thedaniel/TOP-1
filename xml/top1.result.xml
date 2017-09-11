@@ -16,7 +16,10 @@ return f.path();
 ```</doc>
   <templatetypeparameter id="top1::result::ok_t" name="ok_t" />
   <templatetypeparameter id="top1::result::err_t" name="err_t" />
-  <struct name="result_except" ref="top1::result::result_except#top1::result::result_except" />
+  <struct name="result_except" ref="top1::result::result_except#top1::result::result_except">
+    <brief>Thrown from <ref ref="top1::result#top1::result::unwrap_ok">top1::result::unwrap_ok</ref> and <ref ref="top1::result#top1::result::unwrap_err">top1::result::unwrap_err</ref>.
+</brief>
+  </struct>
   <methodtemplate id="top1::result::result&lt;ok_t, err_t&gt;" name="result&lt;ok_t, err_t&gt;">
     <undocumented-return />
     <return>
@@ -258,13 +261,22 @@ otherwise invokes `f` with the ok value</brief>
       </default>
     </templatetypeparameter>
   </methodtemplate>
-  <method id="top1::result::may_throw" name="may_throw">
-    <brief>Return ok, or throw a `result_except&amp;lt;Err&amp;gt;` holding the error value.
+  <method id="top1::result::unwrap_ok" name="unwrap_ok">
+    <brief>Return ok, or throw a `result_except&amp;lt;Err&amp;gt;` holding the result.
 </brief>
-    <doc>Evil, but useful</doc>
+    <doc>Should only be called when <ref ref="top1::result#top1::result::is_err">top1::result::is_err</ref> or <ref ref="top1::result#top1::result::is_ok">top1::result::is_ok</ref> has been used to check.</doc>
     <undocumented-return />
     <return>
       <type name="result&lt;ok_t, err_t&gt;::Ok" />
+    </return>
+  </method>
+  <method id="top1::result::unwrap_err" name="unwrap_err">
+    <brief>Return err, or throw a `result_except&amp;lt;Err&amp;gt;` holding the result.
+</brief>
+    <doc>Should only be called when <ref ref="top1::result#top1::result::is_err">top1::result::is_err</ref> or <ref ref="top1::result#top1::result::is_ok">top1::result::is_ok</ref> has been used to check.</doc>
+    <undocumented-return />
+    <return>
+      <type name="result&lt;ok_t, err_t&gt;::Err" />
     </return>
   </method>
 </classtemplate>

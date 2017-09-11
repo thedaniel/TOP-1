@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="top1::TapeFile::SliceData" name="SliceData" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <field id="top1::TapeFile::SliceData::inPos" name="inPos">
-    <type name="u4b" />
+  <field id="top1::TapeFile::SliceData::in" name="in">
+    <type name="uint32_t" />
   </field>
-  <field id="top1::TapeFile::SliceData::outPos" name="outPos">
-    <type name="u4b" />
+  <field id="top1::TapeFile::SliceData::out" name="out">
+    <type name="uint32_t" />
   </field>
 </struct>

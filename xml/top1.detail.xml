@@ -22,6 +22,9 @@
   <variable id="top1::detail::invalid_index" name="invalid_index">
     <type name="TypeIndex" qualifier=" const" />
   </variable>
+  <struct name="dereference" ref="top1::detail::dereference#top1::detail::dereference">
+    <brief>A function object used to call `operator*()`</brief>
+  </struct>
   <structtemplate name="type_for_index" ref="top1::detail::type_for_index#top1::detail::type_for_index">
     <templatetypeparameter id="top1::detail::type_for_index::Base" name="Base" />
     <templatenontypeparameter id="top1::detail::type_for_index::I" name="I">

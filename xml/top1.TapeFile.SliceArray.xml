@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::TapeFile::SliceArray" name="SliceArray" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::TapeFile::SliceArray::array" name="array">
+    <type name="std::array&lt;top1::TapeFile::SliceData, 2048&gt;" />
+  </field>
+  <field id="top1::TapeFile::SliceArray::count" name="count">
+    <type name="uint16_t" />
+  </field>
+</struct>

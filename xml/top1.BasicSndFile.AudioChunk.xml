@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<struct access="protected" id="top1::BasicSndFile::AudioChunk" name="AudioChunk" xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <base access="public">
-    <type name="File::Chunk" ref="top1::File::Chunk#top1::File::Chunk" />
-  </base>
-  <constructor id="top1::BasicSndFile::AudioChunk::AudioChunk" name="AudioChunk" />
-</struct>

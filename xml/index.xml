@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <index xmlns="http://jessevdk.github.com/cldoc/1.0">
-  <brief># TOP-1: **T**otally **O**riginal **P**roject-**1**
+  <brief># TOP-1: Totally Original Project-1
 [![Build Status](https://travis-ci.org/topisani/TOP-1.svg?branch=master)](https://travis-ci.org/topisani/TOP-1)
 </brief>
   <doc>Ah, who doesnt love the [op-1](http://teenage.engineering/products/op-1)? Its a magical beast of modern technology! Everything you need to play around with electronic music, in one self-contained device. Its pretty close to perfect, but not quite - its simplicity is its power, but it's also the source of its shortcomings. And then of course, it's not open source.
@@ -10,8 +10,10 @@ Come chat with me at my [discord server](https://discord.gg/4cV9Ucz) if you're i
 ### Introducing the TOP-1!  
 To be fair, the TOP-1 is an op-1 clone. But i like to think it's a bit more than that. Some differences will be subtle, and some differences will be big. Especially the non-core modules will differ greatly, as most of them are designed fully independently. The UI too varies, from the tapedeck, which is practically the same, to the metronome, which is very different (see both below);
 
-&amp;lt;img src="images/tapedeck.png" width="300px" alt="Tapedeck"&amp;gt; &amp;lt;img src="images/mixer.png" width="300px" alt="Mixer"&amp;gt;
-&amp;lt;img src="images/metronome.gif" width="300px" alt="Metronome"&amp;gt; &amp;lt;img src="images/simple-drums.png" width="300px" alt="Drum Synth"&amp;gt;
+&amp;lt;div class="screenshots"&amp;gt;
+![Tapedeck](images/tapedeck.png) ![Mixer](images/mixer.png) &amp;lt;br&amp;gt;
+![Metronome](images/metronome.gif) ![Drum Synth](images/simple-drums.png)
+&amp;lt;/div&amp;gt;
 
 # Current Progress  
 The tapedeck is completed, with a few bugs left to iron out, and with the addition of the metronome, mixer, and input selector, the software is just about ready to be used for recording with external synthesizers. It runs in an OpenGLFW window, and the buttons and rotaries are emulated with keyboard shortcuts.
@@ -151,12 +153,12 @@ If you are interested, come chat with me at my [discord server](https://discord.
  - [mapbox/variant](https://github.com/mapbox/variant), one of the best variant implementations out there
 
 And of course, none of this would be posible without [spacemacs](http://spacemacs.org/), because i would've given up programming long ago</doc>
-  <category name="algorithms" ref="algorithms#algorithms" />
   <category name="installing" ref="installing#installing">
     <brief># In Ubuntu 16.04
 This is the recommended version to run in a VM.
 </brief>
   </category>
+  <namespace name="std" ref="std#std" />
   <namespace name="top1" ref="top1#top1">
     <namespace name="audio" ref="top1::audio#top1::audio">
       <namespace name="detail" ref="top1::audio::detail#top1::audio::detail" />
@@ -186,6 +188,9 @@ This is the recommended version to run in a VM.
       <class name="Waveform" ref="top1::audio::Waveform#top1::audio::Waveform" />
     </namespace>
     <namespace name="detail" ref="top1::detail#top1::detail">
+      <struct name="dereference" ref="top1::detail::dereference#top1::detail::dereference">
+        <brief>A function object used to call `operator*()`</brief>
+      </struct>
       <structtemplate name="type_for_index" ref="top1::detail::type_for_index#top1::detail::type_for_index">
         <templatetypeparameter id="top1::detail::type_for_index::Base" name="Base" />
         <templatenontypeparameter id="top1::detail::type_for_index::I" name="I">
@@ -396,15 +401,6 @@ Specialize this for each mode</brief>
       <templatetypeparameter id="top1::basic_poly_ptr::Base" name="Base" />
       <templatetypeparameter id="top1::basic_poly_ptr::Types" name="Types" />
     </classtemplate>
-    <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
-      <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
-      <templatenontypeparameter id="top1::BasicSndFile::_channels" name="_channels">
-        <type name="uint" />
-      </templatenontypeparameter>
-      <struct name="WavHeader" ref="top1::BasicSndFile::WavHeader#top1::BasicSndFile::WavHeader" />
-      <struct name="WavFmt" ref="top1::BasicSndFile::WavFmt#top1::BasicSndFile::WavFmt" />
-      <struct name="AudioChunk" ref="top1::BasicSndFile::AudioChunk#top1::BasicSndFile::AudioChunk" />
-    </classtemplate>
     <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
       <brief>TODO: Documentation</brief>
       <struct name="Chunk" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
@@ -430,12 +426,17 @@ Specialize this for each mode</brief>
     <classtemplate name="EventDispatcher" ref="top1::EventDispatcher#top1::EventDispatcher">
       <templatetypeparameter id="top1::EventDispatcher::Args" name="Args" />
     </classtemplate>
-    <class name="File" ref="top1::File#top1::File">
-      <class name="Chunk" ref="top1::File::Chunk#top1::File::Chunk" />
-      <struct name="ChunkFCC" ref="top1::File::ChunkFCC#top1::File::ChunkFCC" />
-      <struct name="Error" ref="top1::File::Error#top1::File::Error" />
-      <struct name="Field" ref="top1::File::Field#top1::File::Field" />
-    </class>
+    <classtemplate name="float_step_iterator" ref="top1::float_step_iterator#top1::float_step_iterator">
+      <brief>An iterator wrapper to iterate with a non-integer ratio
+</brief>
+      <templatetypeparameter id="top1::float_step_iterator::I" name="I" />
+      <templatetypeparameter id="top1::float_step_iterator::Dereference" name="Dereference">
+        <default>
+          <type name="top1::detail::dereference" ref="top1::detail::dereference#top1::detail::dereference" />
+        </default>
+      </templatetypeparameter>
+      <templatetypeparameter id="top1::float_step_iterator" />
+    </classtemplate>
     <class name="Globals" ref="top1::Globals#top1::Globals" />
     <structtemplate name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes">
       <brief>Get an integer with `N` bytes
@@ -466,13 +467,15 @@ with category of at least `category`
     <structtemplate name="overloaded" ref="top1::overloaded#top1::overloaded">
       <brief>Overload lambdas</brief>
     </structtemplate>
-    <struct name="ReadException" ref="top1::ReadException#top1::ReadException" />
     <classtemplate name="result" ref="top1::result#top1::result">
       <brief>A sum type, holding either an Ok value, or an Err
 </brief>
       <templatetypeparameter id="top1::result::ok_t" name="ok_t" />
       <templatetypeparameter id="top1::result::err_t" name="err_t" />
-      <struct name="result_except" ref="top1::result::result_except#top1::result::result_except" />
+      <struct name="result_except" ref="top1::result::result_except#top1::result::result_except">
+        <brief>Thrown from <ref ref="top1::result#top1::result::unwrap_ok">top1::result::unwrap_ok</ref> and <ref ref="top1::result#top1::result::unwrap_err">top1::result::unwrap_err</ref>.
+</brief>
+      </struct>
     </classtemplate>
     <structtemplate name="select_type" ref="top1::select_type#top1::select_type">
       <brief>has member type `type` which is `T1` if b is `true`,
@@ -488,20 +491,17 @@ otherwise it is `T2`</brief>
     </class>
     <class name="TapeBuffer" ref="top1::TapeBuffer#top1::TapeBuffer">
       <class name="CompareTapeSlice" ref="top1::TapeBuffer::CompareTapeSlice#top1::TapeBuffer::CompareTapeSlice" />
-      <struct name="RingBuffer" ref="top1::TapeBuffer::RingBuffer#top1::TapeBuffer::RingBuffer" />
+      <struct name="RingBuffer" ref="top1::TapeBuffer::RingBuffer#top1::TapeBuffer::RingBuffer">
+        <struct name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+      </struct>
       <class name="TapeSliceSet" ref="top1::TapeBuffer::TapeSliceSet#top1::TapeBuffer::TapeSliceSet" />
     </class>
     <class name="TapeDiskThread" ref="top1::TapeDiskThread#top1::TapeDiskThread" />
     <class name="TapeFile" ref="top1::TapeFile#top1::TapeFile">
+      <struct name="SliceArray" ref="top1::TapeFile::SliceArray#top1::TapeFile::SliceArray" />
       <struct name="SliceData" ref="top1::TapeFile::SliceData#top1::TapeFile::SliceData" />
-      <struct name="SlicesChunk" ref="top1::TapeFile::SlicesChunk#top1::TapeFile::SlicesChunk" />
-      <struct name="TOP1Chunk" ref="top1::TapeFile::TOP1Chunk#top1::TapeFile::TOP1Chunk" />
-      <struct name="TrackSlicesChunk" ref="top1::TapeFile::TrackSlicesChunk#top1::TapeFile::TrackSlicesChunk" />
     </class>
     <struct name="Track" ref="top1::Track#top1::Track" />
-    <structtemplate name="TypedField" ref="top1::TypedField#top1::TypedField">
-      <templatetypeparameter id="top1::TypedField::T" name="T" />
-    </structtemplate>
   </namespace>
   <templatetypeparameter id="S" name="S" />
   <templatetypeparameter id="B" name="B" />
@@ -527,22 +527,5 @@ otherwise it is `T2`</brief>
   <templatetypeparameter id="S" name="S" />
   <templatetypeparameter id="B" name="B" />
   <templatetypeparameter id="Ts" name="Ts" />
-  <method id="readBytes" name="readBytes">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="readBytes::data" name="data">
-      <type name="std::array&lt;top1::TapeFile::SliceData, 2048&gt;" qualifier=" &amp;" />
-    </argument>
-  </method>
-  <method id="writeBytes" name="writeBytes">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
-    <argument id="writeBytes::data" name="data">
-      <type name="std::array&lt;top1::TapeFile::SliceData, 2048&gt;" qualifier=" &amp;" />
-    </argument>
-  </method>
+  <struct name="iterator_traits" ref="iterator_traits#iterator_traits" />
 </index>

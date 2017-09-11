@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classtemplate abstract="true" id="top1::float_step_iterator" name="float_step_iterator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>An iterator wrapper to iterate with a non-integer ratio
+</brief>
+  <doc>This iterates through contiguous data, or simply increments an
+integer value, with floating point steps. It keeps track of the
+error, and corrects it while iterating.
+
+The most common use case is iterating over data at a non-integer
+rate ratio. In the TOP-1 it is used to read sound samples at a
+different rate than how they were recorded.
+
+When used to iterator through data, it is preferred to use
+`first &lt; last` as the loop condition, as opposed to the
+conventional `first != last`. The need for doing this depends on
+the relationship between the `first` and `last` iterators. If
+one was created from the other, using <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator+">operator+</ref> or
+<ref ref="top1::float_step_iterator#top1::float_step_iterator::operator-">operator-</ref> and <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator-">operator-</ref>, they are guarantied to be reachable from the other
+using <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator++">operator++</ref> and <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator++">operator++</ref> or <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator--">operator--</ref> and <ref ref="top1::float_step_iterator#top1::float_step_iterator::operator--">operator--</ref> as applicable, as long as the
+<ref ref="top1::float_step_iterator#top1::float_step_iterator::step">step</ref> member variable on the mutating iterator is unchanged.
+
+`float_step_iterator` nearly models a random access iterator,
+missing only a few operations, that may be added in the future.
+but should not be used as such. It does however model a
+Bidirectional iterator.
+
+</doc>
+  <templatetypeparameter id="top1::float_step_iterator::I" name="I" />
+  <templatetypeparameter id="top1::float_step_iterator::Dereference" name="Dereference">
+    <default>
+      <type name="top1::detail::dereference" ref="top1::detail::dereference#top1::detail::dereference" />
+    </default>
+  </templatetypeparameter>
+  <templatetypeparameter id="top1::float_step_iterator" />
+</classtemplate>

@@ -1,50 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
-<class abstract="true" id="top1::TapeFile" name="TapeFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
+<class id="top1::TapeFile" interface="true" name="TapeFile" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <base access="public">
-    <type name="BasicSndFile&lt;float, 4&gt;" />
+    <type name="SoundFile" ref="top1::SoundFile#top1::SoundFile" />
   </base>
+  <struct name="SliceArray" ref="top1::TapeFile::SliceArray#top1::TapeFile::SliceArray" />
   <struct name="SliceData" ref="top1::TapeFile::SliceData#top1::TapeFile::SliceData" />
-  <struct name="SlicesChunk" ref="top1::TapeFile::SlicesChunk#top1::TapeFile::SlicesChunk" />
-  <struct name="TOP1Chunk" ref="top1::TapeFile::TOP1Chunk#top1::TapeFile::TOP1Chunk" />
-  <struct name="TrackSlicesChunk" ref="top1::TapeFile::TrackSlicesChunk#top1::TapeFile::TrackSlicesChunk" />
-  <field id="top1::TapeFile::top1Chunk" name="top1Chunk">
-    <type name="TOP1Chunk" ref="top1::TapeFile::TOP1Chunk#top1::TapeFile::TOP1Chunk" />
-  </field>
   <field id="top1::TapeFile::slices" name="slices">
-    <type name="SlicesChunk" ref="top1::TapeFile::SlicesChunk#top1::TapeFile::SlicesChunk" />
+    <type name="std::array&lt;top1::TapeFile::SliceArray, 4&gt;" />
   </field>
-  <constructor id="top1::TapeFile::TapeFile" name="TapeFile" />
-  <constructor id="top1::TapeFile::TapeFile" name="TapeFile">
-    <argument id="top1::TapeFile::TapeFile::path" name="path">
-      <type name="std::string" qualifier=" const &amp;" />
-    </argument>
-  </constructor>
-  <constructor abstract="yes" id="top1::TapeFile::TapeFile" name="TapeFile">
-    <argument id="top1::TapeFile::TapeFile::" name="">
-      <type name="TapeFile" qualifier=" &amp;" ref="top1::TapeFile#top1::TapeFile" />
-    </argument>
-  </constructor>
-  <constructor abstract="yes" id="top1::TapeFile::TapeFile" name="TapeFile">
-    <argument id="top1::TapeFile::TapeFile::" name="">
-      <type name="TapeFile &amp;&amp;" />
-    </argument>
-  </constructor>
-  <method abstract="yes" id="top1::TapeFile::readSlices" name="readSlices">
+  <constructor abstract="yes" id="top1::TapeFile::TapeFile" name="TapeFile" />
+  <method abstract="yes" access="protected" id="top1::TapeFile::add_custom_chunks" name="add_custom_chunks" override="yes" virtual="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
+    <argument id="top1::TapeFile::add_custom_chunks::v" name="v">
+      <type name="std::vector&lt;std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt;, std::allocator&lt;std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt; &gt; &gt;" qualifier=" &amp;" />
+    </argument>
+    <override name="SoundFile::add_custom_chunks" ref="top1::SoundFile#top1::SoundFile::add_custom_chunks" />
   </method>
-  <method abstract="yes" id="top1::TapeFile::writeSlices" name="writeSlices">
+  <method abstract="yes" access="protected" id="top1::TapeFile::replace_custom_chunk" name="replace_custom_chunk" override="yes" virtual="yes">
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
-  </method>
-  <method access="protected" id="top1::TapeFile::setupChunks" name="setupChunks" virtual="yes">
-    <undocumented-return />
-    <return>
-      <type builtin="yes" name="void" />
-    </return>
+    <argument id="top1::TapeFile::replace_custom_chunk::ptr" name="ptr">
+      <type name="std::unique_ptr&lt;top1::ByteFile::Chunk, std::default_delete&lt;top1::ByteFile::Chunk&gt; &gt;" qualifier=" &amp;" />
+    </argument>
+    <override name="SoundFile::replace_custom_chunk" ref="top1::SoundFile#top1::SoundFile::replace_custom_chunk" />
   </method>
 </class>

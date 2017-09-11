@@ -16,7 +16,7 @@
   </constructor>
   <constructor id="top1::ByteFile::Chunk::Chunk" name="Chunk">
     <argument id="top1::ByteFile::Chunk::Chunk::o" name="o">
-      <type name="Chunk" qualifier=" &amp;" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
+      <type name="Chunk" qualifier=" const &amp;" ref="top1::ByteFile::Chunk#top1::ByteFile::Chunk" />
     </argument>
   </constructor>
   <destructor id="top1::ByteFile::Chunk::~Chunk" name="~Chunk" virtual="yes" />

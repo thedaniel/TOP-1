@@ -44,13 +44,14 @@ A Wrapper for ringbuffers, used for the tapemodule.
   <method abstract="yes" id="top1::TapeBuffer::goTo" name="goTo">
     <doc>
 Jumps to another position in the tape
-@param tapePos position to jump to
+@tapePos position to jump to
 </doc>
     <undocumented-return />
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="top1::TapeBuffer::goTo::tapePos" name="tapePos">
+      <doc>position to jump to</doc>
       <type name="TapeTime" />
     </argument>
   </method>

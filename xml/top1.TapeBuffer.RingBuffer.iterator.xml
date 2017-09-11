@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="top1::TapeBuffer::RingBuffer::iterator" name="iterator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="top1::TapeBuffer::RingBuffer::iterator::data" name="data">
+    <type name="AudioFrame" qualifier="*" />
+  </field>
+  <field id="top1::TapeBuffer::RingBuffer::iterator::index" name="index">
+    <type name="uint" />
+  </field>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator!=" name="operator!=">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::iterator::operator!=::r" name="r">
+      <type name="iterator" qualifier=" const &amp;" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator*" name="operator*">
+    <undocumented-return />
+    <return>
+      <type name="AudioFrame" qualifier=" &amp;" />
+    </return>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator+" name="operator+">
+    <undocumented-return />
+    <return>
+      <type name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::iterator::operator+::i" name="i">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator++" name="operator++">
+    <undocumented-return />
+    <return>
+      <type name="iterator" qualifier=" &amp;" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type name="iterator" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::iterator::operator-::i" name="i">
+      <type builtin="yes" name="int" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator-" name="operator-">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::iterator::operator-::r" name="r">
+      <type name="iterator" qualifier=" const &amp;" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </argument>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator--" name="operator--">
+    <undocumented-return />
+    <return>
+      <type name="iterator" qualifier=" &amp;" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </return>
+  </method>
+  <method id="top1::TapeBuffer::RingBuffer::iterator::operator==" name="operator==">
+    <undocumented-return />
+    <return>
+      <type builtin="yes" name="bool" />
+    </return>
+    <argument id="top1::TapeBuffer::RingBuffer::iterator::operator==::r" name="r">
+      <type name="iterator" qualifier=" const &amp;" ref="top1::TapeBuffer::RingBuffer::iterator#top1::TapeBuffer::RingBuffer::iterator" />
+    </argument>
+  </method>
+</struct>

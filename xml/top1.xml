@@ -171,12 +171,6 @@ Use this instead of raw indexed loops wherever possible.
     <templatetypeparameter id="top1::basic_poly_ptr::Base" name="Base" />
     <templatetypeparameter id="top1::basic_poly_ptr::Types" name="Types" />
   </classtemplate>
-  <classtemplate name="BasicSndFile" ref="top1::BasicSndFile#top1::BasicSndFile">
-    <templatetypeparameter id="top1::BasicSndFile::sample_type" name="sample_type" />
-    <templatenontypeparameter id="top1::BasicSndFile::_channels" name="_channels">
-      <type name="uint" />
-    </templatenontypeparameter>
-  </classtemplate>
   <class name="ByteFile" ref="top1::ByteFile#top1::ByteFile">
     <brief>TODO: Documentation</brief>
   </class>
@@ -198,7 +192,17 @@ Use this instead of raw indexed loops wherever possible.
   <classtemplate name="EventDispatcher" ref="top1::EventDispatcher#top1::EventDispatcher">
     <templatetypeparameter id="top1::EventDispatcher::Args" name="Args" />
   </classtemplate>
-  <class name="File" ref="top1::File#top1::File" />
+  <classtemplate name="float_step_iterator" ref="top1::float_step_iterator#top1::float_step_iterator">
+    <brief>An iterator wrapper to iterate with a non-integer ratio
+</brief>
+    <templatetypeparameter id="top1::float_step_iterator::I" name="I" />
+    <templatetypeparameter id="top1::float_step_iterator::Dereference" name="Dereference">
+      <default>
+        <type name="top1::detail::dereference" ref="top1::detail::dereference#top1::detail::dereference" />
+      </default>
+    </templatetypeparameter>
+    <templatetypeparameter id="top1::float_step_iterator" />
+  </classtemplate>
   <class name="Globals" ref="top1::Globals#top1::Globals" />
   <structtemplate name="int_n_bytes" ref="top1::int_n_bytes#top1::int_n_bytes">
     <brief>Get an integer with `N` bytes
@@ -229,7 +233,6 @@ with category of at least `category`
   <structtemplate name="overloaded" ref="top1::overloaded#top1::overloaded">
     <brief>Overload lambdas</brief>
   </structtemplate>
-  <struct name="ReadException" ref="top1::ReadException#top1::ReadException" />
   <classtemplate name="result" ref="top1::result#top1::result">
     <brief>A sum type, holding either an Ok value, or an Err
 </brief>
@@ -250,7 +253,4 @@ otherwise it is `T2`</brief>
   <class name="TapeDiskThread" ref="top1::TapeDiskThread#top1::TapeDiskThread" />
   <class name="TapeFile" ref="top1::TapeFile#top1::TapeFile" />
   <struct name="Track" ref="top1::Track#top1::Track" />
-  <structtemplate name="TypedField" ref="top1::TypedField#top1::TypedField">
-    <templatetypeparameter id="top1::TypedField::T" name="T" />
-  </structtemplate>
 </namespace>

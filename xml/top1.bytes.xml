@@ -9,7 +9,7 @@
   <constructor abstract="yes" id="top1::bytes::bytes&lt;len&gt;" name="bytes&lt;len&gt;" />
   <constructor id="top1::bytes::bytes&lt;len&gt;" name="bytes&lt;len&gt;">
     <argument id="top1::bytes::bytes&lt;len&gt;::o" name="o">
-      <type name="bytes" qualifier=" &amp;" ref="top1::bytes#top1::bytes" />
+      <type name="bytes" qualifier=" const &amp;" ref="top1::bytes#top1::bytes" />
     </argument>
   </constructor>
   <constructor id="top1::bytes::bytes&lt;len&gt;" name="bytes&lt;len&gt;">
@@ -133,4 +133,30 @@
       <type builtin="yes" name="char" qualifier="*" />
     </return>
   </conversionfunction>
+  <methodtemplate id="top1::bytes::from_u" name="from_u" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="bytes" ref="top1::bytes#top1::bytes" />
+    </return>
+    <argument id="top1::bytes::from_u::n" name="n">
+      <type name="Num" />
+    </argument>
+    <templatenontypeparameter id="top1::bytes::from_u::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::bytes::from_u::Num" name="Num" />
+  </methodtemplate>
+  <methodtemplate id="top1::bytes::from_i" name="from_i" static="yes">
+    <undocumented-return />
+    <return>
+      <type name="bytes" ref="top1::bytes#top1::bytes" />
+    </return>
+    <argument id="top1::bytes::from_i::n" name="n">
+      <type name="Num" />
+    </argument>
+    <templatenontypeparameter id="top1::bytes::from_i::N" name="N">
+      <type name="std::size_t" />
+    </templatenontypeparameter>
+    <templatetypeparameter id="top1::bytes::from_i::Num" name="Num" />
+  </methodtemplate>
 </structtemplate>
